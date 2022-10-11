@@ -1,0 +1,98 @@
+.md-footer, .md-header, .md-tabs {
+    display: none;
+}
+
+
+h1 {
+    display:none;
+} 
+
+.md-content__button {
+    display: none;
+}
+
+.md-main__inner { 
+    max-width: 100%; 
+}       
+.md-sidebar--primary {
+    left: 0; 
+} 
+.md-sidebar--secondary {
+    right: 0; 
+    margin-left: 0; 
+    -webkit-transform: none; 
+    transform: none; 
+} 
+
+.md-typeset h2 {
+    margin: 0px 0px 25px 0px;
+}
+
+/* ---- Couleur de fond ---- */
+body {
+  background-color: var(--back-color);
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;    
+}
+
+
+/* ---- Elements de markdown de mkdocs à cacher ---- */
+.md-typeset h1, .md-content__button, .md-footer, .md-header, .md-tabs {
+    display: none;
+}
+
+
+/* ---- Nécessaire ---- */
+.md-main__inner.md-grid {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+}
+   
+
+
+.md-content__inner.md-typeset {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+}
+
+.text > p {
+    font-size:16px;
+
+}
+
+
+/* SUPRIMMER ESPACE DU HAUT */
+
+article::before {
+    display: none !important;
+        margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+
+}
+
+article > h1 {
+    display: none !important;
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+}
+
+
+article > p {
+    margin:0 !important;
+    padding:0 !important;
+    height:0 !important;
+    width:0 !important;
+}
+
+
+

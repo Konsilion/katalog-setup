@@ -1,0 +1,130 @@
+/*-----------------------------------------------
+    ELEMENTS GRID & CARD
+
+1.     grid-container
+2.     container
+    2.1    column_catalog
+        2.1.1  img-grid (contenant img-card)
+        2.1.2  card-title
+    2.2    overlay   
+------------------------------------------------*/
+
+
+.grid-container { 
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%; 
+    gap: 50px; 
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 0px;
+    margin: 50px 0px;
+} 
+
+.grid-container > div { 
+    text-align: left;
+    font-size: 20px; 
+}
+
+.container {
+    border: none;
+    position: relative;
+    border-radius:10px;
+}
+
+.container:hover .overlay {
+  height: 100%;
+  padding: 0px 10px 0px 10px;  
+}
+    
+.column_catalog {
+    border: none;
+    padding: 0px 0px 0px 0px;
+    outline: 1px solid #CCC;
+    border-radius: 10px;
+    height:210px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+}
+
+.column_catalog p {
+    color:black;
+    font-size:20px;
+    margin-top: 10px;
+}
+   
+.img_grid {
+  background-color: white;  
+  border: none;  
+  height: 150px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;  
+  overflow: hidden;  
+}    
+ 
+.img_card {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+} 
+ 
+.card-title {
+    height: auto;
+    border: none;
+    border-top: 1px solid grey;
+    margin:0px;
+    padding: 0px 15px 0px 15px;
+    text-align: center;
+}      
+ 
+.card-title > p {
+    font-size: 16px;
+    line-height: 21px;
+}    
+
+.overlay {
+  color: black;
+  font-size: 18px;  
+  position: absolute;
+  border-radius: 10px; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9));
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .3s ease;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .grid-container { 
+    display: grid; 
+    grid-template-columns: 30% 30% 30%; 
+    gap: 40px; 
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 0px; 
+    }
+} 
+
+@media only screen and (max-width: 1200px) {
+    .grid-container { 
+    display: grid; 
+    grid-template-columns: 45% 45%; 
+    gap: 40px; 
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 0px; 
+    }
+}  
+    
+@media only screen and (max-width: 800px) {
+    .grid-container { 
+    display: grid; 
+    grid-template-columns: 95%; 
+    gap: 40px; 
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 0px; 
+    }
+}     
+ 

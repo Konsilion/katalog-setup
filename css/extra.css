@@ -1,0 +1,90 @@
+:root > * {
+	--color-back-form: rgba(245, 245, 245, 0.9);
+	--color-button: #1FAA1F;
+    --md-primary-fg-color: #2B8DCE !important;
+    --md-primary-fg-color-light: rgba(19,96,149,0.2) !important;
+    --md-primary-fg-color--dark: #505050;
+}
+
+#######################################
+
+
+/* ------ NAVIGATION ------ */
+
+.md-header {
+    background-color: var(--md-primary-fg-color);
+    background-image: var(--md-primary-fg-color);
+}
+
+
+.md-tabs {
+    background-color: white !important;
+    padding: 0px;
+}
+
+.md-tabs__item {
+    max-height: 35px;
+    vertical-align: middle;
+}
+
+
+.md-tabs__item:hover, .md-tabs__item:hover > a  {
+    background-color: #DDD !important;
+    color: black !important;
+}
+
+.md-tabs__link {
+    color: black;
+    max-height: 10px;
+    vertical-align: middle;
+    margin-top:8px;
+}
+
+.md-tabs__link--active {
+    text-decoration: underline;
+}
+
+
+
+.md-tabs__inner.md-grid, .md-header__inner.md-grid {
+    margin:0px !important;
+
+}
+
+.md-header__source {
+    right:0px;
+}
+
+
+
+
+
+a.md-content__button.md-icon {
+    display: none !important;
+}
+
+
+
+
+/* ------ KONSILION ADMONITION ------ */
+
+
+:root {
+  --md-admonition-icon--ksln-info: url(../../images/circle-info-solid.svg)
+}
+
+.md-typeset .admonition.ksln-info,
+.md-typeset details.ksln-info {
+  border-color: white;
+}
+.md-typeset .ksln-info > .admonition-title,
+.md-typeset .ksln-info > summary {
+  background-color: var(--md-primary-fg-color-light);
+}
+.md-typeset .ksln-info > .admonition-title::before,
+.md-typeset .ksln-info > summary::before {
+  background-color: grey;
+  -webkit-mask-image: var(--md-admonition-icon--ksln-info);
+          mask-image: var(--md-admonition-icon--ksln-info);
+}
+

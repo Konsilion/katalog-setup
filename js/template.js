@@ -9,12 +9,32 @@ let arr_filters;
 // Transformations CSV vers HTML
 window.onload = function() {
 
-    Papa.parse(window.location.pathname + "../data/parametres.csv", { 
-        download: true,
-        delimiter: ";",
-        skipEmptyLines: true,
-        complete: param_result
-    });  
+    
+    
+    
+    
+    
+    
+    
+    let param_results;
+
+    const csvData = Papa.parse(window.location.pathname + "../data/parametres.csv", {
+          download: true,
+          delimiter: ";",
+          skipEmptyLines: true,
+          complete: function(data) {
+                param_results = data.data
+          }
+    });
+
+    setTimeout(()=> {
+    console.log(param_results[0].ISSN)
+    }, 1500);   
+    
+    
+    
+    
+    
     
     
     
@@ -24,7 +44,7 @@ window.onload = function() {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(results.data,param_result.data);
+            htmlGridGenerator(results.data,param_results);
         }
     });    
 

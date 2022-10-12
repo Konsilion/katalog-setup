@@ -37,15 +37,7 @@ h1 {
   display: none;
 }
 
-/* ---- Les FilerDiv sont montrés si show est ajouté à la classe ----- */
-.show {
-  display: block;
-}
 
-/* ---- Permet de cacher certains éléments ----- */
-.hide {
-  display: none;
-}
    
     
 /* ---- Particularité du boutons réinitialiser ----- */

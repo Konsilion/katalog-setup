@@ -1,5 +1,5 @@
 // Mise à zéro des filtres et de la fonction de recherche avancée 'Et/Ou'
-
+var param_results;
 var filters = [];
 var toggle = 0;
 const fromDb = undefined;
@@ -10,14 +10,14 @@ let arr_filters;
 window.onload = function() {
 
 
-    var param_results;
+    
 
-    const csvData = Papa.parse(window.location.pathname + "../data/parametres.csv", {
+    Papa.parse(window.location.pathname + "../data/parametres.csv", {
           download: true,
           delimiter: ";",
           skipEmptyLines: true,
-          complete: function(data) {
-                param_results = data.data
+          complete: function(results) {
+                param_results = results.data;
           }
     });
 

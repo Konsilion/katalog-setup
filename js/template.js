@@ -27,7 +27,7 @@ window.onload = function() {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(results.data);
+            htmlGridGenerator(results.data,param_results);
         }
     });    
 
@@ -65,7 +65,9 @@ window.onload = function() {
 
 
 // -----> Créée le filtres principaux
-function htmlFilterGenerator(content) {
+function htmlFilterGenerator(content,param) {
+    
+    console.log("Dans la fonction est passe:", param);
     
     const all = "'all'"
     

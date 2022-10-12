@@ -286,7 +286,7 @@ function htmlParamGenerator(content) {
     let katalog_title = document.getElementById('KatalogTitle'); 
     
     html = `<h2 style="color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - ` + data[3][1] + `&emsp;
-                <br><p>` + data[8][1] + `</p>
+                <br><p style="color:#BBB; font-size: 16px;">` + data[8][1] + `</p>
                 <br id="BrMobile"><br id="BrMobile">
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>

@@ -71,7 +71,9 @@ a.md-content__button.md-icon {
     display: none !important;
 }
 
-
+a.md-source {
+    display: none !important;
+}
 
 /* ------ COMMUN CLASS ------*/
 

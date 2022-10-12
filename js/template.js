@@ -73,7 +73,7 @@ function htmlFilterGenerator(content,param) {
     
     let grid_filter = document.getElementById('Filter1Zone');
     
-    let html = "<b>Filtres principaux</b><br><br>";
+    let html = "<b>Filtres principaux</b><br>";
     
     const data = content.slice(1);
     
@@ -285,7 +285,7 @@ function htmlParamGenerator(content) {
     
     let katalog_title = document.getElementById('KatalogTitle'); 
     
-    html = `<h2 style="color:#3B5F7F; font-size: 30px; margin-bottom:0px;"><b>Katalog</b> - ` + data[3][1] + `&emsp;
+    html = `<h2 style="color:#3B5F7F; font-size: 30px; margin-bottom:0px;">Katalog - <b>` + data[3][1] + `</b>&emsp;
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
                 </button>
@@ -295,7 +295,7 @@ function htmlParamGenerator(content) {
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 300; border-top:1px solid #DDD"><br>` + data[8][1] + `</p>`;
+            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 350; border-top:1px solid #EEE"><br>` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

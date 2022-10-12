@@ -274,13 +274,13 @@ function htmlParamGenerator(content) {
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
                 </button>
-                <button id="ShowNav" class="btn neumorphic-btn" onclick="ShowMobileNav();HideClassSwitch(\'KatalogDescr\')">
+                <button id="ShowNav" class="btn neumorphic-btn active" onclick="ShowMobileNav();HideClassSwitch(\'KatalogDescr\')">
                     <i class="fa-solid fa-eye"></i>
                 </button>
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2><p id="KatalogDescr" class="" style="color:#AAA; font-size: 18px; font-weight: 350; border-top:1px solid #EEE"><br>` + data[8][1] + `</p>`;
+            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 350; border-top:1px solid #EEE"><br>` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

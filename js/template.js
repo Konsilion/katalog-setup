@@ -21,7 +21,7 @@ window.onload = function() {
           }
     });
 
-    console.log(var);
+    console.log(param_results);
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 

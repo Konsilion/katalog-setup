@@ -16,7 +16,9 @@
     background-image: var(--md-primary-fg-color);
 }
 
-
+.md-header__title {
+	margin-left:0px;
+}
 
 .md-copyright {
     max-width: 25px !important;
@@ -25,11 +27,8 @@
     white-space: nowrap !important;
 }
 
-
-
-
 .md-tabs {
-    background-color: rgba(0,0,0,.87) !important;
+    background-color: rgba(0,0,0,.7) !important;
     padding: 0px;
 }
 

@@ -111,30 +111,6 @@ h1 {
    
 
 
-    
-
-.InputAdd {
-  background-color: white;
-  width: 45%;
-  font-size: 16px;
-  padding: 12px 12px 12px 12px;
-  border: 1px solid #ddd;
-  margin: 0px 12px 12px 0px;
-  border-radius: 15px;
-}
-
-.InputAdd::placeholder {
-    color: #CCC;
-} 
-
-
-
-@media only screen and (max-width: 1219px) {
-    .InputAdd {
-      width: 100%;
-    }
-}  
-
 #myInput {
   background-color: #F5F5F5;
   width: 100%;

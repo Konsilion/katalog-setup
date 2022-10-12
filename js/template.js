@@ -9,14 +9,8 @@ let arr_filters;
 // Transformations CSV vers HTML
 window.onload = function() {
 
-    
-    
-    
-    
-    
-    
-    
-    let param_results;
+
+    var param_results;
 
     const csvData = Papa.parse(window.location.pathname + "../data/parametres.csv", {
           download: true,
@@ -27,16 +21,7 @@ window.onload = function() {
           }
     });
 
-    setTimeout(()=> {
-    console.log(param_results[0].ISSN)
-    }, 1500);   
-    
-    
-    
-    
-    
-    
-    
+    console.log(var);
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 
@@ -44,7 +29,7 @@ window.onload = function() {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(results.data,param_results);
+            htmlGridGenerator(results.data);
         }
     });    
 
@@ -82,13 +67,13 @@ window.onload = function() {
 
 
 // -----> Créée le filtres principaux
-function htmlFilterGenerator(content,param_content) {
+function htmlFilterGenerator(content) {
     
     const all = "'all'"
     
     let grid_filter = document.getElementById('Filter1Zone');
     
-    let html = "<b>" + param_content.slice(6)[0][1] + "</b><br><br>";
+    let html = "<b>Filtres principaux</b><br><br>";
     
     const data = content.slice(1);
     

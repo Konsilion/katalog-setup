@@ -9,17 +9,6 @@ let arr_filters;
 // Transformations CSV vers HTML
 window.onload = function() {
 
-
-    Papa.parse(window.location.pathname + "../data/parametres.csv", {
-          download: true,
-          delimiter: ";",
-          skipEmptyLines: true,
-          complete: function(results) {
-                console.log("Finished:", results.data);
-                param_results=results.data;
-          }
-    });
-
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 
@@ -27,7 +16,7 @@ window.onload = function() {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(results.data,param_results);
+            htmlGridGenerator(results.data);
         }
     });    
 
@@ -65,10 +54,8 @@ window.onload = function() {
 
 
 // -----> Créée le filtres principaux
-function htmlFilterGenerator(content,param) {
-    
-    console.log("Dans la fonction est passe:", param);
-    
+function htmlFilterGenerator(content) {
+
     const all = "'all'"
     
     let grid_filter = document.getElementById('Filter1Zone');
@@ -266,10 +253,6 @@ function htmlParamGenerator(content) {
     
     let btn_zone = document.getElementById('SubButtons'); 
 
-    // html = '<div><button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button>';
-
-    //html = '<div><h2 style="margin 0px !important; color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - Modèles numériques.</h2></div>'
-    
     html = '<button class="btn neumorphic-btn" id="BtnAdd" onclick="PrintFilterPopup();HideClassSwitch(\'PopupAdd\');HideClassSwitch(\'Content\');"><i class="fa-solid fa-plus"></i></button>';
     
     html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'FiltersZone\');"><i class="fa-solid fa-filter"></i></button>'; 
@@ -281,7 +264,7 @@ function htmlParamGenerator(content) {
     btn_zone.innerHTML = html;
     
     
-    // -----> Titre
+    // -----> Titre et Butons navigation
     
     let katalog_title = document.getElementById('KatalogTitle'); 
     
@@ -289,7 +272,7 @@ function htmlParamGenerator(content) {
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
                 </button>
-                <button id="ShowNav" class="btn neumorphic-btn active" onclick="ShowMobileNav();HideClassSwitch(\'KatalogDescr\')">
+                <button id="ShowNav" class="btn neumorphic-btn" onclick="ShowMobileNav();HideClassSwitch(\'KatalogDescr\')">
                     <i class="fa-solid fa-eye"></i>
                 </button>
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">

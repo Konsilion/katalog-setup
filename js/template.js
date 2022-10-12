@@ -10,18 +10,15 @@ let arr_filters;
 window.onload = function() {
 
 
-    
-
     Papa.parse(window.location.pathname + "../data/parametres.csv", {
           download: true,
           delimiter: ";",
           skipEmptyLines: true,
           complete: function(results) {
-                param_results = results.data;
+                console.log("Finished:", results.data);
           }
     });
 
-    console.log(param_results);
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 

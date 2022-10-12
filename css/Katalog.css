@@ -348,7 +348,11 @@ h1 {
 
 
 
-
+@media only screen and (min-width: 1220px) {
+    #grid-preview {
+       padding: 0px 0px 0px 0px;
+    }
+}
     
     
     

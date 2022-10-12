@@ -58,7 +58,7 @@ function htmlFilterGenerator(content) {
     
     const all = "'all'"
     
-    let grid_filter = document.getElementById('grid-filter');
+    let grid_filter = document.getElementById('Filter1Zone');
     
     let html = "<b>Filtres principaux</b><br><br>";
     
@@ -76,7 +76,7 @@ function htmlFilterGenerator(content) {
 // -----> Créée le filtres secondaires
 function html_s_FilterGenerator(content) {
 
-    let grid_s_filter = document.getElementById('grid-s-filter');
+    let grid_s_filter = document.getElementById('Filter2Zone');
 
     let html = '<b>Filtres secondaires</b><br><br>';
     
@@ -95,9 +95,9 @@ function html_s_FilterGenerator(content) {
 // -----> Créée les gridcards depuis le fichier data.csv
 function htmlGridGenerator(content) {   
     
-    let grid_preview = document.getElementById('grid-preview');
+    let grid_preview = document.getElementById('CardPreview');
     
-    let html = '<div style="text-align: center; justify-content: center;"  id="grid-show" class="grid-container">';
+    let html = '<div style="text-align: center; justify-content: center;"  id="CardShow" class="grid-container">';
     
     const data = content.slice(1);
     
@@ -127,7 +127,7 @@ function htmlGridGenerator(content) {
 // -----> Creation du code HTML du tableau des données
 function htmlTableGenerator(content) {
 
-    let csv_preview = document.getElementById('csv-preview');
+    let csv_preview = document.getElementById('TabPreview');
 
     let html = '<table id="TableGrid" class="display table table-hover table-striped align-middle" style="width:100%">';
 
@@ -204,9 +204,9 @@ function htmlParamGenerator(content) {
 
     const data = content.slice(0);
     
-    let param_zone = document.getElementById('param-zone');   
+    let param_zone = document.getElementById('SearchParam');   
     
-    let html = '<details id="param-detail" class="tip"><summary>Paramètre avancé de recherche</summary>';    
+    let html = '<details id="ParamDetail" class="tip"><summary>Paramètre avancé de recherche</summary>';    
     
     // -----> Ajouter ce catalogue à votre site internet - lien iframe
     
@@ -242,7 +242,7 @@ function htmlParamGenerator(content) {
     
     // -----> Copyright
     
-    let copyright_zone = document.getElementById('copyright-zone'); 
+    let copyright_zone = document.getElementById('CopyrightZone'); 
     
     html = '<p style="margin:10px;text-align:center;color:#CAC7C7;font-size:14px;"><img style="filter: grayscale(100%);height:40px;left-margin:100px;" src="' + data[5][1] + '"><br><br>' + data[2][1] + '</p>';
 
@@ -251,19 +251,19 @@ function htmlParamGenerator(content) {
         
     // -----> Ajouter les boutons de navigation
     
-    let btn_zone = document.getElementById('btn-zone'); 
+    let btn_zone = document.getElementById('SubButtons'); 
 
     // html = '<div><button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button>';
 
     //html = '<div><h2 style="margin 0px !important; color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - Modèles numériques.</h2></div>'
     
-    html = '<button class="btn neumorphic-btn" id="btn-add" onclick="PrintFilterPopup();HideClassSwitch(\'popup2\');HideClassSwitch(\'content\')"><i class="fa-solid fa-plus"></i></button>';
+    html = '<button class="btn neumorphic-btn" id="BtnAdd" onclick="PrintFilterPopup();HideClassSwitch(\'PopupAdd\');HideClassSwitch(\'Content\')"><i class="fa-solid fa-plus"></i></button>';
     
-    html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-filter"></i></button>'; 
+    html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'FiltersZone\');"><i class="fa-solid fa-filter"></i></button>'; 
     
-    html += '<button class="btn neumorphic-btn btn-reset" id="btn-reset" onclick="all_grid()"><i class="fa-solid fa-rotate-left"></i></button>';
+    html += '<button class="btn neumorphic-btn btn-reset" id="BtnReset" onclick="all_grid()"><i class="fa-solid fa-rotate-left"></i></button>';
 
-    html += '<br><br><input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Rechercher ..." title="Rechercher"></div>';
+    html += '<br><br><input type="text" id="SearchInput" onkeyup="SearchBar()" placeholder="Rechercher ..." title="Rechercher"></div>';
     
     btn_zone.innerHTML = html;
     
@@ -281,7 +281,7 @@ function htmlParamGenerator(content) {
                     <i class="fa-solid fa-eye"></i>
                 </button>
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
-                    <i class="fa-solid fa-image" id="btn-switch"></i>
+                    <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
             </h2>
             `;
@@ -312,15 +312,15 @@ function htmlParamGenerator(content) {
     
     GetElem = document.getElementById('AddStep1');
     
-    html = `<a href="#" onclick="HideClassSwitch('popup2');HideClassSwitch('content')"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
+    html = `<a href="#" onclick="HideClassSwitch('PopupAdd');HideClassSwitch('Content')"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
                 <hr>
                 <h2>Décrivez-nous votre projet : </h2>
                 <hr>
                 <details class="ksln-info"><summary>Les différents filtres de ce Katalog</summary>
                     <br>
-                    <div id="div_flt1"></div>
+                    <div id="DivFlt1"></div>
                     <hr>
-                    <div id="div_flt2"></div>
+                    <div id="DivFlt2"></div>
                 </details>
                 <div style="text-align:center;">
                     <input type="text" class="InputAdd" id="AddDesi" placeholder="Désignation">
@@ -331,7 +331,7 @@ function htmlParamGenerator(content) {
                     <input type="text" class="InputAdd" id="AddPers" placeholder="Auteur.ices et partenaires">
                     <br><button class="btn neumorphic-btn" onclick="TestAddProject();">Valider</button><button id="CopyCodeAdd" class="btn neumorphic-btn hide" onclick="CopyAddCode()">Copier le code d'ajout</button>
                 </div>
-                <div id="TestZoneAdd"></div>`;
+                <div id="AddZoneTest"></div>`;
     
     
     GetElem.innerHTML = html;
@@ -348,7 +348,7 @@ function PrintFilterPopup() {
         skipEmptyLines: true,
         complete: results => {
             arr_filters = results.data;
-            htmlFiltersTableGenerator(results.data,"flt1");
+            htmlFiltersTableGenerator(results.data,"Flt1");
         }
     });    
     
@@ -359,7 +359,7 @@ function PrintFilterPopup() {
         skipEmptyLines: true,
         complete: results => {
             arr_filters = arr_filters.concat(results.data);
-            htmlFiltersTableGenerator(results.data,"flt2");
+            htmlFiltersTableGenerator(results.data,"Flt2");
         }
     });    
 
@@ -427,14 +427,14 @@ function reset_grid() {
     }
 
     // Add or remove active class to the current button
-    var btnContainer = document.getElementById("grid-s-filter");
+    var btnContainer = document.getElementById("Filter2Zone");
     var btns = btnContainer.getElementsByClassName("neumorphic-btn");
     for (var i = 0; i < btns.length; i++) {   
         btns[i].className = btns[i].className.replace(" active", "");
     }
     
     // Add or remove active class to the current button
-    var btnContainer = document.getElementById("grid-filter");
+    var btnContainer = document.getElementById("Filter1Zone");
     var btns = btnContainer.getElementsByClassName("neumorphic-btn");
     for (var i = 0; i < btns.length; i++) {   
         btns[i].className = btns[i].className.replace(" active", "");
@@ -442,7 +442,7 @@ function reset_grid() {
     
     //Delete content of search bar
     
-    document.getElementById("myInput").value = "";
+    document.getElementById("SearchInput").value = "";
     
     SearchBar();
     
@@ -555,7 +555,7 @@ function listFilters(){
     
     let html = '';
     
-    let filters_list = document.getElementById('filters-list');
+    let filters_list = document.getElementById('FiltersList');
     
     for (var i = 0, len = filters.length; i < len; i++){   
         html += '<button class="neumorphic-tag active" onclick="TagFilterClick(this,\''+ filters[i] +'\');"><i style="color: red;" class="fa-solid fa-xmark"></i>  ' + VlookUp(arr_filters, filters[i]) + '</button>';
@@ -580,7 +580,7 @@ function VlookUp(arr, value){
 // -----> Recherche par nom de projet - (pas trop maitrisé mais fonctionne)
 function SearchBar() {
     var input, filter, li, a, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("SearchInput");
     filter = input.value.toUpperCase();
     li = document.getElementsByClassName("filterDiv");
     for (i = 0; i < li.length; i++) {
@@ -648,12 +648,12 @@ function ShowMobileNav() {
 
 // -----> Afficher masquer l'affichage en tableau ou en gridcard
 function htmlTableSwitch(){
-    HideClassSwitch("csv-preview");
-    HideClassSwitch("grid-preview");
+    HideClassSwitch("TabPreview");
+    HideClassSwitch("CardPreview");
     HideClassSwitch("FilterBtn");
-    HideClassSwitch("filters-list");
-    HideClassSwitch("btn-reset");
-    HideClassSwitch("myInput");
+    HideClassSwitch("FiltersList");
+    HideClassSwitch("BtnReset");
+    HideClassSwitch("SearchInput");
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 
@@ -667,21 +667,21 @@ function htmlTableSwitch(){
     
     
     if(document.getElementById("FilterBtn").classList.contains("active")){
-        HideClassSwitch("filters-zone");
+        HideClassSwitch("FiltersZone");
         document.getElementById("FilterBtn").classList.toggle("active");
     }
     
     if(document.getElementById("FilterBtn").classList.contains("active")){
-        HideClassSwitch("filters-zone");
+        HideClassSwitch("FiltersZone");
         document.getElementById("FilterBtn").classList.toggle("active");
     }    
         
-    if(document.getElementById("btn-switch").classList.contains('fa-image')){
-        document.getElementById("btn-switch").classList.add('fa-table-list');
-        document.getElementById("btn-switch").classList.remove('fa-image');
+    if(document.getElementById("BtnSwitch").classList.contains('fa-image')){
+        document.getElementById("BtnSwitch").classList.add('fa-table-list');
+        document.getElementById("BtnSwitch").classList.remove('fa-image');
     } else {
-        document.getElementById("btn-switch").classList.add('fa-image');
-        document.getElementById("btn-switch").classList.remove('fa-table-list');
+        document.getElementById("BtnSwitch").classList.add('fa-image');
+        document.getElementById("BtnSwitch").classList.remove('fa-table-list');
     }
     
     
@@ -702,7 +702,7 @@ function HideClassSwitch(id){
 // -----> Creation du code HTML du tableau d'affichage des filtres
 function htmlFiltersTableGenerator(content,id_ele) {
 
-    let preview = document.getElementById("div_" + id_ele);
+    let preview = document.getElementById("Div" + id_ele);
 
     let html = '<table id="table_' + id_ele + '" class="display table align-middle" style="width:100%">';
 

@@ -41,7 +41,7 @@ function htmlGridGenerator(content) {
     
     let html = '<div style="text-align: center; justify-content: center; margin: 0px auto;"  id="grid-show" class="grid-container">';
     
-    const data = content.slice(3);
+    let data = content.slice(3);
     
     data.forEach(function(row, index) {
         
@@ -69,6 +69,40 @@ function htmlGridGenerator(content) {
     html += '</div>';
 
     grid_preview.innerHTML = html;
+    
+    
+    // ----> Admonition Add
+    
+    
+    let GetElem = document.getElementById('AddAdmonition');
+    
+    data = content.slice(1);
+    
+    html = `<details class="ksln-info"><summary>Proposer d'ajouter un Katalog</summary>
+        <div style="background-color:#F5F5F5; padding:25px; border: 1px solid #DDD; border-radius:10px; margin-top:25px;">
+            <h2>Décrivez-nous un peu ce Katalog : </h2>
+            <hr>
+            <div style="text-align:center;">
+                <input type="text" class="InputAdd" id="AddDesi" placeholder="Nom du Katalog">
+                <input type="text" class="InputAdd" id="AddDescr" placeholder="Description">
+                <input type="text" class="InputAdd" id="AddWeb" placeholder="Lien vers une images un logo (optionnel) : https://...">
+                <input type="text" class="InputAdd" id="AddImg" placeholder="Lien de redirection : https://...">
+                <br><button class="btn neumorphic-btn" onclick="TestAddProject();">Valider</button><button id="CopyCodeAdd" class="btn neumorphic-btn hide" onclick="CopyAddCode()">Copier le code d'ajout</button>                    
+            </div>
+            <div id="TestZoneAdd"></div>
+            <div class="hide" id="AddStep2">
+                <hr>
+                <p>Vous pouvez nous transmettre le code d'ajout par le biais de notre <b>formulaire contact</b>.</p><a href="` + data[0][0] + `" target="_blank">
+                <button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
+                <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet.</p><a href="` + data[0][1] + `" target="_blank">
+                <button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a>                
+            </div>
+        </div><br>    
+    </details>
+    <hr>
+    <p style="color:#BBB; font: italic normal 300 16px/2 Roboto;"><i style="color:var(--md-primary-fg-color);" class="fa-solid fa-share-nodes"></i> : Katalog importé d'un site exterieur</p>`;
+    
+    GetElem.innerHTML = html;
 }
 
 

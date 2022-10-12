@@ -1,5 +1,5 @@
 // Mise à zéro des filtres et de la fonction de recherche avancée 'Et/Ou'
-var param_results;
+let param_results;
 var filters = [];
 var toggle = 0;
 const fromDb = undefined;
@@ -16,6 +16,7 @@ window.onload = function() {
           skipEmptyLines: true,
           complete: function(results) {
                 console.log("Finished:", results.data);
+                param_results=results.data;
           }
     });
 
@@ -267,7 +268,7 @@ function htmlParamGenerator(content) {
 
     //html = '<div><h2 style="margin 0px !important; color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - Modèles numériques.</h2></div>'
     
-    html = '<button class="btn neumorphic-btn" id="BtnAdd" onclick="PrintFilterPopup();HideClassSwitch(\'PopupAdd\');HideClassSwitch(\'Content\')"><i class="fa-solid fa-plus"></i></button>';
+    html = '<button class="btn neumorphic-btn" id="BtnAdd" onclick="PrintFilterPopup();HideClassSwitch(\'PopupAdd\');HideClassSwitch(\'Content\');"><i class="fa-solid fa-plus"></i></button>';
     
     html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'FiltersZone\');"><i class="fa-solid fa-filter"></i></button>'; 
     
@@ -283,18 +284,17 @@ function htmlParamGenerator(content) {
     let katalog_title = document.getElementById('KatalogTitle'); 
     
     html = `<h2 style="color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - ` + data[3][1] + `&emsp;
-                <br><p style="color:#BBB; font-size: 16px;">` + data[8][1] + `</p>
                 <br id="BrMobile"><br id="BrMobile">
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
                 </button>
-                <button id="ShowNav" class="btn neumorphic-btn active" onclick="ShowMobileNav();">
+                <button id="ShowNav" class="btn neumorphic-btn active" onclick="ShowMobileNav();HideClassSwitch(\'KatalogDescr\')">
                     <i class="fa-solid fa-eye"></i>
                 </button>
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2>`;
+            </h2><br><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px;">` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

@@ -56,11 +56,20 @@
 }
 
 
-
-
-
 a.md-content__button.md-icon {
     display: none !important;
+}
+
+
+
+/* ------ COMMUN CLASS ------*/
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 

@@ -1,5 +1,5 @@
 // Mise à zéro des filtres et de la fonction de recherche avancée 'Et/Ou'
-let param_results;
+var param_results = [];
 var filters = [];
 var toggle = 0;
 const fromDb = undefined;
@@ -295,7 +295,7 @@ function htmlParamGenerator(content) {
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px;">` + data[8][1] + `</p>`;
+            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 300;"><hr>` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

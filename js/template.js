@@ -762,7 +762,7 @@ function TestAddProject () {
  
     let html = "";
     
-    let grid_preview = document.getElementById('TestZoneAdd');
+    let grid_preview = document.getElementById('AddZoneTest');
     
     const data = document.getElementsByClassName('InputAdd');
         

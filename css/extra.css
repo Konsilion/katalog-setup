@@ -104,7 +104,7 @@ a.md-content__button.md-icon {
 }
 .md-typeset .ksln-info > .admonition-title,
 .md-typeset .ksln-info > summary {
-  background-color: var(--md-primary-fg-color);
+  background-color: rgba(0,0,0,0.1);
 }
 .md-typeset .ksln-info > .admonition-title::before,
 .md-typeset .ksln-info > summary::before {

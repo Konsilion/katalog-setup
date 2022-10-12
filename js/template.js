@@ -34,7 +34,7 @@ window.onload = function() {
     // -----> Lancement du script starter - Ecoute des actions sur boutons par exemple
     var extra_js = document.createElement('script');
 
-    extra_js.setAttribute('src','https://gitcdn.link/cdn/Konsilion/katalog-setup/master/js/starter.js');
+    extra_js.setAttribute('src','https://konsilion.github.io/katalog-setup/js/starter.js');
 
     document.head.appendChild(extra_js);
 }

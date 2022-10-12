@@ -1,6 +1,6 @@
 setTimeout(function(){
     all_grid();
-    var loader = document.getElementById("container-loader");
+    var loader = document.getElementById("LoaderContainer");
     var content = document.getElementById("content");
     //w3AddClass(loader, "hide");
     w3RemoveClass(content, "hide");

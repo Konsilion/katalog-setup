@@ -295,7 +295,7 @@ function htmlParamGenerator(content) {
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 300;"><hr>` + data[8][1] + `</p>`;
+            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 300; border-top:1px solid #DDD"><br>` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

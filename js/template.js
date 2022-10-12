@@ -9,6 +9,14 @@ let arr_filters;
 // Transformations CSV vers HTML
 window.onload = function() {
 
+    Papa.parse(window.location.pathname + "../data/parametres.csv", { 
+        download: true,
+        delimiter: ";",
+        skipEmptyLines: true,
+        complete: param_result
+    });  
+    
+    
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../data/data.csv", { 
@@ -16,7 +24,7 @@ window.onload = function() {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(results.data);
+            htmlGridGenerator(results.data,param_result.data);
         }
     });    
 
@@ -54,13 +62,13 @@ window.onload = function() {
 
 
 // -----> Créée le filtres principaux
-function htmlFilterGenerator(content) {
+function htmlFilterGenerator(content,param_content) {
     
     const all = "'all'"
     
     let grid_filter = document.getElementById('Filter1Zone');
     
-    let html = "<b>Filtres principaux</b><br><br>";
+    let html = "<b>" + param_content.slice(6)[0][1] + "</b><br><br>";
     
     const data = content.slice(1);
     
@@ -273,6 +281,7 @@ function htmlParamGenerator(content) {
     let katalog_title = document.getElementById('KatalogTitle'); 
     
     html = `<h2 style="color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - ` + data[3][1] + `&emsp;
+                <br><p>` + data[8][1] + `</p>
                 <br id="BrMobile"><br id="BrMobile">
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
@@ -283,8 +292,7 @@ function htmlParamGenerator(content) {
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2>
-            `;
+            </h2>`;
     
     katalog_title.innerHTML = html;
     

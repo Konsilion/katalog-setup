@@ -66,10 +66,3 @@
               inset -3px -3px 5px rgba(255, 255, 255, 1),
               inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
 }
-
-@media only screen and (min-width: 1220px) {
-    #grid-preview {
-       padding: 0px 0px 0px 0px;
-    }
-}
-

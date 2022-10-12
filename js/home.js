@@ -37,9 +37,9 @@ function htmlGridGenerator(content) {
     
     let Ilogo = "";
     
-    let grid_preview = document.getElementById('grid-preview');
+    let grid_preview = document.getElementById('CardPreview');
     
-    let html = '<div style="text-align: center; justify-content: center; margin: 0px auto;"  id="grid-show" class="grid-container">';
+    let html = '<div style="text-align: center; justify-content: center; margin: 0px auto;"  id="CardShow" class="grid-container">';
     
     let data = content.slice(3);
     
@@ -111,7 +111,7 @@ function TestAddProject () {
  
     let html = "";
     
-    let grid_preview = document.getElementById('TestZoneAdd');
+    let grid_preview = document.getElementById('AddZoneTest');
     
     const data = document.getElementsByClassName('InputAdd');
 

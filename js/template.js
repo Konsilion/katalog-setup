@@ -67,6 +67,8 @@ function htmlFilterGenerator(content) {
     data.forEach(function(row, index) {    
         html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\'' + data[index][0] + '\')"> ' + data[index][1] + '</button>';
     });
+    
+    html += '<br>';
 
     grid_filter.innerHTML = html;
 }
@@ -78,7 +80,7 @@ function html_s_FilterGenerator(content) {
 
     let grid_s_filter = document.getElementById('Filter2Zone');
 
-    let html = '<b>Filtres secondaires</b><br><br>';
+    let html = '<b>Filtres secondaires</b><br>';
     
     const data = content.slice(1);
     
@@ -278,7 +280,7 @@ function htmlParamGenerator(content) {
                 <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
                     <i class="fa-solid fa-image" id="BtnSwitch"></i>
                 </button>
-            </h2><p id="KatalogDescr" class="hide" style="color:#AAA; font-size: 18px; font-weight: 350; border-top:1px solid #EEE"><br>` + data[8][1] + `</p>`;
+            </h2><p id="KatalogDescr" class="" style="color:#AAA; font-size: 18px; font-weight: 350; border-top:1px solid #EEE"><br>` + data[8][1] + `</p>`;
     
     katalog_title.innerHTML = html;
     

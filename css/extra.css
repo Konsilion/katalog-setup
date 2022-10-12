@@ -96,16 +96,15 @@ a.md-content__button.md-icon {
 
 
 :root {
-  --md-admonition-icon--ksln-info: url(../../images/circle-info-solid.svg)
+  --md-admonition-icon--ksln-info: url(https://katalog.konsilion.fr/latest/images/circle-info-solid.svg)
 }
-
 .md-typeset .admonition.ksln-info,
 .md-typeset details.ksln-info {
   border-color: white;
 }
 .md-typeset .ksln-info > .admonition-title,
 .md-typeset .ksln-info > summary {
-  background-color: var(--md-primary-fg-color-light);
+  background-color: var(--md-primary-fg-color);
 }
 .md-typeset .ksln-info > .admonition-title::before,
 .md-typeset .ksln-info > summary::before {

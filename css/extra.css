@@ -76,11 +76,11 @@ a.md-content__button.md-icon {
 /* ------ COMMUN CLASS ------*/
 
 .show {
-  display: block;
+  display: block !important;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .ellipsis {

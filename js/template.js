@@ -3,7 +3,6 @@
 var filters = [];
 var toggle = 0;
 const fromDb = undefined;
-//var arr_filters = [[]];
 let arr_filters;
 
 
@@ -12,7 +11,7 @@ window.onload = function() {
 
     
     // -----> Données de votre liste de projet - Gridcard
-    Papa.parse("https://gitcdn.link/cdn/Konsilion/PicoJoule/master/mkdocs/docs/katalog/communautes/data/data.csv", { 
+    Papa.parse(window.location.pathname + "../data/data.csv", { 
         download: true,
         delimiter: ";",
         skipEmptyLines: true,
@@ -35,10 +34,15 @@ window.onload = function() {
     // -----> Lancement du script starter - Ecoute des actions sur boutons par exemple
     var extra_js = document.createElement('script');
 
-    extra_js.setAttribute('src','../../backend/starter.js');
+    extra_js.setAttribute('src','https://gitcdn.link/cdn/Konsilion/katalog-setup/master/js/starter.js');
 
     document.head.appendChild(extra_js);
 }
+
+
+
+
+
 
 
 
@@ -56,7 +60,7 @@ function htmlFilterGenerator(content) {
     
     let grid_filter = document.getElementById('grid-filter');
     
-    let html = "";
+    let html = "<b>Filtres principaux</b><br><br>";
     
     const data = content.slice(1);
     
@@ -74,7 +78,7 @@ function html_s_FilterGenerator(content) {
 
     let grid_s_filter = document.getElementById('grid-s-filter');
 
-    let html = '';
+    let html = '<b>Filtres secondaires</b><br><br>';
     
     const data = content.slice(1);
     
@@ -240,19 +244,11 @@ function htmlParamGenerator(content) {
     
     let copyright_zone = document.getElementById('copyright-zone'); 
     
-    html = '<p style="margin:10px;text-align:center;color:#CAC7C7;font-size:14px;"><img style="filter: grayscale(100%);height:40px;left-margin:100px;" src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"><br><br>' + data[2][1] + '</p>';
+    html = '<p style="margin:10px;text-align:center;color:#CAC7C7;font-size:14px;"><img style="filter: grayscale(100%);height:40px;left-margin:100px;" src="' + data[5][1] + '"><br><br>' + data[2][1] + '</p>';
 
     copyright_zone.innerHTML = html;
     
-    
-    // -----> Logo et titre
-    
-    let Banner = document.getElementById('Banner');
-    
-    //html = '<h2 style="vertical-align: middle;padding-left:15px;">Bienvenue sur la Forge de Picojoule</h2>';
-    
-    //Banner.innerHTML = html;
-    
+        
     // -----> Ajouter les boutons de navigation
     
     let btn_zone = document.getElementById('btn-zone'); 
@@ -270,6 +266,75 @@ function htmlParamGenerator(content) {
     html += '<br><br><input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Rechercher ..." title="Rechercher"></div>';
     
     btn_zone.innerHTML = html;
+    
+    
+    // -----> Titre
+    
+    let katalog_title = document.getElementById('KatalogTitle'); 
+    
+    html = `<h2 style="color:#3B5F7F; font-size: 30px;"><b>Katalog</b> - ` + data[3][1] + `&emsp;
+                <br id="BrMobile"><br id="BrMobile">
+                <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="parent.ReturnKatalog();">
+                    <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
+                </button>
+                <button id="ShowNav" class="btn neumorphic-btn active" onclick="ShowMobileNav();">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="btn neumorphic-btn" onclick="htmlTableSwitch();">
+                    <i class="fa-solid fa-image" id="btn-switch"></i>
+                </button>
+            </h2>
+            `;
+    
+    katalog_title.innerHTML = html;
+    
+    
+    // -----> Popup ajout step 2
+    
+    let GetElem = document.getElementById('AddStep2');
+    
+    html = `<hr>
+                <p>Vous pouvez nous transmettre le code d'ajout par le biais de notre <b>formulaire contact</b>.</p>
+                <a href="` + data[4][1] + `" target="_blank">
+                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button>
+                </a>
+                <hr>
+                <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet.</p>
+                <a href="` + data[0][1] + `" target="_blank">
+                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button>
+                </a>`;
+    
+    GetElem.innerHTML = html;
+    
+    
+    
+    // -----> Popup creation
+    
+    GetElem = document.getElementById('AddStep1');
+    
+    html = `<a href="#" onclick="HideClassSwitch('popup2');HideClassSwitch('content')"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
+                <hr>
+                <h2>Décrivez-nous votre projet : </h2>
+                <hr>
+                <details class="ksln-info"><summary>Les différents filtres de ce Katalog</summary>
+                    <br>
+                    <div id="div_flt1"></div>
+                    <hr>
+                    <div id="div_flt2"></div>
+                </details>
+                <div style="text-align:center;">
+                    <input type="text" class="InputAdd" id="AddDesi" placeholder="Désignation">
+                    <input type="text" class="InputAdd" id="AddDescr" placeholder="Description">
+                    <input type="text" class="InputAdd" id="AddWeb" placeholder="Lien de redirection : https://...">
+                    <input type="text" class="InputAdd" id="AddFilt" placeholder="Filtres à appliquer">
+                    <input type="text" class="InputAdd" id="AddImg" placeholder="Lien vers une images (optionnel) : https://">
+                    <input type="text" class="InputAdd" id="AddPers" placeholder="Auteur.ices et partenaires">
+                    <br><button class="btn neumorphic-btn" onclick="TestAddProject();">Valider</button><button id="CopyCodeAdd" class="btn neumorphic-btn hide" onclick="CopyAddCode()">Copier le code d'ajout</button>
+                </div>
+                <div id="TestZoneAdd"></div>`;
+    
+    
+    GetElem.innerHTML = html;
 }
 
 
@@ -300,6 +365,19 @@ function PrintFilterPopup() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -669,13 +747,14 @@ function htmlFiltersTableGenerator(content,id_ele) {
         initDataTable("#table_" + id_ele);
     }
 }
+
+
 function initDataTable(table_id) {
     $(table_id).dataTable({
         dom: 'Bfrtip',
         order: [[0, 'asc']],        
     })
 }
-
 
 
 
@@ -736,26 +815,3 @@ function CopyAddCode() {
 
 
 
-
-
-
-
-
-
-
-// ============== Fonction non utilisée depuis 06-09-2022 =================
-
-
-
-
-
-// ----> Non utilisée - pour le moment, elle permettrait la gestion du Ou/Et lors de la recherche
-function arraysAreIdentical(arr1, arr2){
-    if (arr1.length !== arr2.length) return false;
-    for (var i = 0, len = arr1.length; i < len; i++){
-        if (arr1[i] !== arr2[i]){
-            return false;
-        }
-    }
-    return true; 
-}

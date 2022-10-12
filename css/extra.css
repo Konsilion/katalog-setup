@@ -29,7 +29,7 @@
 
 
 .md-tabs {
-    background-color: white !important;
+    background-color: rgba(0,0,0,.87) !important;
     padding: 0px;
 }
 
@@ -45,14 +45,15 @@
 }
 
 .md-tabs__link {
-    color: black;
+    color: #DDD;
     max-height: 10px;
     vertical-align: middle;
     margin-top:8px;
 }
 
 .md-tabs__link--active {
-    text-decoration: underline;
+    text-decoration: bold;
+    color: white;
 }
 
 

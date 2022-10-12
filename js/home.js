@@ -41,7 +41,7 @@ function htmlGridGenerator(content) {
     
     let html = '<div style="text-align: center; justify-content: center; margin: 0px auto;"  id="grid-show" class="grid-container">';
     
-    const data = content.slice(1);
+    const data = content.slice(5);
     
     data.forEach(function(row, index) {
         

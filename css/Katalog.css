@@ -1,128 +1,13 @@
-
-
-
 h1 {
     display:none;
 } 
 
 
-
-#BrMobile {
-    display: none;
-}
-
-
-@media only screen and (max-width: 737px) {
-#BrMobile {
-    display: block;
-}
-} 
-
-
-
-
-
-
-
-
-
-
 /*----------------------------
-    AUTRES ELEMENTS 
------------------------------*/  
-
+BUTTONS & INPUT ON KATALOG MENU
+-----------------------------*/ 
     
-/* ---- Status de base les FilerDiv sont caché ----- */
-.filterDiv {
-  display: none;
-}
-
-
-   
-    
-/* ---- Particularité du boutons réinitialiser ----- */
-
-.btn-reset:hover {
-    color: white !important;  
-    background-color: #DD160A;
-    box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
-              inset -7px -7px 10px rgba(255, 255, 255, 0.2),
-              inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
-}
-
-
-
-#btn-add { 
-    background-color: rgba(125, 236, 33, 0.1);
-}
-
-#btn-add:hover {
-    color: white !important;  
-    background-color: green;
-    box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
-              inset -7px -7px 10px rgba(255, 255, 255, 0.2),
-              inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
-}
-
-
-
-
-#param-zone {
-    box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
-    transition: box-shadow 0.5s linear;
-}
-
-#param-zone:hover {
-    box-shadow: 0px -25px 22px -32px rgba(30, 30, 30, 0.7);
-}
-
-
-
-
-.ellipsis {
-    max-width: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-   
-
-
-#myInput {
-  background-color: #F5F5F5;
-  width: 100%;
-  max-width: 450px;
-  font-size: 16px;
-  padding: 12px 12px 12px 12px;
-  border: 1px solid #ddd;
-  margin: 0px 12px 0px 0px;
-  border-radius: 5px;
-  transition: width 0.6s linear;
-  transition: background-color 0.1s linear;
-}
-
-
-#myInput:hover {
-    background-color: white;
-}
-
-#myInput:focus {
-    background-color: white;
-    width: 100%;
-    transition: width 0.3s linear, max-width 0.3s linear;
-    max-width: 100%;
-    box-shadow: 0px 0px 6px 0px rgba(30, 30, 30, 0.2);
-}
-
-
-#myInput:focus::placeholder {
-    color: white;
-}    
-    
-
-    
-    
-#catalog-navbar {
+#KatalogMenu {
     z-index: 99 !important;
     padding: 25px 25px 25px 25px;
     border-radius:0px;
@@ -132,94 +17,52 @@ h1 {
 }
 
     
-
-#btn-zone-mobile {
-    justify-content: left;
-    text-align: left;
-    font-size: 25px;
-    margin: 25px 0px 0px 25px
-}
-
-    
-    
-#csv-preview {
-    margin: 0px 50px;
-}
-
-
-
-@media only screen and (max-width: 1219px) {
-    #csv-preview {
-        margin: 0px 10px;
-    }
-}    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-#filters-zone {
+#FiltersZone {
     padding: 0px 0px 0px 0px;
     width: 100%;
 } 
 
 
-#filters-list {
+#FiltersList {
     padding: 0px 25px 0px 0px;
 }
 
 
 
-#grid-s-filter { 
+#Filter1Zone { 
     padding-top: 25px;
     margin-bottom: 25px;
     border-top: solid 1px #e0dfdf;
 } 
 
-#grid-filter { 
+#Filter2Zone { 
     padding-top: 25px;
     margin-bottom: 25px;
     border-top: solid 1px #e0dfdf;
 } 
 
 
-.filter_descr {
-    padding: 0px;
-    margin:0px;
-    font: italic small-caps bold 16px/2 cursive !important;
-}
-
-#grid-filter, #grid-s-filter {
+#Filter1Zone, #Filter2Zone {
     justify-content: left;
     text-align: left;   
 }
 
 
 @media only screen and (max-width: 600px) {
-    #grid-filter, #grid-s-filter {
+    #Filter1Zone, #Filter2Zone {
         justify-content: center !important;
         text-align: center !important;   
     }
 }  
 
 
-#grid-s-filter > ul {
+#Filter2Zone > ul {
     padding:0px;
     margin:0px;
 }
 
 
-#grid-s-filter > ul > li{ /* will style only the top level li */
+#Filter2Zone > ul > li{ /* will style only the top level li */
     list-style: none;
 	display: inline-block;
     padding:0px;
@@ -228,7 +71,7 @@ h1 {
     
 
     
-#grid-s-filter li ul{
+#Filter2Zone li ul{
     font: italic small-caps bold 16px/2 cursive;
 	position:absolute;
 	list-style:none;
@@ -243,50 +86,7 @@ h1 {
 }
 
 
-.DescrFilter {
-    visibility: hidden;
-    height: 0;
-    transition: height 0.20s ease-out;
-    overflow: hidden;
-
-} 
-
-.neumorphic-btn.filtre:hover > .DescrFilter {
-    visibility: visible;
-    height: 20px;
-    transition: height 0.10s ease-in;
-    transition-delay:0.55s;
-} 
-
-
-
-
-
-
-/*----------------------------
-    AUTRES ELEMENTS 
------------------------------*/  
-
-    
-/* ---- Status de base les FilerDiv sont caché ----- */
-.filterDiv {
-  display: none;
-}
-
-/* ---- Les FilerDiv sont montrés si show est ajouté à la classe ----- */
-.show {
-  display: block;
-}
-
-/* ---- Permet de cacher certains éléments ----- */
-.hide {
-  display: none;
-}
-   
-    
-/* ---- Particularité du boutons réinitialiser ----- */
-
-.btn-reset:hover {
+#BtnReset:hover {
     color: white !important;  
     background-color: #DD160A;
     box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
@@ -294,13 +94,11 @@ h1 {
               inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
-
-
-#btn-add { 
+#BtnAdd { 
     background-color: rgba(125, 236, 33, 0.1);
 }
 
-#btn-add:hover {
+#BtnAdd:hover {
     color: white !important;  
     background-color: green;
     box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
@@ -309,64 +107,91 @@ h1 {
 }
 
 
+#SearchInput {
+  background-color: #F5F5F5;
+  width: 100%;
+  max-width: 450px;
+  font-size: 16px;
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #ddd;
+  margin: 0px 12px 0px 0px;
+  border-radius: 5px;
+  transition: width 0.6s linear;
+  transition: background-color 0.1s linear;
+}
 
 
-#param-zone {
+#SearchInput:hover {
+    background-color: white;
+}
+
+#SearchInput:focus {
+    background-color: white;
+    width: 100%;
+    transition: width 0.3s linear, max-width 0.3s linear;
+    max-width: 100%;
+    box-shadow: 0px 0px 6px 0px rgba(30, 30, 30, 0.2);
+}
+
+
+#SearchInput:focus::placeholder {
+    color: white;
+}    
+
+
+#SearchParam {
     box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
     transition: box-shadow 0.5s linear;
 }
 
-#param-zone:hover {
+#SearchParam:hover {
     box-shadow: 0px -25px 22px -32px rgba(30, 30, 30, 0.7);
 }
 
-
-
-.md-copyright {
-    max-width: 25px !important;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
+#FiltersTag {
+    justify-content: left;
+    text-align: left;
+    font-size: 25px;
+    margin: 25px 0px 0px 25px
 }
 
+    
 
-.ellipsis {
-    max-width: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+
+
+
+/*----------------------------
+   KATALOG DATA - CARD & TAB
+-----------------------------*/ 
+
+#CardPreview {
+	margin: 0px 50px;
 }
-   
-
-
 
 @media only screen and (min-width: 1220px) {
-    #grid-preview {
+    #CardPreview {
        padding: 0px 0px 0px 0px;
     }
 }
-    
-    
-    
+
+#TabPreview {
+    margin: 0px 50px;
+}
+
+@media only screen and (max-width: 1219px) {
+    #TabPreview {
+        margin: 0px 10px;
+    }
+}    
+  
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----  KATALOG POPUP ----*/
+/*----------------------------
+    KATALOG POPUP 
+-----------------------------*/
 
 .popup {
     background-color: #F5F5F5;
@@ -389,11 +214,11 @@ h1 {
 
 
 
+/*----------------------------
+    KATALOG LOADER
+-----------------------------*/
 
-
-/* ----  KATALOG LOADER ----*/
-
-#container-loader {
+#LoaderContainer {
   width: 100px;
   height: 425px;
   position: absolute;
@@ -402,7 +227,7 @@ h1 {
 }
     
     
-#loader {
+#Loader {
   width: 70px;
   height: 70px;
   border-style: solid;
@@ -426,5 +251,28 @@ h1 {
   75% { border-width: 3px;}
   100% { border-width: 10px;}
 }
+
+
+
+
+
+
+/*----------------------------
+    AUTRES ELEMENTS 
+-----------------------------*/  
+
     
-    
+/* ---- Status de base les FilerDiv sont caché ----- */
+.filterDiv {
+  display: none;
+}
+
+#BrMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 737px) {
+	#BrMobile {
+		display: block;
+	}
+}

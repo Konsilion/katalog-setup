@@ -106,7 +106,7 @@ a.md-source {
 }
 .md-typeset .ksln-info > .admonition-title,
 .md-typeset .ksln-info > summary {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.03);
 }
 .md-typeset .ksln-info > .admonition-title::before,
 .md-typeset .ksln-info > summary::before {

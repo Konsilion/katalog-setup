@@ -1,12 +1,3 @@
-setTimeout(function(){
-    all_grid();
-    var loader = document.getElementById("LoaderContainer");
-    var content = document.getElementById("Content");
-    w3RemoveClass(content, "hide");
-    loader.style.display = "none";
-}, 2000);
-
-
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("Filter1Zone");
 var btns = btnContainer.getElementsByClassName("btn");

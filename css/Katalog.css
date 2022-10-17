@@ -164,11 +164,6 @@ BUTTONS & INPUT ON KATALOG MENU
    KATALOG DATA - CARD & TAB
 -----------------------------*/ 
 
-
-#CardPreview {
-	height:800px
-}
-
 @media only screen and (min-width: 1220px) {
     #CardPreview {
        padding: 0px 0px 0px 0px;

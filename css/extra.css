@@ -20,13 +20,6 @@
 	margin-left:0px;
 }
 
-.md-copyright {
-    max-width: 100% !important;
-    text-overflow: ellipsis !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-}
-
 .md-tabs {
     background-color: rgba(0,0,0,.7) !important;
     padding: 0px;

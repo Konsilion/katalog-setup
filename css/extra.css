@@ -21,7 +21,7 @@
 }
 
 .md-copyright {
-    max-width: 350px !important;
+    max-width: 100% !important;
     text-overflow: ellipsis !important;
     overflow: hidden !important;
     white-space: nowrap !important;

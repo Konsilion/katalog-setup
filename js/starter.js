@@ -23,30 +23,7 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     }
   });
-}
-
-
-// -----> Filtres principaux
-Papa.parse(window.location.pathname + "../data/filtres.csv", { 
-    download: true,
-    delimiter: ",",
-    skipEmptyLines: true,
-    complete: results => {
-        arr_filters = results.data;
-        htmlFilterGenerator(results.data);
-    }
-});    
-
-// -----> Filtres secondaire
-Papa.parse(window.location.pathname + "../data/s_filtres.csv", { 
-    download: true,
-    delimiter: ",",
-    skipEmptyLines: true,
-    complete: results => {
-        arr_filters = arr_filters.concat(results.data);
-        html_s_FilterGenerator(results.data);
-    }
-});   
+}  
 
 
 

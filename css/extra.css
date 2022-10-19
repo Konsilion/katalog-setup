@@ -60,6 +60,10 @@
 }
 
 
+.md-footer__inner.md-grid {
+    display:none !important;
+}
+
 a.md-content__button.md-icon {
     display: none !important;
 }

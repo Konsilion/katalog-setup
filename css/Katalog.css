@@ -32,13 +32,13 @@ BUTTONS & INPUT ON KATALOG MENU
 #Filter1Zone { 
     padding-top: 0px;
     margin-bottom: 25px;
-    border-top: solid 1px #e0dfdf;
+    border-top: solid 1px var(--md-default-fg-color--lightest);
 } 
 
 #Filter2Zone { 
     padding-top: 25px;
     margin-bottom: 25px;
-    border-top: solid 1px #e0dfdf;
+    border-top: solid 1px var(--md-default-fg-color--lightest);
 } 
 
 

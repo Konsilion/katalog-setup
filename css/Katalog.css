@@ -47,13 +47,6 @@ BUTTONS & INPUT ON KATALOG MENU
 }
 
 
-@media only screen and (max-width: 600px) {
-    #Filter1Zone, #Filter2Zone {
-        justify-content: center !important;
-        text-align: center !important;   
-    }
-}  
-
 
 #Filter2Zone > ul {
     padding:0px;

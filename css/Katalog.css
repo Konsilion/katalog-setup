@@ -95,7 +95,7 @@ BUTTONS & INPUT ON KATALOG MENU
 }
 
 
-#SearchInput {
+.search-input {
   background-color: #F5F5F5;
   width: 100%;
   max-width: 450px;

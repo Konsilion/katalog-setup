@@ -43,14 +43,13 @@ function KatalogConstruction(location,name) {
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlGridGenerator(csvExtractionKatalog(results.data,name));
+            htmlGridGenerator(csvExtractionKatalog(results.data,name),location,name);
         }
     });
     
 
     // -----> Données de votre liste de projet - Gridcard
-    console.log(location + "katalogs/katalogs.csv");
-    
+
     Papa.parse(location + "katalogs/katalogs.csv", { 
         download: true,
         delimiter: ";",
@@ -100,8 +99,7 @@ function csvExtractionKatalog(content,name) {
 
 
 
-function KatalogSwitch(){
-    
+function KatalogSwitch(){ 
     HideClassSwitch('LoaderContainer');
     HideClassSwitch('Bibliotek');
     
@@ -114,8 +112,6 @@ function KatalogSwitch(){
 
 
 function BibliotekSwitch(){
-    
-    
     ele = document.getElementById('FiltersZone');
     w3RemoveClass(ele, "show");
     w3AddClass(ele, "hide")
@@ -124,6 +120,18 @@ function BibliotekSwitch(){
     
     HideClassSwitch('Katalog');
     HideClassSwitch('Bibliotek');
+};
+
+function OpenBibliotek(){ 
+    
+    HideClassSwitch('Bibliotek');    
+    HideClassSwitch('LoaderContainer');
+
+    setTimeout(function(){
+        HideClassSwitch('Bibliotek');
+        all_grid();
+        HideClassSwitch('LoaderContainer');
+    }, 1000);
 };
 
 
@@ -178,17 +186,17 @@ function html_s_FilterGenerator(content,name) {
 
 
 // -----> Créée les gridcards depuis le fichier data.csv
-function htmlGridGenerator(content) {   
+function htmlGridGenerator(content,location,name) {   
     
     const data = content.slice(0);
         
     document.getElementById("CardGrid").innerHTML = "";
     
         
-    document.getElementById("CardGrid").innerHTML += `
-        <div onclick="AddResources();" style="cursor: pointer;" class="card container add-card">
-            <div class="add-img"><img style="filter: grayscale(20%) opacity(40%)" src="https://cdn-icons-png.flaticon.com/512/7235/7235503.png"></div>
-        </div>`;
+    //document.getElementById("CardGrid").innerHTML += `
+    //    <div onclick="AddResources('` + location + `','` + name + `');" style="cursor: pointer;" class="card container add-card">
+    //        <div class="add-img"><img style="filter: grayscale(20%) opacity(40%)" src="https://cdn-icons-png.flaticon.com/512/7235/7235503.png"></div>
+    //    </div>`;
     
     data.forEach(function(row, index) {
         const card = ressourceCardTemplate.content.cloneNode(true).children[0]
@@ -300,9 +308,6 @@ function htmlParamGenerator(content,location,name) {
 
     const data = content.slice(0);
     
-    
-    
-    
     // -----> Filtres principaux
     Papa.parse(location + "katalogs/filters1.csv", { 
         download: true,
@@ -368,8 +373,8 @@ function htmlParamGenerator(content,location,name) {
     
     let katalog_title = document.getElementById('KatalogTitle'); 
     
-    html = `<h2 style="color:#6D6D6D; font-size: 30px; margin:0px auto;">Katalog - <b>` + data[0][3] + `</b>&emsp; 
-                <img style="float:right;margin:10px" width="80px" class="fit-picture" src="https://cdn-icons-png.flaticon.com/512/3616/3616558.png" alt="Bibliotek logo">
+    html = `<h2 style="color:#6D6D6D; font-size: 30px; margin:0px auto;">` + data[0][3] + `&emsp; 
+                <img onclick="AddResources('` + location + `','` + name + `');" width="125px" class="top-logo fit-picture" src="../../images/Add_Ressources.png" alt="Bibliotek logo">
                 <button id="ReturnKatalog" class="btn neumorphic-btn" onclick="BibliotekSwitch();">
                     <i class="fa-solid fa-person-walking-arrow-loop-left"></i>
                 </button>
@@ -381,28 +386,11 @@ function htmlParamGenerator(content,location,name) {
     
     
     
-
-    
-    
-    
-    
-    
-}
-
-
-function AddResources() {
-
-    HideClassSwitch('PopupAdd');
-    
-    HideClassSwitch('Katalog');
-    
-    w3RemoveClass(x[i], "active");
-    
     // -----> Popup creation
     
     let GetElem = document.getElementById('AddStep1');
     
-    html = `<a href="#" onclick="HideClassSwitch('AddStep2');HideClassSwitch('PopupAdd');HideClassSwitch('Katalog');"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
+    html = `<a style="cursor: pointer;" onclick="HideClassSwitch('PopupAdd');HideClassSwitch('Katalog');"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
                 <hr>
                 <h2>Décrivez-nous votre <b>ressource</b> :</h2>
                 <hr>
@@ -430,18 +418,35 @@ function AddResources() {
     
     GetElem = document.getElementById('AddStep2');
     
+    console.log(location)
+    
     html = `<hr>
-                <p>Vous pouvez nous transmettre le code d'ajout par le biais de notre <b>formulaire contact</b>.</p>
-                <a href="" target="_blank">
-                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre ressource</button>
+                <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre ressource.</p>
+                <a href="` + location + "katalogs/ressources.csv" + `" target="_blank">
+                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Directement en 2 clics</button>
                 </a>
                 <hr>
-                <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre ressource.</p>
-                <a href="" target="_blank">
-                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre ressource</button>
+                <p>Vous pouvez nous transmettre le code d'ajout par le biais de notre <b>formulaire contact</b>.</p>
+                <a href="` + data[0][4] + `" target="_blank">
+                    <button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Par une prise de contact</button>
                 </a>`;
     
     GetElem.innerHTML = html;
+    
+    
+    
+    
+    
+}
+
+
+function AddResources(location,name) {
+
+    HideClassSwitch('PopupAdd');
+    
+    HideClassSwitch('Katalog');
+    
+    PrintFilterPopup(location, name);
 }
 
 
@@ -461,7 +466,7 @@ function PrintFilterPopup(location, name) {
             htmlFiltersTableGenerator(csvExtractionKatalog(results.data,name),"Flt1");
         }
     });    
-    
+
     // -----> Filtres secondaire
     Papa.parse(location + "/katalogs/filters2.csv", { 
         download: true,
@@ -786,31 +791,27 @@ function htmlFiltersTableGenerator(content,id_ele) {
     if (content.length == 0 || typeof(content[0]) === 'undefined') {
         return null
     } else {
-        const header = content[0];
-        const data = content.slice(1);
+        
+        const header = ["CODE","Designation"];
+        const data = content.slice(0);
         
         html += '<thead class="table-dark">';
         html += '<tr>';
-        header.forEach(function(colData) {
-            html += '<th class="ellipsis">' + colData + '</th>';
-        });
+        html += '<th class="ellipsis">' + header[0] + '</th>';
+        html += '<th class="ellipsis">' + header[1] + '</th>';
         html += '</tr>';
         html += '</thead>';
         
         html += '<tbody>';
 
         data.forEach(function(row) {
-            if (header.length === row.length) {
-                html += '<tr>';
-                row.forEach(function(colData, index) {            
-                    if (index == 2) {
-                        html += '<td class="ellipsis"><a href="' + colData + '" target="_blank">' + colData + '</a></td>';
-                    } else {
-                        html += '<td class="ellipsis">' + colData + '</td>';
-                    };
-                });
-                html += '</tr>';
-            }
+            html += '<tr>';
+            row.forEach(function(colData, index) {            
+                if(index != 0){
+                    html += '<td class="ellipsis">' + colData + '</td>';
+                }
+            });
+            html += '</tr>';
         });
 
         html += '</tbody>';
@@ -855,11 +856,7 @@ function TestAddRessource() {
     html += '<a style="display: none;"><p>' + data[1].value + '</p></a></div>';
     
     grid_preview.innerHTML = html;
-        
-    if(document.getElementById("AddStep2").classList.contains("hide")) {
-        HideClassSwitch("AddStep2");
-    };
-    
+
     CopyAddCode();
     
 }

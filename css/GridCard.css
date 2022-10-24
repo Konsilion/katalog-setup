@@ -86,7 +86,7 @@
   color: black;
   font-size: 18px;  
   position: absolute;
-  border-radius: 10px; 
+  border-radius: 0px 0px 10px 10px; 
   bottom: 0;
   left: 0;
   right: 0;

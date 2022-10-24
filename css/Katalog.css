@@ -108,16 +108,16 @@ BUTTONS & INPUT ON KATALOG MENU
 }
 
 
-#SearchInput:hover {
+.search-input:hover {
     background-color: white;
 }
 
-#SearchInput:focus {
+.search-input:focus {
     background-color: white;
     box-shadow: 0px 0px 6px 0px rgba(30, 30, 30, 0.2);
 }
 
-#SearchInput:focus::placeholder {
+.search-input:focus::placeholder {
     color: white;
 }  
 

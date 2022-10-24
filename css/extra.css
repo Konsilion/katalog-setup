@@ -95,7 +95,7 @@ a.md-source {
 
 
 :root {
-  --md-admonition-icon--ksln-info: url(https://katalog.konsilion.fr/latest/images/circle-info-solid.svg)
+  --md-admonition-icon--ksln-info: url(https://img.icons8.com/ios-glyphs/344/info--v1.png)
 }
 .md-typeset .admonition.ksln-info,
 .md-typeset details.ksln-info {

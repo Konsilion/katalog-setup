@@ -588,7 +588,7 @@ function findLastBibliotekResult(content,contact,add) {
         });
 
                     
-        html += 'Vous devez renseigner ce code d\'import dans une nouvelle ligne<b> : &ensp;&ensp;../' (+ max + 1) + '/</b>';  
+        html += 'Vous devez renseigner ce code d\'import dans une nouvelle ligne<b> : &ensp;&ensp;../' + (max + 1) + '/</b>';  
         
         html += '</div>';
         

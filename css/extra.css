@@ -104,10 +104,11 @@ a.md-source {
 .md-typeset .ksln-info > .admonition-title,
 .md-typeset .ksln-info > summary {
   background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
 }
 .md-typeset .ksln-info > .admonition-title::before,
 .md-typeset .ksln-info > summary::before {
-  background-color: grey;
+  background-color: var(--md-primary-bg-color);
   -webkit-mask-image: var(--md-admonition-icon--ksln-info);
           mask-image: var(--md-admonition-icon--ksln-info);
 }

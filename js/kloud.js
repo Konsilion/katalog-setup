@@ -2,13 +2,27 @@ let klouds = [];
 const kloudCardTemplate = document.querySelector("[kloud-card-template]")
 const kloudCardContainer = document.querySelector("[klouds-grid-container]")
 
-
+let url_remote = "";
+let url_web = "";
 
 
 // Transformations CSV vers HTML
 window.onload = function() {
 
-    console.log(window.location.pathname);
+
+    // -----> Données de votre liste de projet - Gridcard
+    Papa.parse(window.location.pathname + "../../biblioteks/home.csv", { 
+        download: true,
+        delimiter: ";",
+        skipEmptyLines: true,
+        complete: results => {
+            GetURLs(results.data);
+        }
+    });    
+    
+    
+    
+    
     
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../home.csv", { 
@@ -20,29 +34,39 @@ window.onload = function() {
         }
     });
     
-    
-    
-    
+
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse(window.location.pathname + "../klouds-list.csv", { 
         download: true,
         delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
-            htmlKloudGenerator(results.data);
+            htmlKloudGenerator(results.data,(window.location.pathname + "../klouds-list.csv"));
         }
     });    
-    
-    
-    
-    
 }
+
+
+
+function GetURLs(bibl_info){
+
+    let data = bibl_info.slice(1);
+
+    url_remote = data[1][2];
+    
+    url_web = data[1][4];
+}
+
+
+
 
 
 // ========== LES FONCTIONS DE CREATION HTML =============
 
 // -----> Créée les gridcards depuis le fichier data.csv
 function htmlTitleKloudGenerator(content) {   
+    
+    console.log(url_remote)
     
     let data = content.slice(1);
     
@@ -51,8 +75,7 @@ function htmlTitleKloudGenerator(content) {
     let html = `<br>
                 <h1 style="display: block;">
                     ` + data[1][0] + `
-                    <img onclick="AddKloud('');" style="" width="75px" class="top-logo fit-picture" src="../../images/Add_Kloud.png" alt="Bibliotek logo">
-                    <a href='../../biblioteks/home'><img style="" width="75px" class="top-logo fit-picture" src="../../images/Go_Bibliotek.png" alt="Bibliotek logo"></a>
+                    <a class="a-slide" href="` + url_remote + `../stockages/home.csv" target="_blank"><img style="" width="30px" class="top-logo fit-picture" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="Bibliotek logo"></a>
                 </h1>
                 <p style="color:#AAA; font-size: 18px; font-weight: 350;">` + data[1][1] + `</p>`; 
     
@@ -92,9 +115,9 @@ function htmlKloudGenerator(content) {
         
     });
 
-    //html += `<div style="cursor: pointer;" class="card container add-card">
-    //            <div class="add-img"><img style="filter: grayscale(100%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/6537/6537728.png"></div>
-    //        </div>`;
+    html += `<div style="cursor: pointer;" class="card container add-card">
+                <a href="` + url_remote + `../stockages/klouds-list.csv" target="_blank"><div class="add-img"><img style="filter: grayscale(100%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/892/892258.png"></div></a>
+            </div>`;
     
     
     card.innerHTML += html;

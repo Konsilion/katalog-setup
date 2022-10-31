@@ -11,7 +11,7 @@ window.onload = function() {
 
 
     // -----> Données de votre liste de projet - Gridcard
-    Papa.parse(window.location.pathname + "../../biblioteks/home.csv", { 
+    Papa.parse(window.location.pathname + "../../../parametres.csv", { 
         download: true,
         delimiter: ";",
         skipEmptyLines: true,
@@ -50,11 +50,12 @@ window.onload = function() {
 
 function GetURLs(bibl_info){
 
-    let data = bibl_info.slice(1);
+    let data = bibl_info.slice(0);
 
-    url_remote = data[1][2];
+    url_web = data[0][1];
     
-    url_web = data[1][4];
+    url_remote = data[1][1];
+    
 }
 
 
@@ -73,7 +74,7 @@ function htmlTitleKloudGenerator(content) {
     let html = `<br>
                 <h1 style="display: block;">
                     ` + data[1][0] + `
-                    <a class="a-slide" href="` + url_remote + `../stockages/home.csv" target="_blank"><img style="" width="30px" class="top-logo fit-picture" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="Bibliotek logo"></a>
+                    <a class="a-slide" href="` + url_remote + `../klouds/home.csv" target="_blank"><img style="" width="30px" class="top-logo fit-picture" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="Bibliotek logo"></a>
                 </h1>
                 <p style="color:#AAA; font-size: 18px; font-weight: 350;">` + data[1][1] + `</p>`; 
     
@@ -114,7 +115,7 @@ function htmlKloudGenerator(content) {
     });
 
     html += `<div style="cursor: pointer;" class="card container add-card">
-                <a href="` + url_remote + `../stockages/klouds-list.csv" target="_blank"><div class="add-img"><img style="filter: grayscale(100%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/892/892258.png"></div></a>
+                <a href="` + url_remote + `../klouds/klouds-list.csv" target="_blank"><div class="add-img"><img style="filter: grayscale(100%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/892/892258.png"></div></a>
             </div>`;
     
     

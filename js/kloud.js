@@ -65,9 +65,7 @@ function GetURLs(bibl_info){
 
 // -----> Créée les gridcards depuis le fichier data.csv
 function htmlTitleKloudGenerator(content) {   
-    
-    console.log(url_remote)
-    
+
     let data = content.slice(1);
     
     let GetElem = document.getElementById('KloudsTitle');

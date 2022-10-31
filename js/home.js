@@ -26,11 +26,22 @@ searchBibliotek.addEventListener("input", e => {
 
 
 
-// Transformations CSV vers HTML
+
 window.onload = function() {
 
 
-    // -----> Données de votre liste de projet - Gridcard
+    Papa.parse(window.location.pathname + "../../../infos.csv", { 
+        download: true,
+        delimiter: ";",
+        skipEmptyLines: true,
+        complete: results => {
+            URLGenerator(results.data);
+        }
+    });
+    
+    
+    
+
     Papa.parse(window.location.pathname + "../home.csv", { 
         download: true,
         delimiter: ";",
@@ -43,7 +54,7 @@ window.onload = function() {
     
     
     
-    // -----> Données de votre liste de projet - Gridcard
+
     Papa.parse(window.location.pathname + "../biblioteks-list.csv", { 
         download: true,
         delimiter: ";",
@@ -55,9 +66,37 @@ window.onload = function() {
 }
 
 
-// ========== LES FONCTIONS DE CREATION HTML =============
 
-// -----> Créée les gridcards depuis le fichier data.csv
+
+
+function URLGenerator(content) {   
+    
+    // content: infos.csv
+    
+    let data = content.slice(0);
+    
+    url_remote[0] = data[1][1];
+    
+    url_web[0] = data[0][1];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function htmlHomeGenerator(content) {   
     
     // content: home.csv
@@ -77,11 +116,11 @@ function htmlHomeGenerator(content) {
     
     GetElem.innerHTML += html;
     
-    url_remote[0] = data[1][2];
+    // url_remote[0] = data[1][2];
     
-    url_web[0] = data[1][4];
+    // url_web[0] = data[1][4];
     
-    document.querySelector("[biblioteks-btn-zone]").innerHTML = `<a class="add-slide" onclick="AddBibliotek('` + data[1][2] + `','` + data[1][3] + `');"><img  width="30px" class="top-logo" style="float:right;" src="https://cdn-icons-png.flaticon.com/512/4211/4211134.png" alt=""></a><br>`    
+    document.querySelector("[biblioteks-btn-zone]").innerHTML = `<a class="add-slide" onclick="AddBibliotek('` + url_remote + `','` + data[1][3] + `');"><img  width="30px" class="top-logo" style="float:right;" src="https://cdn-icons-png.flaticon.com/512/4211/4211134.png" alt=""></a><br>`    
 
 }
 

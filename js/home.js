@@ -1,6 +1,8 @@
 let biblioteks = [];
 const bibliotekCardTemplate = document.querySelector("[bibliotek-card-template]")
 const bibliotekCardContainer = document.querySelector("[biblioteks-grid-container]")
+let url_remote = [];
+let url_web = [];
 
 OpenBibliotek();
     
@@ -49,11 +51,7 @@ window.onload = function() {
         complete: results => {
             htmlBibliotekGenerator(results.data);
         }
-    });    
-    
-    
-    
-    
+    });
 }
 
 
@@ -62,6 +60,8 @@ window.onload = function() {
 // -----> Créée les gridcards depuis le fichier data.csv
 function htmlHomeGenerator(content) {   
     
+    // content: home.csv
+    
     let data = content.slice(1);
     
     let GetElem = document.getElementById('BiblioteksTitle');
@@ -69,12 +69,20 @@ function htmlHomeGenerator(content) {
     let html = `<br>
                 <h1 style="display: block;">
                     ` + data[1][0] + `
-                    <a href='../../stockages/home'><img width="75px" class="top-logo fit-picture" src="../../images/Go_Kloud.png" alt="Bibliotek logo"></a>
-                    <img onclick="AddBibliotek('` + data[1][2] + `','` + data[1][3] + `');" style="" width="75px" class="top-logo fit-picture" src="../../images/Add_Bibliotek.png" alt="Bibliotek logo">
+                    
+                    <!-- <a href='` + data[1][2] + `home.csv' target='_blank'><img width="40px" class="top-logo fit-picture" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png"></a> -->
+                    <a class="a-slide" href='` + data[1][2] + `home.csv' target='_blank'><img  width="30px" class="top-logo" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt=""></a>
                 </h1>
                 <p style="color:#AAA; font-size: 18px; font-weight: 350;">` + data[1][1] + `</p>`;
     
-    GetElem.innerHTML += html;        
+    GetElem.innerHTML += html;
+    
+    url_remote[0] = data[1][2];
+    
+    url_web[0] = data[1][4];
+    
+    document.querySelector("[biblioteks-btn-zone]").innerHTML = `<a class="add-slide" onclick="AddBibliotek('` + data[1][2] + `','` + data[1][3] + `');"><img  width="30px" class="top-logo" style="float:right;" src="https://cdn-icons-png.flaticon.com/512/4211/4211134.png" alt=""></a><br>`    
+
 }
 
 
@@ -88,16 +96,16 @@ function htmlHomeGenerator(content) {
 // -----> Créée les gridcards depuis le fichier data.csv
 function htmlBibliotekGenerator(content) {   
 
+    // content: bibliotek-list.csv
+    
     
     let html = '';
     
     const data = content.slice(2);
-    
+
+
+    // -----> Boucle de création sur toutes les bibliothèque enregistrées
     data.forEach(function(row, index) {
-        
-        
-        
-        // -----> Données de votre liste de projet - Gridcard
         Papa.parse(data[index][0] + "bibliotek-info.csv", { 
             download: true,
             delimiter: ";",
@@ -107,7 +115,6 @@ function htmlBibliotekGenerator(content) {
             }
         });           
     });    
-    
     
 
 }
@@ -122,6 +129,11 @@ function htmlBibliotekGenerator(content) {
 
 function htmlInfoBibliotekGenerator(info,index,path) {
 
+        // path: chemin de la bibliotek en cours de création
+    
+        let modify_path = '';
+        let import_path = '';
+    
         const data = info.slice(2);
     
         const card = bibliotekCardTemplate.content.cloneNode(true).children[0]
@@ -130,15 +142,22 @@ function htmlInfoBibliotekGenerator(info,index,path) {
         const link = card.querySelector("[bibliotek-link]")
         
         
-        name.innerHTML = '<hr><img style="filter: opacity(80%); float:left; margin: 0px 25px 25px 0px;" width="30px" class="fit-picture" src="https://cdn-icons-png.flaticon.com/512/2206/2206433.png" alt="Bibliotek logo">' + data[0][0] + '';
+
+         modify_path = url_remote + path.slice(-3)
+
+         import_path = url_web + path.slice(-3)
+   
+
+        
+        name.innerHTML = '<hr><a class="a-slide" href="' + modify_path + 'bibliotek-info.csv' + '" target="_blank"><img width="25px" class="top-logo fit-picture" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="Bibliotek logo"> </a><h2>' + data[0][0] + '</h2>';
         
         descr.innerHTML = '<p style="color:#AAA; font-size: 17px; font-weight: 350;">' + data[0][1] + '</p>'
     
         if(path.startsWith('../')) {
             if(path.endsWith('#')) {
-                link.innerHTML = '<br><p style="text-align: right; color:#AAA; font-size: 13px; font-weight: 300;"><b>Code d\'import :</b> ' + path.replace("../", window.location.href).replace("#", "") + '</p>';
+                link.innerHTML = '<br><p style="text-align: right; color:#AAA; font-size: 13px; font-weight: 300;"><b>Code d\'import :</b> ' + import_path.replace("#", "") + '</p>';
             } else {
-                link.innerHTML = '<br><p style="text-align: right; color:#AAA; font-size: 13px; font-weight: 300;"><b>Code d\'import :</b> ' + path.replace("../", window.location.href) + '</p>';
+                link.innerHTML = '<br><p style="text-align: right; color:#AAA; font-size: 13px; font-weight: 300;"><b>Code d\'import :</b> ' + import_path + '</p>';
             }
         } else {
             link.innerHTML = '<br><p style="text-align: right; color:#AAA; font-size: 13px; font-weight: 300;"><b>Code d\'import :</b> ' + path + '</p>';
@@ -155,11 +174,9 @@ function htmlInfoBibliotekGenerator(info,index,path) {
             delimiter: ";",
             skipEmptyLines: true,
             complete: results => {
-                htmlKatalogGenerator(results.data,data[0][2],data[0][3],path,index);
+                htmlKatalogGenerator(results.data,(modify_path + "katalogs/katalogs.csv"),data[0][3],path,index);
             }
         });    
-    
- 
 }
 
 
@@ -179,7 +196,19 @@ function htmlInfoBibliotekGenerator(info,index,path) {
 
         
 
-function htmlKatalogGenerator(content,add,contact,url,num_blibliotek) {
+function htmlKatalogGenerator(content,add,contact,path,num_blibliotek) {
+    
+
+    let modify_url = '';
+
+        if (path.startsWith('../')) {
+            modify_url = url_remote + path.slice(-3)
+        } else {
+            modify_url = url_remote + path.slice(-3)
+        }
+    
+
+    let consult_url = url_web + path.slice(-3)
     
     const card = bibliotekCardContainer.children[num_blibliotek]
 
@@ -191,9 +220,9 @@ function htmlKatalogGenerator(content,add,contact,url,num_blibliotek) {
     let html = '';
     
     data.forEach(function(row, index) {
-        
+
         html += `<div style="cursor: pointer;" class="card container">
-                    <a onclick="KatalogConstruction('` + url + `','` + data[index][0] + `');" target="_blank" data-link>
+                    <a onclick="KatalogConstruction('` + consult_url + `','` + data[index][0] + `','` + modify_url + `');" target="_blank" data-link>
                         <div class="img" style="background-size: cover; background-image: url('` + data[index][6] + `');"><img src="` + data[index][6] + `" data-img></div>
                         <div class="header" data-header>` + data[index][3] + `</div>
                         <div class="overlay">
@@ -205,10 +234,11 @@ function htmlKatalogGenerator(content,add,contact,url,num_blibliotek) {
         
     
     html += `<div style="cursor: pointer;" class="card container add-card">
-                <div onclick="AddKatalog('` + add + `','` + contact + `','` + url + `');" class="add-img"><img style="filter: grayscale(15%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/4732/4732392.png"></div>
+                <div onclick="AddKatalog('` + add + `','` + contact + `','` + path + `');" class="add-img"><img style="filter: grayscale(15%) opacity(20%)" src="https://cdn-icons-png.flaticon.com/512/4732/4732392.png"></div>
             </div>`;     
 
     grid.innerHTML = html;
+    
     
 }
 
@@ -264,7 +294,7 @@ function AddBibliotek(add_link, contact_link) {
     let GetElem = document.getElementById('AddStep1');
     
     html = `<a style="cursor: pointer;" onclick="BiblioteksAddQuit('AddStep2', 'hide'); HideClassSwitch('PopupAdd');HideClassSwitch('Bibliotek');"><i style="color: red;" class="fa-solid fa-xmark"></i> Fermer</a>
-                <h2><u>Ajouter</u> ou <u>Importer</u> le code d'import d'une <b>Bibliothèque</b></h2>
+                <h2 style="text-align:center;"><b>Créer</b> ou <b>Importer</b> une Bibliothèque</h2>
                 <hr>
                 <div class="add-choice" style="justify-content: center;">
                     <div onclick="HideClassSwitch('AddStep2');" class="add-card container">
@@ -272,7 +302,7 @@ function AddBibliotek(add_link, contact_link) {
                             <img style="filter: opacity(60%)" src="https://cdn-icons-png.flaticon.com/512/7084/7084011.png">
                         </div>
                     </div>
-                    <a href="` + add_link + `" target="_blank" class="add-card container">
+                    <a href="` + add_link + `biblioteks-list.csv" target="_blank" class="add-card container">
                         <div class="add-img">
                             <img style="filter: opacity(60%)" src="https://cdn-icons-png.flaticon.com/512/8364/8364955.png">
                         </div>
@@ -318,7 +348,7 @@ function TestAddBibliotek() {
     
     let html = "";
     
-    html += '<div style="vertical-align: middle;"><h2 id="' + data[0].value + '"><img style="filter: grayscale(100%);" width="25px" class="fit-picture" src="https://cdn-icons-png.flaticon.com/512/6817/6817478.png">&ensp;' + data[0].value + '';
+    html += '<div style="vertical-align: middle;"><h2 id="' + data[0].value + '"><img style="filter: grayscale(100%);" width="25px" class="fit-picture" src="https://cdn-icons-png.flaticon.com/512/6817/6817478.png">&ensp;' + data[0].value + '</h2>';
 
     html += '<p style="color:#AAA; font-size: 18px; font-weight: 350;"><br>' + data[1].value + '</p><br></div>';
     
@@ -405,9 +435,7 @@ function AddKatalog(add_link, contact_link, url) {
     HideClassSwitch('PopupAdd');
     
     HideClassSwitch('Bibliotek');
-    
-    console.log(url + 'katalogs/katalogs.csv')
-    
+
     // -----> Popup creation
     
     let GetElem = document.getElementById('AddStep1');
@@ -460,7 +488,7 @@ function AddKatalog(add_link, contact_link, url) {
 function PrintKatalogsPopup(location) {
 
     // -----> Liste des katalogs
-    Papa.parse(location + "/katalogs/katalogs.csv", { 
+    Papa.parse(location + "katalogs/katalogs.csv", { 
         download: true,
         delimiter: ";",
         skipEmptyLines: true,
@@ -588,13 +616,13 @@ function findLastBibliotekResult(content,contact,add) {
         });
 
                     
-        html += 'Vous devez renseigner ce code d\'import dans une nouvelle ligne<b> : &ensp;&ensp;../' + (max + 1) + '/</b>';  
+        html += 'Vous devez renseigner ce code d\'import dans une nouvelle ligne<b> : &ensp;&ensp;../0' + (+max + 1) + '/</b>';  
         
         html += '</div>';
         
         
         html += `<div style="text-align:center;">
-                <a href="` + add + `" target="_blank">
+                <a href="` + add + `biblioteks-list.csv" target="_blank">
                     <button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Directement</button>
                 </a>
                 <a href="` + contact + `" target="_blank">

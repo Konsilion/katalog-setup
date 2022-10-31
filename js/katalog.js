@@ -29,12 +29,6 @@ searchInput.addEventListener("input", e => {
 // Transformations CSV vers HTML
 function KatalogConstruction(url_web,name,url_remote) {
 
-        
-    console.log("URL Remote : " + url_remote)
-    
-    console.log("URL Web : " + url_web)
-    
-    
     // ---> url_web : origine github.io de la bibliotek
     // ---> url_remote : origine github.com de la bibliotek 
 
@@ -202,7 +196,6 @@ function htmlGridGenerator(content,location,name,url_remote) {
     data.forEach(function(row, index) {
         
         const card = ressourceCardTemplate.content.cloneNode(true).children[0]
-        console.log(card)
         const btn = card.querySelector("[data-btn]")
         const header = card.querySelector("[data-header]")
         const link = card.querySelector("[data-link]")

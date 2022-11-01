@@ -5,7 +5,7 @@
       "title": "ID du Katalog",
       "description": "Numero du Katalog associé",
       "subtype": "tags",
-      "tagSeparator": ","
+      "tagSeparator": ",",
       "type": "string",
       "hide": false
     },

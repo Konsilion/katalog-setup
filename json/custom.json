@@ -4,8 +4,9 @@
       "name": "KATALOG - ID",
       "title": "ID du Katalog",
       "description": "Numero du Katalog associé",
+      "subtype": "tag",
       "type": "string",
-      "hide": true
+      "hide": false
     },
     {
       "name": "NOM DE LA RESSOURCE",

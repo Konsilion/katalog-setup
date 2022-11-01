@@ -1,0 +1,35 @@
+{
+  "fields": [
+    {
+      "name": "KATALOG - ID",
+      "title": "ID du Katalog",
+      "description": "Numero du Katalog associé",
+      "type": "string"
+    },
+    {
+      "name": "NOM DE LA RESSOURCE",
+      "title": "Nom de la ressource",
+      "description": "Designation de la ressource",
+      "type": "string"
+    },
+    {
+      "name": "DESCRIPTION",
+      "title": "Description",
+      "description": "Description de la ressource",
+      "type": "string"
+    },
+    {
+      "name": "LIEN",
+      "title": "Lien de redirection",
+      "description": "Retrouver la données à cet URL",
+      "type": "string"
+    },
+    {
+      "name": "IMAGE",
+      "title": "Image de la ressources",
+      "description": "Image descriptive",
+      "type": "string"
+    },
+  ],
+  "primaryKey": ["NOM DE LA RESSOURCE"]
+}

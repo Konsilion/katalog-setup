@@ -6,7 +6,16 @@
       "description": "Numero du Katalog associé",
       "subtype": "tags",
       "tagSeparator": ",",
-      "hide": false
+      "hide": false,
+      "bgColor" : "#BED3C3",
+      "foreignKey": {
+        "activate": true,
+        "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/etc/biblioteks/01/katalogs/katalogs.csv",
+        "fields": "KATALOG - ID",
+        "returnFields" : [
+          "NOM DU KATALOG"
+        ]
+      }
     },
     {
       "name": "NOM DE LA RESSOURCE",

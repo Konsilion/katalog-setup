@@ -25,11 +25,23 @@
       "type": "string"
     },
     {
+      "name": "IDs - FILTRES",
+      "title": "Image de la ressources",
+      "description": "Image descriptive",
+      "type": "string"
+    },
+    {
       "name": "IMAGE",
       "title": "Image de la ressources",
       "description": "Image descriptive",
       "type": "string"
     },
+    {
+      "name": "AUTEUR.ICES",
+      "title": "Image de la ressources",
+      "description": "Image descriptive",
+      "type": "string"
+    }
   ],
   "primaryKey": ["NOM DE LA RESSOURCE"]
 }

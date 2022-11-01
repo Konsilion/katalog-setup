@@ -6,7 +6,6 @@
       "description": "Numero du Katalog associé",
       "subtype": "tags",
       "tagSeparator": ",",
-      "type": "string",
       "hide": false
     },
     {

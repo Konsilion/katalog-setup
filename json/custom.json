@@ -25,7 +25,8 @@
       "title": "Lien de redirection",
       "description": "Retrouver la données à cet URL",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "subtype": "link"
     },
     {
       "name": "IDs - FILTRES",

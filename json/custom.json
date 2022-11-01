@@ -38,7 +38,8 @@
       "name": "IMAGE",
       "title": "Image de la ressources",
       "description": "Image descriptive",
-      "type": "string"
+      "type": "string",
+      "subtype": "link"
     },
     {
       "name": "AUTEUR.ICES",

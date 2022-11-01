@@ -4,9 +4,8 @@
       "name": "KATALOG - ID",
       "title": "ID du Katalog",
       "description": "Numero du Katalog associé",
-      "subtype": "tags",
-      "tagSeparator": ",",
-      "hide": false,
+      "subtype": "tag",
+      "hide": true,
       "foreignKey": {
         "activate": true,
         "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/etc/biblioteks/01/katalogs/katalogs.csv",

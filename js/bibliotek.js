@@ -262,7 +262,7 @@ function htmlKatalogGenerator(content,add,contact,path,num_blibliotek) {
 
         html += `<div style="cursor: pointer;" class="card container">
                     <a onclick="KatalogConstruction('` + consult_url + `','` + data[index][0] + `','` + modify_url + `');" target="_blank" data-link>
-                        <div class="img" style="background-size: cover; background-image: url('` + data[index][6] + `');"><img src="` + data[index][6] + `" data-img></div>
+                        <div class="img"><img src="` + data[index][6] + `" data-img></div>
                         <div class="header" data-header>` + data[index][3] + `</div>
                         <div class="overlay">
                             <p data-descr>` + data[index][5] + `</p>

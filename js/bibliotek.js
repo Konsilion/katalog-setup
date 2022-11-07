@@ -39,7 +39,7 @@ window.onload = function() {
         }
     });
     
-    
+
     
 
     Papa.parse(window.location.pathname + "../home.csv", { 

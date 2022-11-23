@@ -1,0 +1,99 @@
+
+    .datami-widget {
+        background-color: white !important;
+    }
+        
+    .container {
+        max-width: 100% !important;
+    }
+    
+    .container.mb-4 {
+        margin-top: 50px !important;
+    }
+    
+    .mdi {
+        font-size:18px;
+        color: var(--md-primary-fg-color--light);
+    }
+    
+    .mdi-close {
+        color: red;
+    }
+    
+    .card-header-icon > div > div > span > .mdi-eye {
+        color: white;
+    }
+    
+    .card {
+        background-color: white !important;
+        border-radius: 20px;
+        box-shadow: 0 0em 1em -.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+    }
+    
+    .card-footer {
+        border-top: 0px; 
+    }
+    
+    .card:hover {
+        box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0px 0px 10px var(--md-primary-fg-color--light);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .column.is-4, .column.is-4-tablet {
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            width: 100%;
+        }
+    }    
+    
+    @media only screen and (min-width: 769px) and (max-width: 1199px) {
+        .column.is-4, .column.is-4-tablet {
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            width: 50%;
+        }
+    }
+
+    
+    @media only screen and (min-width: 1200px) and (max-width: 1450px) {
+        .column.is-4, .column.is-4-tablet {
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            width: 33.33333337%;
+        }
+    }
+    
+    
+    @media only screen and (min-width: 1451px) {
+        .column.is-4, .column.is-4-tablet {
+            -webkit-box-flex: 0;
+            -ms-flex: none;
+            flex: none;
+            width: 25%;
+        }
+    }
+
+    
+    .columns.is-mobile>.column.is-10 {
+        flex: 1;
+    }
+
+    .button.outlink {
+        width: 100%;
+    }
+    
+    .button.is-small:not(.is-rounded){
+        border-radius: 25px;
+    }
+    
+    .button.is-dark.is-outlined {
+        border-color: #DDD;
+    }
+    
+    .is-dark.input {
+        border-color: #DDD;
+    }
+    

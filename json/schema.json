@@ -1,5 +1,35 @@
 {
   "fields": [
-
+    {
+      "name": "NOM DE LA RESSOURCE",
+      "title": "Nom de la ressource",
+      "description": "Designation brève de la ressource numérique",
+      "type": "string"
+    },
+    {
+      "name": "DESCRIPTION",
+      "title": "Présentation de la ressource",
+      "description": "Paragraphe de présentation de la ressource",
+      "type": "string"
+    },
+    {
+      "name": "LIEN",
+      "title": "URL du site de la ressource",
+      "type": "string",
+      "format": "uri"
+    },
+    {
+      "name": "IDs - FILTRES",
+      "title": "Filtres de la ressource",
+      "type": "tags",
+      "tagSeparator": ","
+      "format": "string"
+    },
+    {
+      "name": "AUTEUR.ICES",
+      "title": "Auteurs et autrices de la ressources",
+      "description": "Liste exhaustives des participants d'origine de la ressource.",
+      "type": "string"
+    }
   ]
 }

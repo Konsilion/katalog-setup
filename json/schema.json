@@ -20,7 +20,7 @@
     },
     {
       "name": "IDs - FILTRES",
-      "title": "Filtres de la ressource",
+      "title": "Catégories",
       "description": "Le différents filtres pour les ressources numériques.",
       "type": "string"
     },

@@ -1,60 +1,27 @@
 {
   "fields": [
     {
-      "name": "KATALOG - ID",
-      "title": "ID du Katalog",
-      "description": "Numero du Katalog associé",
-      "subtype": "tag",
-      "hide": true,
-      "foreignKey": {
-        "activate": true,
-        "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/etc/biblioteks/01/katalogs/katalogs.csv",
-        "fields": "KATALOG - ID",
-        "returnFields" : [
-          "NOM DU KATALOG"
-        ]
-      }
-    },
-    {
       "name": "NOM DE LA RESSOURCE",
-      "title": "Nom de la ressource",
-      "description": "Designation de la ressource",
-      "type": "string"
+      "sticky": true,
+      "primaryKey": true
     },
     {
       "name": "DESCRIPTION",
-      "title": "Description",
-      "description": "Description de la ressource",
-      "type": "string"
+      "subtype": "longtext",
+      "maxLength": 2000
     },
     {
       "name": "LIEN",
-      "title": "Lien de redirection",
-      "description": "Retrouver la données à cet URL",
-      "type": "string",
-      "format": "uri",
       "subtype": "link"
     },
     {
       "name": "IDs - FILTRES",
-      "title": "Image de la ressources",
-      "description": "Image descriptive",
-      "type": "string",
-      "hide": true
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
     },
     {
-      "name": "IMAGE",
-      "title": "Image de la ressources",
-      "description": "Image descriptive",
-      "type": "string",
-      "subtype": "link"
-    },
-    {
-      "name": "AUTEUR.ICES",
-      "title": "Image de la ressources",
-      "description": "Image descriptive",
-      "type": "string"
+      "name": "AUTEUR.ICES"
     }
-  ],
-  "primaryKey": ["NOM DE LA RESSOURCE"]
+  ]
 }

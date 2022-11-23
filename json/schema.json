@@ -22,7 +22,7 @@
       "name": "IDs - FILTRES",
       "title": "Filtres de la ressource",
       "type": "tags",
-      "tagSeparator": ","
+      "tagSeparator": ",",
       "format": "string"
     },
     {

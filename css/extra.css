@@ -55,6 +55,24 @@
 
 }
 
+
+
+.md-nav__title {
+    color: rgba(0,0,0,0);
+    line-height:0px;
+    margin-top:15px;
+}
+    
+.md-sidebar {
+        padding: 0px !important;
+}    
+.md-sidebar > * {
+    color: white;
+    background-color: rgba(0,0,0,.8) !important;
+    padding-left: 10px;
+    margin: 0;
+}
+
 .md-header__source {
     right:0px;
 }

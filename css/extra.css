@@ -64,7 +64,7 @@
 
 @media only screen and (min-width: 1220px) {
     .md-nav__title {
-        display:none;	    
+        visibility: hidden !important;	    
     }
 
     .md-sidebar {

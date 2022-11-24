@@ -64,7 +64,10 @@
 
 @media only screen and (min-width: 1220px) {
     .md-nav__title {
-        visibility: hidden !important;	    
+        visibility: hidden !important;
+	color: rgba(0,0,0,0);
+        line-height:0px;
+        margin-top:15px;    
     }
 
     .md-sidebar {

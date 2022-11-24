@@ -19,23 +19,53 @@
     .mdi-close {
         color: red;
     }
-    
-    .card-header-icon > div > div > span > .mdi-eye {
-        color: white;
+
+    .CustomFilterDropdown {
+       border: 1px solid #DDD;
+       border-radius: 25px;
     }
-    
+
+    .navbar-link.is-arrowless {
+       border-radius: 25px;
+    }
+
     .card {
         background-color: white !important;
         border-radius: 20px;
         box-shadow: 0 0em 1em -.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
     }
     
+    .card-header {
+        padding-bottom: 12px;
+    }
+
+    .card-header-icon > div > div > span > .mdi-eye {
+        color: white;
+    }
+
     .card-footer {
         border-top: 0px; 
     }
     
     .card:hover {
         box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0px 0px 10px var(--md-primary-fg-color--light);
+    }
+
+    .DatamiCardBlockImage {
+        justify-content: center !important;
+        text-align: center !important;
+        max-height: 150px;
+        border-top: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+        overflow: hidden;
+        background-color: #f9f9f9;
+    }
+    
+    .DatamiCardBlockImage > figure > img {
+        margin: 10px auto;
+        object-fit: cover;
+        display: block;
+        width: 80%;
     }
     
     @media only screen and (max-width: 768px) {

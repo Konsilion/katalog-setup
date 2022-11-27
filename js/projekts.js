@@ -61,5 +61,5 @@ function IndexConstruction(projekts) {
 
 function EditButtonRedirection(param) {
 
-    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/projekts/projekts.json') 
+    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'edit/master/docs/etc/projekts/projekts.json') 
 }

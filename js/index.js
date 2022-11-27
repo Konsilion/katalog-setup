@@ -1,7 +1,7 @@
 const titre = document.querySelector("[titre-plateforme]")
 const descr = document.querySelector("[descr-plateforme]")
 
-var url = window.location.pathname + '../param.json';
+var url = window.location.pathname + './param.json';
 fetch(url)
     .then(response => response.json())
     .then(json => {

@@ -57,5 +57,5 @@ function IndexConstruction(katalogs) {
 
 function EditButtonRedirection(param) {
 
-    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/katalogs/katalogs.json')
+    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'edit/master/docs/etc/katalogs/katalogs.json')
 }

@@ -128,3 +128,6 @@
         border-color: #DDD;
     }
     
+.ButtonDarkMode {
+    display: none;
+} 

@@ -55,7 +55,12 @@
 
 
 
-
+@media only screen and (min-width: 960px) {
+    .md-nav__link--passed {
+        color: #BBB
+    }
+}
+   
 
 
 

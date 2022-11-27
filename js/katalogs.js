@@ -1,7 +1,18 @@
 const ressourceCardTemplate = document.querySelector("[data-ressource-template]");
 const ressourceCardContainer = document.querySelector("[data-ressource-cards-container]")
 let ressources = [];
-let katalog_json_file;
+
+const searchInput = document.querySelector("[data-search]")
+
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.toLowerCase()
+  ressources.forEach(ressource => {
+    const isVisible =
+      ressource.name.toLowerCase().includes(value) || ressource.description.toLowerCase().includes(value) || ressource.author.toLowerCase().includes(value)
+      ressource.element.classList.toggle("hide", !isVisible)
+  })
+})
+
 
 var url = window.location.pathname + '../katalogs.json';
 fetch(url)
@@ -10,10 +21,7 @@ fetch(url)
         IndexConstruction(json);
     });
 
-
-
 function IndexConstruction(katalogs) {
-        
 
     for (let i = 0; i < katalogs.katalogs.length; i++) {
         
@@ -39,102 +47,15 @@ function IndexConstruction(katalogs) {
         ressources[i] = {name: katalogs.katalogs[i].name, description: katalogs.katalogs[i].description, author: katalogs.katalogs[i].auteur, element: card}        
     }
     
-    Papa.parse(window.location.pathname + "../../../param.csv", { 
-        download: true,
-        delimiter: ";",
-        skipEmptyLines: true,
-        complete: results => {
-            EditButtonRedirection(results.data);
-        }
-    });  
+    fetch(window.location.pathname + '../../../param.json')
+        .then(response => response.json())
+        .then(json => {
+            EditButtonRedirection(json);
+        });
 }
 
 
 function EditButtonRedirection(param) {
-    
-    const data = param.slice(2);
-    
-    document.getElementById('EditBtn').setAttribute("href", data[0][0] + 'etc/katalogs/katalogs.csv')
-}
 
-
-
-function DatamiConstruction(name,link) {
-
-    let grid = document.getElementById('DatamiGrid');
-    
-    let html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
-                <datami-file
-                  title="` + name + `"
-                  gitfile="` + link + `"
-                  options='{
-                  "height": "500px",
-                  "separator": ";",
-                  "lockcolumns": false,
-                  "pagination": {
-                    "itemsPerPage": 25
-                  },
-                  "cardsview": {
-                    "activate": true,
-                    "default": true
-                  },
-                  "schema": {
-                    "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
-                  },
-                  "fields-custom-properties": {
-                    "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
-                  },
-                  "customfilters": {
-                    "activate": true,
-                    "filterfields": [
-                      "IDs - FILTRES"
-                    ],
-                    "tagsSeparator": ","
-                  },
-
-                  "cardsdetail": false,
-                  "cardssettings": {
-                    "mini": {
-                      "NOM DE LA RESSOURCE": {
-                        "position": "title"
-                      },
-                      "DESCRIPTION": {
-                        "position": "resume"
-                      },
-                      "IDs - FILTRES": {
-                        "position": "tags"
-                      },
-                    "IMAGE": {
-                        "position": "image"
-                      }
-                    },
-                    "detail": {
-                      "NOM DE LA RESSOURCE": {
-                        "position": "title"
-                      },
-                      "DESCRIPTION": {
-                        "position": "resume"
-                      },
-                      "IMAGE": {
-                        "position": "image"
-                      },
-                      "LIEN": {
-                        "position": "links"
-                      },
-                      "IDs - FILTRES": {
-                        "position": "tags", "block_title": "Catégories :"
-                      }
-                    }
-                  }
-                }'
-                  onlypreview="false"
-                  usertoken: ""
-                  locale="fr"
-                ></datami-file> `;
-    
-    grid.innerHTML = html;
-    
-    document.getElementById('DatamiBloc').classList.toggle("hide");
-    document.getElementById('IndexBloc').classList.toggle("hide");
-    document.getElementsByClassName('md-sidebar')[0].classList.toggle("hide");
+    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/katalogs/katalogs.json')
 }

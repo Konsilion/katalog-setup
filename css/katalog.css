@@ -72,7 +72,7 @@
   border: 1px solid #CCC;
   background-color: #EEE;
   height: 225px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
     
@@ -99,7 +99,7 @@
     background-color: white;
     height: 70%;
     overflow: hidden;
-    border-radius:10px 10px 0px 0px;
+    border-radius:25px 25px 0px 0px;
 }
   
 .ksln-img > img {
@@ -113,7 +113,7 @@
 .container {
     border: none;
     position: relative;
-    border-radius:10px;
+    border-radius:25px;
 }
 
 .container:hover .ksln-overlay {
@@ -125,7 +125,7 @@
   color: black;
   font-size: 18px;  
   position: absolute;
-  border-radius: 10px; 
+  border-radius: 25px; 
   bottom: 0;
   left: 0;
   right: 0;

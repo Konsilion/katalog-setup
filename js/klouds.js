@@ -45,5 +45,5 @@ function IndexConstruction(klouds) {
 
 function EditButtonRedirection(param) {
 
-    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/projekts/klouds.json') 
+    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/klouds/klouds.json') 
 }

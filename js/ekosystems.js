@@ -53,7 +53,7 @@ function IndexConstruction(ekosystems) {
         const descr = card.querySelector("[data-descr]")
                 
         header.textContent = ekosystems.ekosystems[i].name
-        link.setAttribute("onclick","DatamiConstruction('" + ekosystems.ekosystems[i].name + "','" + ekosystems.ekosystems[i].link + "','" + ekosystems.ekosystems[i].type +"');")
+        link.setAttribute("href","ekosystems.ekosystems[i].link)
         if(ekosystems.ekosystems[i].image !== ""){
             img.src = ekosystems.ekosystems[i].image
         } else {

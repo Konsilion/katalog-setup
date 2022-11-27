@@ -56,7 +56,7 @@
 .md-nav__link.md-nav__link--active {
 color: #FFF;
 font-size:19px;
-text-decoration: underline overline var(--md-primary-fg-color); 
+text-decoration: underline var(--md-primary-fg-color); 
 }
 
 

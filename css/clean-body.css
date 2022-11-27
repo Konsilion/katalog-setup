@@ -40,22 +40,14 @@
         display: none;
 }
 
-@media only screen and (min-width: 1400px) {
-    .div-cleanbody {
-       padding: 25px 200px;
-    }
+
+
+.div-cleanbody {
+   padding: 25px 50px;
 }
-
-
-@media only screen and (max-width: 1399px) {
-    .div-cleanbody {
-       padding: 25px 100px;
-    }
-}
-
 
 @media only screen and (max-width: 1219px) {
     .div-cleanbody {
-       padding: 25px 25px;
+       padding: 25px 15px;
     }
 }

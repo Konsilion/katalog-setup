@@ -54,3 +54,85 @@
               inset -7px -7px 10px rgba(255, 255, 255, 0.5),
               inset 7px 7px 10px rgba(70, 70, 70, 0.12);
 }
+
+
+
+
+       
+.card-grid {
+  margin: 15px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, auto));
+  gap: 50px;
+  justify-content: left;    
+}
+
+
+.ksln-card {
+  border: 1px solid #CCC;
+  background-color: #EEE;
+  height: 225px;
+  border-radius: 10px;
+}
+
+    
+.ksln-card > .ksln-header {
+    padding: 5px 15px;
+    background-color: #DDD;
+    font-size: 80px;
+}
+
+
+.ksln-header {
+  font-size: 18px;
+  color: black;
+  padding: 15px;
+  overflow: hidden;
+}
+    
+    
+    
+    
+.ksln-img {
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    background-color: white;
+    height: 70%;
+    overflow: hidden;
+    border-radius:10px 10px 0px 0px;
+}
+  
+.ksln-img > img {
+    min-width: 200px;
+    width: 100%;
+    height:100%;
+    border: 1px solid #FFF;
+}
+    
+    
+.container {
+    border: none;
+    position: relative;
+    border-radius:10px;
+}
+
+.container:hover .ksln-overlay {
+  height: 100%;
+  padding: 0px 10px 0px 10px;  
+}
+    
+.ksln-overlay {
+  color: black;
+  font-size: 18px;  
+  position: absolute;
+  border-radius: 10px; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.9));
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .3s ease;
+}
+    

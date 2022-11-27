@@ -78,7 +78,7 @@ function DatamiWrite(param,name,link) {
                   }
                 }'
                   onlypreview="false"
-                  usertoken: "` + param.informations[0].token + `"
+                  usertoken="` + param.informations[0].token + `"
                   locale="fr"
                 ></datami-file> `;
     

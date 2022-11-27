@@ -76,4 +76,6 @@ function DatamiConstruction(name,link) {
     document.getElementById('DatamiBloc').classList.toggle("hide");
     document.getElementById('IndexBloc').classList.toggle("hide");
     document.getElementsByClassName('md-sidebar')[0].classList.toggle("hide");
+    document.getElementsByClassName('md-header')[0].classList.toggle("hide");
+    document.getElementsByClassName('md-footer')[0].classList.toggle("hide");
 }

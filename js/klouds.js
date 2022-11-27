@@ -2,15 +2,12 @@ const ressourceCardTemplate = document.querySelector("[data-ressource-template]"
 const ressourceCardContainer = document.querySelector("[data-ressource-cards-container]")
 let ressources = [];
 
-
 var url = window.location.pathname + '../klouds.json';
 fetch(url)
     .then(response => response.json())
     .then(json => {
         IndexConstruction(json);
     });
-
-
 
 function IndexConstruction(klouds) {
 
@@ -38,19 +35,15 @@ function IndexConstruction(klouds) {
         ressources[i] = {name: klouds.klouds[i].name, description: klouds.klouds[i].description, author: klouds.klouds[i].auteur, element: card}        
     }
     
-    Papa.parse(window.location.pathname + "../../../param.csv", { 
-        download: true,
-        delimiter: ";",
-        skipEmptyLines: true,
-        complete: results => {
-            EditButtonRedirection(results.data);
-        }
-    });  
+    fetch(window.location.pathname + '../../../param.json')
+        .then(response => response.json())
+        .then(json => {
+            EditButtonRedirection(json);
+        });
 }
 
+
 function EditButtonRedirection(param) {
-    
-    const data = param.slice(2);
-    
-    document.getElementById('EditBtn').setAttribute("href", data[0][0] + 'etc/klouds/klouds.csv')
+
+    document.getElementById('EditBtn').setAttribute("href", param.informations[0].link + 'etc/projekts/klouds.json') 
 }

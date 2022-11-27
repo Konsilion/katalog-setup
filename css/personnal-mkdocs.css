@@ -53,7 +53,11 @@
 
 }
 
-
+.md-nav__link.md-nav__link--active {
+color: #FFF;
+font-size:20px;
+text-decoration: underline var(--md-primary-fg-color); 
+}
 
 @media only screen and (min-width: 960px) {
     .md-nav__link--passed {

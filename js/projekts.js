@@ -37,7 +37,7 @@ function IndexConstruction(projekts) {
         const descr = card.querySelector("[data-descr]")
                 
         header.textContent = projekts.projekts[i].name
-        link.setAttribute("onclick","DatamiConstruction('" + projekts.projekts[i].name + "','" + projekts.projekts[i].link + "');")
+        link.setAttribute("onclick","DatamiConstruction('" + projekts.projekts[i].name + "','" + projekts.projekts[i].link + "','" + projekts.projekts[i].type +"');")
         if(projekts.projekts[i].image !== ""){
             img.src = projekts.projekts[i].image
         } else {

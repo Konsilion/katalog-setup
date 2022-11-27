@@ -108,7 +108,23 @@
     height:100%;
     border: 1px solid #FFF;
 }
+
+.ksln-img-acc {
+    text-align: center;
+    height: 100%;
+    max-width: 450px;
+    overflow: hidden;
+}
     
+.ksln-img-acc > img {
+    height: 75%;
+    padding-top:50px;
+}
+
+
+
+
+
     
 .container {
     border: none;

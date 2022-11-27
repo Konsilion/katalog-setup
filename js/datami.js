@@ -1,5 +1,16 @@
 function DatamiConstruction(name,link) {
 
+    var url = window.location.pathname + '../../../param.json';
+    fetch(url)
+        .then(response => response.json())
+        .then(json => {
+            DatamiWrite(json,name,link);
+        });     
+}
+
+
+function DatamiWrite(param,name,link) {
+
     let grid = document.getElementById('DatamiGrid');
     
     let html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
@@ -67,7 +78,7 @@ function DatamiConstruction(name,link) {
                   }
                 }'
                   onlypreview="false"
-                  usertoken: ""
+                  usertoken: "` + param.informations[0].token + `"
                   locale="fr"
                 ></datami-file> `;
     

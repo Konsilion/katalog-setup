@@ -20,6 +20,10 @@
     box-shadow: 0px 0px 6px 0px rgba(30, 30, 30, 0.2);
 }
 
+.search-input::placeholder {
+    color: #AAA;
+}  
+
 .search-input:focus::placeholder {
     color: white;
 }      

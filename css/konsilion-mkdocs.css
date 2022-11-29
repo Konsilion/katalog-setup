@@ -213,10 +213,3 @@ a.md-source {
 	    padding: 25px 10px;
 	}
 }
-
-@media only screen and (min-width: 1220px) {
-	.md-header {
-		display: none;
-	}
-}
-

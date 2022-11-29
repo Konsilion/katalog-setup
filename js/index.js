@@ -25,7 +25,7 @@ linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-datami.cs
 
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <p style="color:#AAA; font-size: 15px; text-align: center">
-    <u><a href="https://konsilion.fr/wp/recherche-et-developpement/katalog-installation" target="_blank"> Obtenir une plateforme similaire</a></u>
+    <u><a href="https://github.com/konsilion/katalog-template/" target="_blank"> Obtenir une plateforme similaire</a></u>
     &ensp;
     <u><a style="cursor: pointer;" onclick="VisualParam();"> Paramètrages</a></u>
     &ensp;

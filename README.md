@@ -1,23 +1,5 @@
 # Paramètres CSS et Javascript pour l'application Katalog
 
-**Retrouvez les différents fichiers aux adresses suivantes**
-
-## CSS
-
-[Lien vers CSS](./css)
-
-
-## Javascript
-
-[Lien vers JS](./js)
-
-
-
-## Documentation et ressources
-
-* Documentation officielle : [Accèder à la documentation](https://katalog.konsilion.fr)
-* Site web Konsilion ingénieries : [Accèder au principal](https://konsilion.fr)
-
 * Une question, un bug ? Accèder à la catégorie 'Issues' de ce répertoire.
 
 ---

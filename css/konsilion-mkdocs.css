@@ -218,7 +218,7 @@ a.md-source {
 
 
 .md-content {
-    padding: 25px 50px !important;
+    padding: 25px 50px;
 }
 
 @media only screen and (max-width: 1219px) {

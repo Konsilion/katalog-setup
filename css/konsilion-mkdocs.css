@@ -181,13 +181,25 @@ h1 {
     font-weight: bold;
 }
 
-.md-nav__link.md-nav__link--active::before {
-    content: 📌;
+.md-nav__link.md-nav__link--active::after {
+content: ">";
+}
+.md-header {
+height: 50px;
 }
 
+.md-header__button.md-icon > * {
+height: 30px;
+width: 30px;
+}
 
+.md-header__button.md-logo :-webkit-any(img,svg) {
+height: 30px !important;
+}
 
-
+.md-header__topic {
+display: none;
+}
 
 
 

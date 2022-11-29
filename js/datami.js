@@ -14,7 +14,7 @@ var model = document.getElementById("CallDatami").getAttribute("model");
 
 
 function TakeTheToken() {
-    var url = window.location.pathname + '../../../git.json';
+    var url = window.location.pathname + '../../../konsilion.json';
     fetch(url)
     .then(response => response.json())
     .then(json => {

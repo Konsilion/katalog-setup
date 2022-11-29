@@ -27,9 +27,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 <p style="color:#AAA; font-size: 15px; text-align: center">
     <u><a href="https://github.com/konsilion/katalog-template/" target="_blank"> Obtenir une plateforme similaire</a></u>
     &ensp;
-    <u><a style="cursor: pointer;" onclick="VisualParam();"> Paramètrages</a></u>
-    &ensp;
-    <u><a style="cursor: pointer;" onclick="VisualRepo();"> Vers le répertoire de l'application</a></u>
+    <u><a style="cursor: pointer;" href="/etc/parametres/home"> Paramètrages</a></u>
     <br>
     <br>
     Une plateforme open-source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.

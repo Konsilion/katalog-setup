@@ -1,7 +1,5 @@
 # Paramètres CSS et Javascript pour l'application Katalog
 
-* Une question, un bug ? Accèder à la catégorie 'Issues' de ce répertoire.
-
 ---
 
 Ce document est régi par les termes de la licence juridique [Creative Commons CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.fr) 

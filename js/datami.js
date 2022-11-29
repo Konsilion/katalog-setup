@@ -142,9 +142,6 @@ function DatamiKatalog(token,repo) {
                           "DESCRIPTION": {
                             "position": "resume"
                           },
-                          "IMAGE": {
-                            "position": "image"
-                          },
                           "LIEN": {
                             "position": "links"
                           },

@@ -26,7 +26,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     &ensp;
     <u><a style="cursor: pointer;" href="https://github.com/Konsilion/katalog-template/issues/new/choose"> Reporter une erreur</a></u>
     <br>
-    <br>
+    <hr>
     Une plateforme open-source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.
     <br><br>
     Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique   

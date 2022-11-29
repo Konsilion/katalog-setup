@@ -13,17 +13,13 @@ h1 {
     color: red;
 }
 
-.md-search {
-    display: none;
-}
-
 .md-content {
-    padding: 50px;
+    padding: 25px 50px;
 }
 
 @media only screen and (max-width: 1219px) {
 	.md-content {
-	    padding: 15px;
+	    padding: 25px 10px;
 	}
 }
 
@@ -145,9 +141,6 @@ h1 {
 }
 
 
-.md-header__title {
-display : none;
-}
 
 
 

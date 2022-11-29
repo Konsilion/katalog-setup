@@ -1,15 +1,15 @@
 function linkRemoteCss(url){
 
-// create new link tag
-var link = document.createElement('link');
+    // create new link tag
+    var link = document.createElement('link');
 
-// set properties of link tag
-link.href = url;
-link.rel = 'stylesheet';
-link.type = 'text/css';
+    // set properties of link tag
+    link.href = url;
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
 
-// append link element to html
-document.body.appendChild(link);
+    // append link element to html
+    document.body.appendChild(link);
 
 }
 
@@ -21,3 +21,17 @@ linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.cs
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs-md.css');
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-datami.css');
+
+
+
+
+document.getElementsByClassName('md-content')[0].innerHTML += `
+<p style="color:#AAA; font-size: 15px; text-align: center">
+    <span> Une plateforme open source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.
+    <br>
+    Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi </a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique.</span>
+    <br>
+    <br>
+    <u><a href="https://konsilion.fr/wp/recherche-et-developpement/katalog-installation" target="_blank"> Obtenir une plateforme similaire</a></u>
+</p>
+`;

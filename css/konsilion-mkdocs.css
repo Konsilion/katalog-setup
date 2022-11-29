@@ -8,19 +8,6 @@
 
 #######################################
 
-.md-content {
-    padding: 25px 50px !important;
-}
-
-@media only screen and (max-width: 1219px) {
-	.md-content {
-	    padding: 25px 10px;
-	}
-}
-
-
-
-
 /* ---- BODY WITH FULL WIDTH & HEIGTH ---- */
 
 .md-main__inner { 
@@ -234,44 +221,15 @@ a.md-source {
     display: none !important;
 }
 
-/* ------ COMMUN CLASS ------*/
 
-.show {
-  display: block !important;
+
+.md-content {
+    padding: 25px 50px !important;
 }
 
-.hide {
-  display: none !important;
-}
-
-.ellipsis {
-    max-width: 100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-    
-
-
-/* ------ KONSILION ADMONITION ------ */
-
-
-:root {
-  --md-admonition-icon--ksln-info: url(https://img.icons8.com/ios-glyphs/344/info--v1.png)
-}
-.md-typeset .admonition.ksln-info,
-.md-typeset details.ksln-info {
-  border-color: white;
-}
-.md-typeset .ksln-info > .admonition-title,
-.md-typeset .ksln-info > summary {
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
-}
-.md-typeset .ksln-info > .admonition-title::before,
-.md-typeset .ksln-info > summary::before {
-  background-color: var(--md-primary-bg-color);
-  -webkit-mask-image: var(--md-admonition-icon--ksln-info);
-          mask-image: var(--md-admonition-icon--ksln-info);
+@media only screen and (max-width: 1219px) {
+	.md-content {
+	    padding: 25px 10px;
+	}
 }
 

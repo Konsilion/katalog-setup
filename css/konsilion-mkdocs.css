@@ -62,7 +62,20 @@
 }
 
 
-
+ 
+.md-nav__item.md-nav__item--active > a {
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: white;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid;
+    border-color : var(--md-primary-fg-color);
+    border-radius: 10px 0px 0px 10px;
+}
+    
+.md-nav__item.md-nav__item--active {
+    padding: 0px;
+}
 
 
 
@@ -92,6 +105,10 @@
     background-image: var(--md-primary-fg-color);
 }
 
+.md-header {
+    display:none
+}
+   
 .md-header__title {
 	margin-left:0px;
 }

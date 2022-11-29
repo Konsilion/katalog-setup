@@ -28,6 +28,8 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     <u><a href="https://konsilion.fr/wp/recherche-et-developpement/katalog-installation" target="_blank"> Obtenir une plateforme similaire</a></u>
     &ensp;
     <u><a style="cursor: pointer;" onclick="VisualParam();"> Paramètrages</a></u>
+    &ensp;
+    <u><a style="cursor: pointer;" onclick="VisualRepo();"> Vers le répertoire de l'application</a></u>
     <br>
     <br>
     Une plateforme open-source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.
@@ -35,6 +37,22 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique   
 </p>
 `;
+
+
+function VisualRepo() {
+    var url = window.location.pathname + '../konsilion.json';
+    fetch(url)
+    .then(response => response.json())
+    .then(json => {
+        GoToVisualRepo(json.repo);
+    });
+}
+
+function GoToVisualRepo(repo) {
+    window.open(repo);
+}
+
+
 
 
 function VisualParam() {

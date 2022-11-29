@@ -24,7 +24,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     &ensp;
     <u><a style="cursor: pointer;" href="./etc/parametres/home"> Paramètrages</a></u>
     &ensp;
-    <u><a style="cursor: pointer;" href="https://github.com/Konsilion/katalog-template/issues/new/choose"> Reporter une erreur</a></u>
+    <u><a style="cursor: pointer;" href="https://github.com/Konsilion/katalog-template/issues/new/choose" target="_blank"> Reporter une erreur</a></u>
     <br>
     <br>
     Une plateforme open-source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.

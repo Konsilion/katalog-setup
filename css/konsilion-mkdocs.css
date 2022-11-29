@@ -33,6 +33,19 @@
     display: none;
 }
 
+.md-sidebar__inner {
+    padding: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
 .md-grid { 
     max-width: 100%;
     padding: 0px;

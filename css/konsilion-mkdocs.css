@@ -89,10 +89,7 @@
     background-image: var(--md-primary-fg-color);
 }
 
-.md-header {
-    display:none
-}
-   
+
 .md-header__title {
 	margin-left:0px;
 }

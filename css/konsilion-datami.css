@@ -115,7 +115,7 @@
 
 
 
-/* ======= BUTTON FUNCTION - 'USEFUL' ======= */
+/* ======= BUTTON FUNCTION - Que ne je ne souhaite pas ======= */
 
     .ButtonDarkMode, .ButtonChangeUserBranch, .ButtonFullscreen, .ButtonChangeLocale  {
         display: none;
@@ -186,7 +186,10 @@
 
         .DatamiCardBlockTags {
             padding-top:25px;
+        }
 
+        .DatamiCardBlockTags > * {
+            font-size: 16;
         }
 
 

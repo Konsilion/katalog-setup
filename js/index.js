@@ -35,33 +35,3 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique   
 </p>
 `;
-
-
-function VisualRepo() {
-    var url = window.location.pathname + '../konsilion.json';
-    fetch(url)
-    .then(response => response.json())
-    .then(json => {
-        GoToVisualRepo(json.repo);
-    });
-}
-
-function GoToVisualRepo(repo) {
-    window.open(repo);
-}
-
-
-
-
-function VisualParam() {
-    var url = window.location.pathname + '../konsilion.json';
-    fetch(url)
-    .then(response => response.json())
-    .then(json => {
-        GoToVisualParam(json.repo);
-    });
-}
-
-function GoToVisualParam(repo) {
-    window.open(repo + "/edit/master/mkdocs.yml");
-}

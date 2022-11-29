@@ -40,9 +40,6 @@
 }
 
 
-.md-content__inner.md-typeset > h1 {
-        display: none;
-}
 
 .md-content__inner.md-typeset::before {
         display: none;

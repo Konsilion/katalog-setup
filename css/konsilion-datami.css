@@ -68,6 +68,10 @@
         box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0px 0px 10px var(--md-primary-fg-color--light);
     }
 
+    .DatamiCardsGrid {
+        margin-top:25px;
+    }
+
     .DatamiCardBlockImage {
         justify-content: center !important;
         text-align: center !important;

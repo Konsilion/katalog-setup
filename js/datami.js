@@ -38,7 +38,7 @@ function DatamiKatalog(token,repo) {
         html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                     <datami-file
                       title="` + title + `"
-                      gitfile="` + repo + `/docs/master/docs/etc/` + name + `/data.csv"
+                      gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
                       options='{
                       "height": "500px",
                       "separator": ";",
@@ -102,7 +102,7 @@ function DatamiKatalog(token,repo) {
         html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                     <datami-file
                       title="` + title + `"
-                      gitfile="` + repo + `/docs/master/docs/etc/` + name + `/data.csv"
+                      gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
                       options='{
                       "height": "500px",
                       "separator": ";",

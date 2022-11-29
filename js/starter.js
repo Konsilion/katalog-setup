@@ -44,9 +44,6 @@ document.body.appendChild(link);
 
 }
 
-
-linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion.css');
-
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.css');
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-datami.css');

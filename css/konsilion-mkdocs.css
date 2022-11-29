@@ -149,7 +149,9 @@ h1 {
         font-size: 18px;
         color: #666;
         line-height:20px;
+	padding-bottom: 25px;    
         margin: 25px auto;
+        border-bottom: 1px solid #DDD;
     }
     
     .md-sidebar {

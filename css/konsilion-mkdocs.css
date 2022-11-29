@@ -164,8 +164,9 @@
 .md-nav__link.md-nav__link--active::after {
 content: ">";
 }
+
 .md-header {
-height: 50px;
+height: 35px;
 }
 
 .md-header__button.md-icon > * {

@@ -8,7 +8,7 @@ fetch("https://unpkg.com/papaparse@5.3.0/papaparse.min.js")
 
 
 
-fetch("/etc/datami.js")
+fetch("https://konsilion.github.io/katalog-setup/js/datami.js")
   .then((response) => response.text())
   .then((text) => eval(text))
   .then(() => {
@@ -44,20 +44,9 @@ document.body.appendChild(link);
 
 }
 
-linkRemoteCss('/etc/konsilion.css');
 
-linkRemoteCss('/etc/konsilion-mkdocs.css');
+linkRemoteCss('https://konsilion.github.io/katalog-setup/js/css/konsilion.css');
 
-linkRemoteCss('/etc/konsilion-datami.css');
+linkRemoteCss('https://konsilion.github.io/katalog-setup/js/css/konsilion-mkdocs.css');
 
-
-
-
-
-
-
-
-
-
-
-
+linkRemoteCss('https://konsilion.github.io/katalog-setup/js/css/konsilion-datami.css');

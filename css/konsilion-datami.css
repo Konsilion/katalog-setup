@@ -108,7 +108,7 @@
     }
 
     
-    @media only screen and (min-width: 1200px) and (max-width: 1450px) {
+    @media only screen and (min-width: 1200px) {
         .column.is-4, .column.is-4-tablet {
             width: 33.33333337%;
         }

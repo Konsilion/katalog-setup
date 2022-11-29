@@ -31,11 +31,7 @@ function TakeTheToken() {
 
 function DatamiKatalog(token,repo) {
 
-    let htlm = "";
-    
-    switch (model) {
-      case '1':
-        html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
+    let htlm = "<!-- DATAMI WIDGET'S HTML BLOCK -->
                     <datami-file
                       title="` + title + `"
                       gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
@@ -45,8 +41,11 @@ function DatamiKatalog(token,repo) {
                       "lockcolumns": false,
                       "pagination": {
                         "itemsPerPage": 6
-                      },
-                      "cardsview": {
+                      },";
+    
+    switch (model) {
+      case '1':
+        html += `"cardsview": {
                         "activate": true,
                         "default": true
                       },
@@ -102,18 +101,7 @@ function DatamiKatalog(token,repo) {
                     ></datami-file> `;
         break;
       case '2':
-        html = `<!-- DATAMI WIDGET'S HTML BLOCK -->
-                    <datami-file
-                      title="` + title + `"
-                      gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
-                      options='{
-                      "height": "500px",
-                      "separator": ";",
-                      "lockcolumns": false,
-                      "pagination": {
-                        "itemsPerPage": 6
-                      },
-                      "cardsview": {
+        html += `"cardsview": {
                         "activate": true,
                         "default": true
                       },

@@ -70,6 +70,9 @@ function DatamiKatalog(token,repo) {
                           "NOM DE LA RESSOURCE": {
                             "position": "title"
                           },
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
                           "IDs - FILTRES": {
                             "position": "tags"
                           }

@@ -47,7 +47,10 @@
     display: none;
 }
 
-
+.md-header__button.md-icon {
+    padding: 0px;
+    margin: 0px;
+}
 
 
 /* ======= NAVIGATIONS, TOC, PREV-NEXT ======= */

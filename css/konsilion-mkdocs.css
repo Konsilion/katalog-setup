@@ -9,7 +9,7 @@
 #######################################
 
 .md-content {
-    padding: 25px 50px;
+    padding: 25px 50px !important;
 }
 
 @media only screen and (max-width: 1219px) {

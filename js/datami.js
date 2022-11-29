@@ -7,6 +7,11 @@ var descr = document.getElementById("CallDatami").getAttribute("descr");
 
 var model = document.getElementById("CallDatami").getAttribute("model");
 
+var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = 'h1 { display: none; }';
+    document.getElementsByTagName('head')[0].appendChild(style);
+
 
 
 // --------------------------------------------------

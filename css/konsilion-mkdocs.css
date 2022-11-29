@@ -47,11 +47,14 @@
     display: none;
 }
 
+
 .md-header__button.md-icon {
     padding: 0px;
     margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-
 
 /* ======= NAVIGATIONS, TOC, PREV-NEXT ======= */
 

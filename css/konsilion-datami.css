@@ -7,12 +7,12 @@
         padding: 0px;
     }
 
-.upper-container {
-      margin-bottom: 20px;  
-      border-width: 0px 0px 4px 0px;
-      border-style: solid;
-      border-image: linear-gradient(to right, #EEE, white) 0.5;    
-}
+    .upper-container {
+          margin-bottom: 20px;  
+          border-width: 0px 0px 4px 0px;
+          border-style: solid;
+          border-image: linear-gradient(to right, #EEE, white) 0.5;    
+    }
 
     .container {
         max-width: 100% !important;
@@ -86,6 +86,9 @@
         max-height: 130px;
     }
     
+    .DatamiGrid {
+        padding: 0px;
+    }
 
     .DatamiCardBlockTags {
         padding-top:25px;

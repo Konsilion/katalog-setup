@@ -136,6 +136,9 @@ function DatamiKatalog(token,repo) {
                         "mini": {
                           "NOM DE LA RESSOURCE": {
                             "position": "title"
+                          },
+                          "IDs - FILTRES": {
+                            "position": "tags"
                           }
                         },
                         "detail": {

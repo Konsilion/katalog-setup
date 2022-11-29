@@ -44,7 +44,7 @@ function DatamiKatalog(token,repo) {
                       "separator": ";",
                       "lockcolumns": false,
                       "pagination": {
-                        "itemsPerPage": 9
+                        "itemsPerPage": 6
                       },
                       "cardsview": {
                         "activate": true,
@@ -108,7 +108,7 @@ function DatamiKatalog(token,repo) {
                       "separator": ";",
                       "lockcolumns": false,
                       "pagination": {
-                        "itemsPerPage": 9
+                        "itemsPerPage": 6
                       },
                       "cardsview": {
                         "activate": true,

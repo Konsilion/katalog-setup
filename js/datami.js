@@ -73,8 +73,8 @@ function DatamiKatalog(token,repo) {
                           "IMAGE": {
                             "position": "image"
                           },
-                          "IDs - FILTRES": {
-                            "position": "tags"
+                          "DESCRIPTION": {
+                            "position": "resume"
                           }
                         },
                         "detail": {

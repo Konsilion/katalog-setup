@@ -8,11 +8,11 @@
 
 
 
-.md-nav__item--nested {
-    border-bottom: 0px solid #DDD;
+
+
+.md-nav__item--active.md-nav__item--nested {
     box-shadow: 0px 10px 5px -3px rgb(0 0 0 / 10%);
 }
-
 
 .md-nav__item--nested > nav > ul {
 	border-left: 1px solid grey;
@@ -147,7 +147,7 @@
             }
 
             .md-nav__item.md-nav__item--active {
-                padding: 0px 0 0 0px;
+                padding: 10px 0 0 0px;
                 color: black;
 		    
             }    

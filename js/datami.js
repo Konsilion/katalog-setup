@@ -7,6 +7,16 @@ var descr = document.getElementById("CallDatami").getAttribute("descr");
 
 var model = document.getElementById("CallDatami").getAttribute("model");
 
+
+var cardview = document.getElementById("CallDatami").getAttribute("cardview");
+
+
+
+
+
+// Ajout CSS - Peux mieux faire ---------------------
+
+
 var style = document.createElement('style');
     style.type = 'text/css';
     style.innerHTML = 'h1 { display: none; }';
@@ -31,9 +41,10 @@ function TakeTheToken() {
 
 function DatamiKatalog(token,repo) {
 
-    let htlm = "<!-- DATAMI WIDGET'S HTML BLOCK -->
-                    <datami-file
-                      title="` + title + `"
+    
+    let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
+                <datami-file
+                    title="` + title + `"
                       gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
                       options='{
                       "height": "500px",
@@ -41,13 +52,18 @@ function DatamiKatalog(token,repo) {
                       "lockcolumns": false,
                       "pagination": {
                         "itemsPerPage": 6
-                      },";
+                      },
+                      `;
     
+    let html_end = ``;
+    
+    let html = ``;
+
     switch (model) {
       case '1':
-        html += `"cardsview": {
+        html = `"cardsview": {
                         "activate": true,
-                        "default": true
+                        "default": ` + cardview + `
                       },
                       "schema": {
                         "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
@@ -62,68 +78,14 @@ function DatamiKatalog(token,repo) {
                         ],
                         "tagsSeparator": ","
                       },
-
                       "cardsdetail": false,
                       "cardssettings": {
                         "mini": {
                           "NOM DE LA RESSOURCE": {
                             "position": "title"
                           },
-                          "IMAGE": {
-                            "position": "image"
-                          },
                           "DESCRIPTION": {
                             "position": "resume"
-                          }
-                        },
-                        "detail": {
-                          "NOM DE LA RESSOURCE": {
-                            "position": "title"
-                          },
-                          "DESCRIPTION": {
-                            "position": "resume"
-                          },
-                          "IMAGE": {
-                            "position": "image"
-                          },
-                          "LIEN": {
-                            "position": "links"
-                          },
-                          "IDs - FILTRES": {
-                            "position": "tags", "block_title": "Catégories :"
-                          }
-                        }
-                      }
-                    }'
-                      onlypreview="false"
-                      usertoken="` + token + `"
-                      locale="fr"
-                    ></datami-file> `;
-        break;
-      case '2':
-        html += `"cardsview": {
-                        "activate": true,
-                        "default": true
-                      },
-                      "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
-                      },
-                      "fields-custom-properties": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
-                      },
-                      "customfilters": {
-                        "activate": true,
-                        "filterfields": [
-                          "IDs - FILTRES"
-                        ],
-                        "tagsSeparator": ","
-                      },
-
-                      "cardsdetail": false,
-                      "cardssettings": {
-                        "mini": {
-                          "NOM DE LA RESSOURCE": {
-                            "position": "title"
                           },
                           "IDs - FILTRES": {
                             "position": "tags"
@@ -140,21 +102,125 @@ function DatamiKatalog(token,repo) {
                             "position": "links"
                           },
                           "IDs - FILTRES": {
-                            "position": "tags", "block_title": "Catégories :"
+                            "position": "tags"
+                          }
+                        }
+                      }
+                    }'`;
+        break;
+      case '2':
+        html = `"cardsview": {
+                        "activate": true,
+                        "default": ` + cardview + `
+                      },
+                      "schema": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
+                      },
+                      "fields-custom-properties": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
+                      },
+                      "customfilters": {
+                        "activate": true,
+                        "filterfields": [
+                          "IDs - FILTRES"
+                        ],
+                        "tagsSeparator": ","
+                      },
+                      "cardsdetail": false,
+                      "cardssettings": {
+                        "mini": {
+                          "NOM DE LA RESSOURCE": {
+                            "position": "title"
+                          },
+                          "IDs - FILTRES": {
+                            "position": "tags", "block_title": "État "
+                          }
+                        },
+                        "detail": {
+                          "NOM DE LA RESSOURCE": {
+                            "position": "title"
+                          },
+                          "LIEN": {
+                            "position": "links"
+                          },
+                          "IDs - FILTRES": {
+                            "position": "tags", "block_title": "État "
                           }
                         }
                       }
                     }'
-                      onlypreview="false"
-                      usertoken="` + token + `"
-                      locale="fr"
-                    ></datami-file> `;            
+                    `;            
         break;
-      default:
-        console.log(`Sorry, we are out of ${model}.`);
+      case '3':
+        html = `"cardsview": {
+                        "activate": true,
+                        "default": ` + cardview + `
+                      },
+                      "schema": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
+                      },
+                      "fields-custom-properties": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
+                      },
+                      "customfilters": {
+                        "activate": true,
+                        "filterfields": [
+                          "IDs - FILTRES"
+                        ],
+                        "tagsSeparator": ","
+                      },
+                      "cardsdetail": false,
+                      "cardssettings": {
+                        "mini": {
+                          "NOM DE LA RESSOURCE": {
+                            "position": "title"
+                          },
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
+                          "IMAGE": {
+                            "position": "image"
+                          }
+                        },
+                        "detail": {
+                          "NOM DE LA RESSOURCE": {
+                            "position": "title"
+                          },
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
+                          "IMAGE": {
+                            "position": "image"
+                          },
+                          "LIEN": {
+                            "position": "links"
+                          },
+                          "IDs - FILTRES": {
+                            "position": "tags", "block_title": "Type :"
+                          }
+                        }
+                      }
+                    }'`;
+        break;
+        default:
+        html = ``;
     }
     
-    document.getElementById('DatamiGrid').innerHTML += html;
+    
+    html_end = `onlypreview="false"
+                usertoken="` + token + `"
+                locale="fr"
+        ></datami-file> `;
+      
+
+    var html_final = htlm_init + html + html_end;
+    
+        
+    console.log(html_final);
+    
+    
+    document.getElementById('DatamiGrid').innerHTML += html_final;
+    
     
     setTimeout(function() {
         const elem = document.createElement("p");

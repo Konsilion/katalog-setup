@@ -18,6 +18,36 @@ linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.cs
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs-md.css');
 
 
+
+document.getElementsByClassName('md-content')[0].innerHTML += `
+<img 
+    id="LogoIndex"
+    src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
+    style= "position: absolute;
+            bottom: 400px;
+            left: 25px;
+            padding-bottom: 25px;
+            max-width: 200px;
+            max-height: 100px;
+            border-bottom: 1px solid #DDD;
+            filter: grayscale(100%);"
+>
+<p     
+    style= "position: absolute;
+        font-size: 16px;
+        line-height: 25px;
+        bottom: 250px;
+        left: 25px;
+        max-width: 200px;
+        padding-top: 25px;
+        filter: grayscale(100%);">
+        Plateforme de collaboration autour de nos projets, nos savoirs et ceux qui les font vivre, c'est à dire nous toutes et tous.
+</p>
+`;
+
+
+
+
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <p style="color:#AAA; font-size: 15px; text-align: center">
     <u><a href="https://github.com/konsilion/katalog-template/" target="_blank"> Obtenir une plateforme similaire</a></u>

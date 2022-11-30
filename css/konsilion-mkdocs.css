@@ -1,13 +1,8 @@
 .ksln-btn-bottom:hover {
 	z-index:500;
-		    position: fixed;
-		    bottom: 60px;
-		    right: 25px;
-		    padding: 10px 15px;
-		    background-color: white;
-		    border-radius: 25px;
-		    border: 3px solid var(--md-primary-fg-color);
-		    cursor: pointer;	
+	    background-color: rgba(50,50,50,1);
+	    color: white;
+	    border: 3px solid rgba(50,50,50,1);
 }
 
 

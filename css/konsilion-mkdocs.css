@@ -1,9 +1,20 @@
+.ksln-btn-bottom::hover {
+	background-color: grey;
+}
+
+
+
 
 @media only screen and (max-width: 1219px) {
 	#LogoIndex {
 		display: none;
 	}
 }
+
+
+
+
+
 
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 

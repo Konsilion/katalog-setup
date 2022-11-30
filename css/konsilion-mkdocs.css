@@ -144,12 +144,6 @@
                 margin: 0;
                 box-shadow: 5px 0px 8px rgba(0,0,0,0.1);
             }
-
-            .md-nav__item.md-nav__item--active {
-                padding: 0px 0px;
-                color: black;
-		    
-            }    
 		
             .md-nav__item.md-nav__item--active > a {
                 margin: 10px 0px;

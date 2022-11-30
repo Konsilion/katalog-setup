@@ -16,7 +16,7 @@
 
 .md-nav__item--nested > nav > ul {
 	border-left: 1px solid grey;
-	padding: 5px;
+	padding-left: 10px;
 }
 
 

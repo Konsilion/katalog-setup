@@ -8,9 +8,9 @@
 
 
 
-li.md-nav__item.md-nav__item--nested {
-    border-bottom: 0px solid grey;
-    box-shadow: 0px 10px 5px -3px rgb(0 0 0 / 0%);
+.md-nav__item--nested {
+    border-bottom: 0px solid #DDD;
+    box-shadow: 0px 10px 5px -3px rgb(0 0 0 / 10%);
 }
 
 

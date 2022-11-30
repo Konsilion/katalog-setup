@@ -1,17 +1,13 @@
-
-
 .ksln-btn-bottom:hover {
 	z-index:500;
 	    background-color: rgba(50,50,50,1);
 	    color: white;
 }
 
-
 .md-nav__item--nested > nav {
     padding-left:15px;
     background-color: rgba(150,150,150,0.1);
 }
-
 
 .md-nav__item--nested > nav > ul {
     padding: 5px 0 10px 0;
@@ -20,7 +16,6 @@
 .md-nav__item {
 	padding: 0px;
 }
-
 
 @media only screen and (max-width: 1219px) {
 	#LogoIndex {

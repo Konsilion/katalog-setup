@@ -125,9 +125,9 @@
         @media only screen and (min-width: 1220px) {
 
             .md-sidebar {
-                max-width: 400px;
+                max-width: 350px;
                 width: 20%;
-                min-width: 350px;
+                min-width: 250px;
                 padding: 0px !important;
             }
 

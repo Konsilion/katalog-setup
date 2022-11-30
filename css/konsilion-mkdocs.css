@@ -14,7 +14,7 @@ li.md-nav__item.md-nav__item--nested {
 }
 
 
-li.md-nav__item.md-nav__item--active.md-nav__item--nested > nav > ul {
+.md-nav__item--nested > nav > ul {
 	border-left: 1px solid grey;
 	padding: 5px;
 }

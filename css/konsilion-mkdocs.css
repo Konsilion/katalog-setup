@@ -9,8 +9,7 @@
 
 
 .md-nav__item--active.md-nav__item--nested > nav {
-    background-color: grey;
-	color: white;	
+    background-color: rgba(0,0,0,0.2);
 }
 
 

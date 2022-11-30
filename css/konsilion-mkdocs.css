@@ -115,9 +115,9 @@
 
         .md-nav__link {
             color: rgba(125,125,125,1) ;
-            font-size:17px;
+            font-size:17px;	
+    	    padding-left: 15px;
         }   
-
 
         /* ------ GRAND ECRAN */
 

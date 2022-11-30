@@ -145,7 +145,7 @@
                 font-size: 18px;
                 color: #666;
                 line-height:20px;
-                padding-bottom: 25px;    
+                padding: 0 0 25px 0;    
                 margin: 100px auto 25px auto;
                 border-bottom: 1px solid #DDD;
             }

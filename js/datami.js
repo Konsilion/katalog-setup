@@ -239,7 +239,7 @@ TakeTheToken();
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <img 
     id="LogoIndex"
-    src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
+    src="https://static.wixstatic.com/media/9c0294_10806d3e86b04622b058669f09f2be9c~mv2.png/v1/fill/w_758,h_206,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/banni%C3%A8reinternet_edited.png"
     style= "position: fixed;
             top: 450px;
             left: 25px;

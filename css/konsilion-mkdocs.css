@@ -94,7 +94,7 @@
     } 
 
     .md-nav__link.md-nav__link--active::after {
-        content: ">";
+        content: "";
     }
 
         /* ------ CORRECTION DATAMI BUG */
@@ -136,18 +136,17 @@
 
             .md-nav__item.md-nav__item--active {
                 padding: 0px 0 0 10px;
-                color: black;
-                font-weight: bold;        
+                color: black;       
             }    
 
             .md-nav__item.md-nav__item--active > a {
                 margin: 10px 0px;
                 padding: 10px;
                 background-color: white;
-                border-width: 1px 0px 1px 1px;
+                border-width: .px 0px 0px 3px;
                 border-style: solid;
                 border-color : var(--md-primary-fg-color);
-                border-radius: 10px 0px 0px 10px;
+                border-radius: 0px 0px 0px 0px;
             }
         }   
 

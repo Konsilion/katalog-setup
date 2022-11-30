@@ -9,14 +9,13 @@
 
 .md-nav__item--nested > nav {
     pading-top:10px;
-	pading-bottom:10px;
     background-color: rgba(100,100,100,0.1);
 }
 
 
 .md-nav__item--nested > nav > ul {
     border-top: 2px solid #7c7c7c;
-    padding: 5px 0 0 0;
+    padding: 5px 0 10px 0;
 }
 
 .md-nav__item {

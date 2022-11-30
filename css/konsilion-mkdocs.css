@@ -8,6 +8,13 @@
 
 
 
+li.md-nav__item.md-nav__item--nested {
+    border-bottom: 1px solid;
+    padding: 10px 0px 10px 0px;
+    margin: 0px 10px 30px 10px;
+    box-shadow: 0px 10px 5px -3px rgb(0 0 0 / 10%);
+}
+
 
 @media only screen and (max-width: 1219px) {
 	#LogoIndex {

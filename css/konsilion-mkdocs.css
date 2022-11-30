@@ -147,10 +147,11 @@ li.md-nav__item.md-nav__item--active.md-nav__item--nested > nav > ul {
             }
 
             .md-nav__item.md-nav__item--active {
-                padding: 0px 0 0 10px;
-                color: black;       
+                padding: 0px 0 0 0px;
+                color: black;
+		    
             }    
-
+		
             .md-nav__item.md-nav__item--active > a {
                 margin: 10px 0px;
                 padding: 10px;

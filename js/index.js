@@ -23,27 +23,18 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 <img 
     id="LogoIndex"
     src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
-    style= "position: absolute;
-            bottom: 400px;
+    style= "position: fixed;
+            top: 450px;
             left: 25px;
-            padding-bottom: 25px;
+            padding-top: 25px;
             max-width: 200px;
             max-height: 100px;
-            border-bottom: 1px solid #DDD;
-            filter: grayscale(100%);"
+            border-top: 1px solid #DDD;
+            filter: grayscale(100%);
+            opacity: 0.5;"
 >
-<p     
-    style= "position: absolute;
-        font-size: 16px;
-        line-height: 25px;
-        bottom: 250px;
-        left: 25px;
-        max-width: 200px;
-        padding-top: 25px;
-        filter: grayscale(100%);">
-        Plateforme de collaboration autour de nos projets, nos savoirs et ceux qui les font vivre, c'est à dire nous toutes et tous.
-</p>
 `;
+
 
 
 

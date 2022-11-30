@@ -12,7 +12,7 @@
 
 
 .md-nav__item--nested > nav > ul {
-	border-left: 1px solid grey;
+	border-left: 2px solid #DDD;
 	padding-left: 10px;
 }
 

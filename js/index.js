@@ -24,7 +24,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     id="LogoIndex"
     src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
     style= "position: fixed;
-            top: 600px;
+            top: 400px;
             left: 25px;
             padding-top: 25px;
             max-width: 200px;

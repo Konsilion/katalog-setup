@@ -202,7 +202,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     }
     
     html_end = `onlypreview="false"
-                usertoken="g` + token + `"
+                usertoken="` + token + `"
                 locale="fr"
         ></datami-file><br><br> `;
       

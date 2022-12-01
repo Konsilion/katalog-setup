@@ -31,16 +31,24 @@ function TakeTheToken() {
     fetch(url)
     .then(response => response.json())
     .then(json => {
-        DatamiKatalog(json.user,json.repo,json.logo);
+        DatamiKatalog(json.user,json.repo,json.logo,json.token);
     });
 }
 
 
 
-function DatamiKatalog(user,repo,logo) {
+function DatamiKatalog(user,repo,logo,global_token) {
 
     var gitfile = `https://github.com/` + user + `/` + repo + `/` + `blob/master/docs/etc/` + name + `/data.csv`
     
+    var token_use = "",
+    
+    if (token == "") {
+        token_use = global_token;
+    } else {
+        token_use = token_use;
+    }
+
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
@@ -207,7 +215,7 @@ function DatamiKatalog(user,repo,logo) {
     
     
     html_end = `onlypreview="false"
-                usertoken="` + token + `"
+                usertoken="` + token_use + `"
                 locale="fr"
         ></datami-file> `;
       

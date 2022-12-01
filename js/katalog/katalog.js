@@ -233,15 +233,7 @@ fetch(ksln_json)
         document.getElementsByClassName('md-content')[0].innerHTML += `
             <img 
                 id="LogoIndex"
-                src="` + json.logo + `"
-                style= "position: fixed;
-                        top: 45px;
-                        left: 25px;
-                        max-width: 200px;
-                        max-height: 45px;
-                        filter: grayscale(100%);
-                        opacity: 0.5;"
-            >
+                src="` + json.logo + `">
             <button class="ksln-btn-bottom" 
             onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs/katalog/` + katalog_folder + `/katalog.json');"> 
             Paramètrer ce catalogue

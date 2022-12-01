@@ -246,6 +246,8 @@ fetch(ksln_json)
             </button>
             `;
     
+            main_gitfile = `https://github.com/` + json.user + `/` + json.repo + `/` + `blob/master/docs/etc/` + katalog_folder + `/data.csv`
+    
             main_token = json.token;
     });
 

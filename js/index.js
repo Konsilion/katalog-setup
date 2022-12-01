@@ -15,7 +15,7 @@ function linkRemoteCss(url){
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.css');
 
-linkRemoteCss('../konsilion-mkdocs-md.css');
+linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs-md.css');
 
 
 

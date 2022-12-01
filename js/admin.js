@@ -27,7 +27,7 @@ function myFunction() {
     
     ---
     
-    <script type="text/javascript" src="../admin.js"></script>
+    <script type="text/javascript" src="https://konsilion.github.io/katalog-setup/js/admin.js"></script>
     <script type="text/javascript" src="https://konsilion.github.io/katalog-setup/js/pages.js"></script>
     `);
 

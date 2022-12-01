@@ -40,7 +40,7 @@
           margin-bottom: 20px;  
           border-width: 0px 0px 4px 0px;
           border-style: solid;
-          border-image: linear-gradient(to left, var(--md-primary-fg-color), white) 0.5;    
+          border-image: linear-gradient(to right, var(--md-primary-fg-color), white) 0.5;    
     }
 
   

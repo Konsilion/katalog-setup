@@ -114,8 +114,7 @@
 
         .md-nav__link {
             color: rgba(125,125,125,1) ;
-            font-size:17px;	
-	    margin: 20px auto;
+            font-size:17px;
         }
 
         /* ------ GRAND ECRAN */
@@ -157,18 +156,23 @@
             }
 		
 
-		.md-nav__item--nested > nav {
-		    padding-left:15px;
-		    background-color: rgba(150,150,150,0.1);
-		}
+			.md-nav__item--nested > nav {
+				padding-left:15px;
+				background-color: rgba(150,150,150,0.1);
+			}
 
-		.md-nav__item--nested > nav > ul {
-		    padding: 5px 0 10px 0;
-		}
+			.md-nav__item--nested > nav > ul {
+				padding: 5px 0 10px 0;
+			}
 
-		.md-nav__item {
-			padding: 0px;
-		}		
+			.md-nav__item {
+				padding: 0px;
+			}	
+
+			.md-nav__link {
+				margin: 20px auto;
+			}
+			
         }   
 
 

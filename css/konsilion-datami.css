@@ -117,7 +117,7 @@
 
 /* ======= BUTTON FUNCTION - Que ne je ne souhaite pas ======= */
 
-    .ButtonDarkMode, .ButtonChangeUserBranch, .ButtonFullscreen, .ButtonChangeLocale  {
+    .ButtonDarkMode, .ButtonChangeUserBranch, .ButtonFullscreen, .ButtonChangeLocale, .ButtonChangeUserToken {
         display: none;
     } 
 

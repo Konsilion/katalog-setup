@@ -29,3 +29,21 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique   
 </p>
 `;
+
+
+
+document.getElementsByClassName('md-content')[0].innerHTML += `
+<img 
+    id="LogoIndex"
+    src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
+    style= "position: fixed;
+            top: 400px;
+            left: 25px;
+            padding-top: 25px;
+            max-width: 200px;
+            max-height: 100px;
+            border-top: 1px solid #DDD;
+            filter: grayscale(100%);
+            opacity: 0.5;"
+>
+`;

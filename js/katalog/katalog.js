@@ -14,6 +14,8 @@ var ksln_json = window.location.pathname + '../../../konsilion.json';
 
 var main_token = "";
 
+var main_gitfile = "";
+
 function TakeTheJson() {
     var url = window.location.pathname + '../katalog.json';
     fetch(url)
@@ -22,7 +24,7 @@ function TakeTheJson() {
         var main = Object.keys(json.informations);
         var model = json.informations.model;
         var cardview = json.informations.cardview;
-        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,json.informations.url,model,cardview,main_token);
+        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,main_gitfile,model,cardview,main_token);
 
         var list = Object.keys(json.external);        
         var count = Object.keys(json.external).length;

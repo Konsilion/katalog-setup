@@ -50,7 +50,8 @@ fetch(url)
     
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <img 
-            id="LogoIndex">
+            id="LogoIndex" 
+            src="` + json.logo + `">
         `;      
 });
 

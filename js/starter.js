@@ -28,7 +28,6 @@ fetch("https://datami-widget.multi.coop/js/app.js")
 
 
 
-
 function linkRemoteCss(url){
 
 // create new link tag

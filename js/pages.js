@@ -50,5 +50,9 @@ fetch(url)
                     filter: grayscale(100%);
                     opacity: 0.5;"
         >
+        <button class="ksln-btn-bottom" 
+        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/upload/master/docs/stg');"> 
+        Modifier cette page
+        </button>
         `;    
 });

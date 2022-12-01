@@ -8,7 +8,7 @@ fetch("https://unpkg.com/papaparse@5.3.0/papaparse.min.js")
 
 
 
-fetch("https://konsilion.github.io/katalog-setup/js/datami.js")
+fetch("https://konsilion.github.io/katalog-setup/js/katalog/datami.js")
   .then((response) => response.text())
   .then((text) => eval(text))
   .then(() => {

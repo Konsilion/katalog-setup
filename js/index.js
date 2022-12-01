@@ -33,7 +33,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 
 
 
-var url = window.location.pathname + '../konsilion.json';
+var url = window.location.pathname + './konsilion.json';
 fetch(url)
 .then(response => response.json())
 .then(json => {

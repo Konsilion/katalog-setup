@@ -43,15 +43,12 @@ fetch(url)
             id="LogoIndex"
             src="` + json.logo + `"
             style= "position: fixed;
-                    top: 400px;
+                    top: 45px;
                     left: 25px;
-                    padding-top: 25px;
                     max-width: 200px;
-                    max-height: 100px;
-                    border-top: 1px solid #DDD;
+                    max-height: 45px;
                     filter: grayscale(100%);
                     opacity: 0.5;"
         >
         `;    
-
 });

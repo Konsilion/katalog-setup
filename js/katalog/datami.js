@@ -41,12 +41,12 @@ function DatamiKatalog(user,repo,logo,global_token) {
 
     var gitfile = `https://github.com/` + user + `/` + repo + `/` + `blob/master/docs/etc/` + name + `/data.csv`
     
-    var token_use = "",
+    var token_use = "";
     
     if (token == "") {
         token_use = global_token;
     } else {
-        token_use = token_use;
+        token_use = token;
     };
 
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->

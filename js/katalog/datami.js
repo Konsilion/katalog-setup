@@ -47,7 +47,7 @@ function DatamiKatalog(user,repo,logo,global_token) {
         token_use = global_token;
     } else {
         token_use = token_use;
-    }
+    };
 
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file

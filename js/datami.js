@@ -1,5 +1,5 @@
 const appId = window.location.pathname.split('/');
-var name = appId[appId.length - 3]
+    var name = appId[appId.length - 3]
 
 var title = document.getElementById("CallDatami").getAttribute("title");
 
@@ -7,11 +7,9 @@ var descr = document.getElementById("CallDatami").getAttribute("descr");
 
 var model = document.getElementById("CallDatami").getAttribute("model");
 
-
 var cardview = document.getElementById("CallDatami").getAttribute("cardview");
 
-
-
+var token = document.getElementById("CallDatami").getAttribute("token");
 
 
 // Ajout CSS - Peux mieux faire ---------------------
@@ -33,19 +31,20 @@ function TakeTheToken() {
     fetch(url)
     .then(response => response.json())
     .then(json => {
-        DatamiKatalog(json.token,json.repo);
+        DatamiKatalog(json.user,json.repo);
     });
 }
 
 
 
-function DatamiKatalog(token,repo) {
+function DatamiKatalog(user,repo) {
 
+    var gitfile = `https://github.com/` + user + `/` + repo + `/` + `blob/master/docs/etc/` + name + `/data.csv`
     
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
-                      gitfile="` + repo + `/blob/master/docs/etc/` + name + `/data.csv"
+                      gitfile="` + gitfile + `"
                       options='{
                       "height": "500px",
                       "separator": ";",
@@ -215,39 +214,55 @@ function DatamiKatalog(token,repo) {
 
     var html_final = htlm_init + html + html_end;
     
-        
-    console.log(html_final);
-    
     
     document.getElementById('DatamiGrid').innerHTML += html_final;
     
     
+
+    
+     document.getElementsByClassName('md-content')[0].innerHTML += `
+    <img 
+        id="LogoIndex"
+        src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
+        style= "position: fixed;
+                padding-top: 25px;
+                border-top: 1px solid #DDD;
+                top: 400px;
+                left: 25px;
+                max-width: 200px;
+                max-height: 100px;
+                filter: grayscale(100%);
+                opacity: 0.5;"
+    >
+    `;
+   
+    
+    
+    
+    
+    
+    
+    
     setTimeout(function() {
         const elem = document.createElement("p");
-            elem.setAttribute("id", "DescrKatalog")
-            elem.appendChild(document.createTextNode(descr));  
-
+            elem.setAttribute("id", "DescrKatalog") 
+            elem.appendChild(document.createTextNode(descr));
 
         var child = document.getElementsByClassName("PreviewCsv")[0];
             child.parentNode.insertBefore(elem, child);
 
     }, 1500);    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
-TakeTheToken();
 
-document.getElementsByClassName('md-content')[0].innerHTML += `
-<img 
-    id="LogoIndex"
-    src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
-    style= "position: fixed;
-            top: 600px;
-            left: 25px;
-            padding-top: 25px;
-            max-width: 200px;
-            max-height: 100px;
-            border-top: 1px solid #DDD;
-            filter: grayscale(100%);
-            opacity: 0.5;"
->
-`;
+
+TakeTheToken();

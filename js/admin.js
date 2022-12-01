@@ -4,7 +4,6 @@ fetch(url)
 .then(json => {
     
     document.getElementById("IndexLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/docs/index.md");
-    document.getElementById("InfoLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/docs/pages/informations.md");
     document.getElementById("PageLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/new/master/docs/pages");
     document.getElementById("InitLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/docs/konsilion.json");
     document.getElementById("ConfigLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/mkdocs.yml");

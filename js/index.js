@@ -43,7 +43,7 @@ fetch(url)
             id="LogoIndex"
             src="` + json.logo + `"
             style= "position: fixed;
-                    top: 400px;
+                    top: 40px;
                     left: 25px;
                     padding-top: 25px;
                     max-width: 200px;

@@ -45,10 +45,8 @@ fetch(url)
             style= "position: fixed;
                     top: 40px;
                     left: 25px;
-                    padding-top: 25px;
                     max-width: 200px;
-                    max-height: 100px;
-                    border-top: 1px solid #DDD;
+                    max-height: 75px;
                     filter: grayscale(100%);
                     opacity: 0.5;"
         >

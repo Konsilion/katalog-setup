@@ -220,21 +220,19 @@ function DatamiKatalog(user,repo,logo) {
     
 
     
-     document.getElementsByClassName('md-content')[0].innerHTML += `
-    <img 
-        id="LogoIndex"
-        src="` + logo + `"
-        style= "position: fixed;
-                padding-top: 25px;
-                border-top: 1px solid #DDD;
-                top: 400px;
-                left: 25px;
-                max-width: 200px;
-                max-height: 100px;
-                filter: grayscale(100%);
-                opacity: 0.5;"
-    >
-    `;
+    document.getElementsByClassName('md-content')[0].innerHTML += `
+        <img 
+            id="LogoIndex"
+            src="` + logo + `"
+            style= "position: fixed;
+                    top: 45px;
+                    left: 25px;
+                    max-width: 200px;
+                    max-height: 45px;
+                    filter: grayscale(100%);
+                    opacity: 0.5;"
+        >
+        `;   
    
     
     

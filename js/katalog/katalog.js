@@ -1,6 +1,5 @@
 // Ajout CSS - Peux mieux faire ---------------------
 
-
 var style = document.createElement('style');
     style.type = 'text/css';
     style.innerHTML = 'h1 { display: none; }';
@@ -13,6 +12,8 @@ const appId = window.location.pathname.split('/');
 
 var ksln_json = window.location.pathname + '../../../konsilion.json';
 
+var main_token = "";
+
 function TakeTheJson() {
     var url = window.location.pathname + '../katalog.json';
     fetch(url)
@@ -21,13 +22,12 @@ function TakeTheJson() {
         var main = Object.keys(json.informations);
         var model = json.informations.model;
         var cardview = json.informations.cardview;
-        var token = json.informations.token;
-        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,json.informations.url,model,cardview,token);
+        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,json.informations.url,model,cardview,main_token);
 
         var list = Object.keys(json.external);        
         var count = Object.keys(json.external).length;
         for (let i = 0; i < count; i++) {
-            DatamiKatalog(i+1,"DatamiExternal",list[i],json.external[list[i]].descr,json.external[list[i]].url,model,cardview,token);
+            DatamiKatalog(i+1,"DatamiExternal",list[i],json.external[list[i]].descr,json.external[list[i]].url,model,cardview,json.external[list[i]].token);
         }
     });
 }
@@ -35,7 +35,6 @@ function TakeTheJson() {
 
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
-
 
     let htlm_init = `<br><br><!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
@@ -245,7 +244,9 @@ fetch(ksln_json)
             onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs/katalog/` + katalog_folder + `/katalog.json');"> 
             Paramètrer ce catalogue
             </button>
-            `;   
+            `;
+    
+            main_token = json.token;
     });
 
 

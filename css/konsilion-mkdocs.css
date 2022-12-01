@@ -220,7 +220,7 @@ input:checked + .slider:before {
                 color: #666;
                 line-height:20px;
                 padding: 25px 0;    
-                margin: 75px auto 25px auto;
+                margin: 100px auto 25px auto;
                 border-bottom: 1px solid #DDD;
 	        border-top: 1px solid #DDD;
             }

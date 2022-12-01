@@ -53,3 +53,23 @@ fetch(url)
         `;    
 
 });
+
+
+
+function ConfigJson() {
+
+    var name = document.getElementById("UserName").value;
+    var repo = document.getElementById("RepoName").value;
+
+    window.open("https://github.com/" + name + "/" + repo + "/edit/master/docs/konsilion.json");
+
+}
+
+function AccessPlateform() {
+
+    var name = document.getElementById("UserName").value;
+    var repo = document.getElementById("RepoName").value;
+
+    window.open("https://" + name + ".github.io/" + repo);
+
+}

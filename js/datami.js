@@ -31,13 +31,13 @@ function TakeTheToken() {
     fetch(url)
     .then(response => response.json())
     .then(json => {
-        DatamiKatalog(json.user,json.repo);
+        DatamiKatalog(json.user,json.repo,json.logo);
     });
 }
 
 
 
-function DatamiKatalog(user,repo) {
+function DatamiKatalog(user,repo,logo) {
 
     var gitfile = `https://github.com/` + user + `/` + repo + `/` + `blob/master/docs/etc/` + name + `/data.csv`
     
@@ -223,7 +223,7 @@ function DatamiKatalog(user,repo) {
      document.getElementsByClassName('md-content')[0].innerHTML += `
     <img 
         id="LogoIndex"
-        src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"
+        src="` + logo + `"
         style= "position: fixed;
                 padding-top: 25px;
                 border-top: 1px solid #DDD;

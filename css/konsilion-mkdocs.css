@@ -130,9 +130,6 @@ input:checked + .slider:before {
 
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
-.md-main {
-	margin: auto;
-}
 
 .md-main__inner { 
     max-width: 100%;

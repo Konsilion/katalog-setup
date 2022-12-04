@@ -1,3 +1,16 @@
+@media only screen and (min-width: 1220px) {
+    .md-sidebar.md-sidebar--secondary {
+        display: none;
+    }
+    
+    .md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {
+        padding-right: 25px;
+        box-shadow: -5px 0px 8px rgba(0,0,0,0.1);
+    }
+    
+}
+
+
 .md-content{
     padding-top: 50px;
     max-width:1219px;

@@ -10,6 +10,7 @@
 
 
 .ksln-btn-bottom {
+	z-index:500;
         background-color: #EEE;
         color: grey;    
         font-size: 17px;
@@ -24,9 +25,8 @@
 
 
 .ksln-btn-bottom:hover {
-	z-index:500;
-	    background-color: rgba(50,50,50,1);
-	    color: white;
+    	background-color: rgba(50,50,50,1);
+    	color: white;
 }
 
     .kslt-btn-index {

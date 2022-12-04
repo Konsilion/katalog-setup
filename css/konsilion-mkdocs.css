@@ -151,15 +151,18 @@ input:checked + .slider:before {
 
 	.md-content{
 		padding-top: 50px;
+		width: 80%;
 		max-width:1219px;
 		margin-left: auto;
 		margin-right: auto;
+	
 	}
 
 	@media only screen and (max-width: 1219px) {
-	.md-content {
-		padding: 25px 10px;
-	}
+		.md-content {
+			padding: 25px 10px;
+		}
+	
 	}
 
 	p {

@@ -150,17 +150,17 @@ input:checked + .slider:before {
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 
 	.md-content{
-		padding-top: 50px;
+		margin: 50px;
 		width: 80%;
 		max-width:1219px;
-		margin-left: auto;
-		margin-right: auto;
 	
 	}
 
 	@media only screen and (max-width: 1219px) {
 		.md-content {
 			padding: 25px 10px;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	
 	}

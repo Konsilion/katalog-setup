@@ -1,9 +1,9 @@
 // Ajout CSS - Peux mieux faire ---------------------
 
-var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = 'h1 { display: none; }';
-    document.getElementsByTagName('head')[0].appendChild(style);
+//var style = document.createElement('style');
+//    style.type = 'text/css';
+//    style.innerHTML = 'h1 { display: none; }';
+//    document.getElementsByTagName('head')[0].appendChild(style);
 
 // ---------------------
 

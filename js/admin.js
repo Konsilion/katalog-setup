@@ -15,7 +15,7 @@ function linkRemoteCss(url){
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.css');
 
-linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs-md.css');
+linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion.css');
 
 
 document.getElementsByClassName('md-content')[0].innerHTML += `
@@ -31,7 +31,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 `;
 
 
-var url = window.location.pathname + '../konsilion.json';
+var url = '/konsilion.json';
 fetch(url)
 .then(response => response.json())
 .then(json => {
@@ -70,24 +70,4 @@ function myFunction() {
 
     // Alert the copied text
     alert("Scripts copié et à coller dans l'étape suivante au bas de la page.");
-}       
-
-
-
-function ConfigJson() {
-
-    var name = document.getElementById("UserName").value;
-    var repo = document.getElementById("RepoName").value;
-
-    window.open("https://github.com/" + name + "/" + repo + "/edit/master/docs/konsilion.json");
-
-}
-
-function AccessPlateform() {
-
-    var name = document.getElementById("UserName").value;
-    var repo = document.getElementById("RepoName").value;
-
-    window.open("https://" + name + ".github.io/" + repo);
-
 }

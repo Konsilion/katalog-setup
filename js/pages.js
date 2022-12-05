@@ -30,7 +30,7 @@ fetch(url)
         <img 
             id="LogoIndex"
             src="` + json.logo + `"
-            onclick="window.open('/','_self')"
+            onclick="window.open(window.location.pathname + '../../','_self')"
             style="cursor: pointer;">
         `;    
 });

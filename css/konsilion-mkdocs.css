@@ -157,14 +157,6 @@
 			
         }   
 
-
-    /* ======= TOC ======= */
-    
-        .md-sidebar.md-sidebar--secondary {
-            display: none;
-        }
-
-
     /* ======= PREV-NEXT ======= */
 
         .md-footer__inner.md-grid {

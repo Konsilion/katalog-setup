@@ -16,6 +16,8 @@ function ShowMeNav() {
 };
 
 window.HideMeNav = HideMeNav();
+window.ShowMeNav = ShowMeNav();
+
 
 function linkRemoteCss(url){
     // create new link tag

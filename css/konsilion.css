@@ -69,7 +69,7 @@ input:checked + .slider:before {
     position: fixed;
     top: 50px;
     left: 25px;
-    max-width: 200px;
+    max-width: 150px;
     max-height: 50px;
     filter: grayscale(100%);
     opacity: 0.5;

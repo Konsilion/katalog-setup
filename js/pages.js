@@ -1,3 +1,5 @@
+// ============= IMPORT CSS =============
+
 function linkRemoteCss(url){
 
     // create new link tag
@@ -17,6 +19,10 @@ linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.cs
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion.css');
 
+
+
+// ============= PIED DE PAGE ================
+
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <p style="color:#AAA; font-size: 15px; text-align: center">
     <u><a href="https://github.com/konsilion/katalog-template/" target="_blank"> Obtenir une plateforme similaire</a></u>
@@ -30,7 +36,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 `;
 
 
-
+// ============ KONSILION JSON INFORMATIONS =============
 
 var url = '/konsilion.json';
 fetch(url)
@@ -50,3 +56,23 @@ fetch(url)
         </button>
         `;    
 });
+
+
+function HideNav() {
+    document.getElementById("HideNav").classList.toggle("hide");
+    document.getElementById("ShowNav").classList.toggle("hide");
+    document.getElementById("LogoIndex").classList.toggle("hide");
+    document.getElementsByClassName("md-sidebar--primary")[0].classList.toggle("hide");
+    document.getElementsByClassName("md-main")[0].style.marginRight = "auto";
+    document.getElementsByClassName("md-main")[0].style.marginLeft = "auto";
+    
+};
+
+function ShowNav() {
+    document.getElementById("HideNav").classList.toggle("hide");
+    document.getElementById("ShowNav").classList.toggle("hide");
+    document.getElementById("LogoIndex").classList.toggle("hide");
+    document.getElementsByClassName("md-sidebar--primary")[0].classList.toggle("hide");
+    document.getElementsByClassName("md-main")[0].style.marginRight = "0px";
+    document.getElementsByClassName("md-main")[0].style.marginLeft = "0px";
+};

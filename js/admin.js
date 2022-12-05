@@ -1,9 +1,3 @@
-fetch("https://konsilion.github.io/katalog-setup/js/konsilion.js")
-  .then((response) => response.text())
-  .then((text) => eval(text))
-  .then(() => {
-  })  
-
 function linkRemoteCss(url){
 
     // create new link tag
@@ -77,3 +71,23 @@ function myFunction() {
     // Alert the copied text
     alert("Scripts copié et à coller dans l'étape suivante au bas de la page.");
 }       
+
+
+
+function ConfigJson() {
+
+    var name = document.getElementById("UserName").value;
+    var repo = document.getElementById("RepoName").value;
+
+    window.open("https://github.com/" + name + "/" + repo + "/edit/master/docs/konsilion.json");
+
+}
+
+function AccessPlateform() {
+
+    var name = document.getElementById("UserName").value;
+    var repo = document.getElementById("RepoName").value;
+
+    window.open("https://" + name + ".github.io/" + repo);
+
+}

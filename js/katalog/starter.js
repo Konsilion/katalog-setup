@@ -15,6 +15,12 @@ fetch("https://konsilion.github.io/katalog-setup/js/katalog/katalog.js")
   })  
 
 
+fetch("https://konsilion.github.io/katalog-setup/js/konsilion.js")
+  .then((response) => response.text())
+  .then((text) => eval(text))
+  .then(() => {
+  }) 
+
 
 
 fetch("https://datami-widget.multi.coop/js/app.js")

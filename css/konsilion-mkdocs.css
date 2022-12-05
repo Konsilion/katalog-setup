@@ -88,6 +88,11 @@
         content: "";
     }
 
+    .md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {
+        padding-right: 25px;
+        box-shadow: -5px 0px 8px rgba(0,0,0,0.1);
+    }
+
         /* ------ CORRECTION DATAMI BUG */
 
         .md-nav__link {

@@ -55,7 +55,9 @@ fetch(url)
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <img 
             id="LogoIndex"
-            src="` + json.logo + `">
+            src="` + json.logo + `"
+            onclick="window.open('/','_self')"
+            style="cursor: pointer;">
         `;    
 });
 

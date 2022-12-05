@@ -36,7 +36,7 @@ function myFunction() {
 
 // ============ LOGO =============
 
-var url = './konsilion.json';
+var url = window.location.pathname + '../konsilion.json';
 fetch(url)
 .then(response => response.json())
 .then(json => {
@@ -48,7 +48,7 @@ fetch(url)
         <img 
             id="LogoIndex"
             src="` + json.logo + `"
-            onclick="window.open('/','_self')"
+            onclick="window.open(window.location.pathname + '../','_self')"
             style="cursor: pointer;">
         `;    
 });

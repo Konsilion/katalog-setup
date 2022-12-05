@@ -42,26 +42,6 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 `;
 
 
-// ============ LOGO =============
-
-var url = '/konsilion.json';
-fetch(url)
-.then(response => response.json())
-.then(json => {
-
-    var array = window.location.pathname.split('/');
-    var page = array[array.length-2];   
-    
-    document.getElementsByClassName('md-content')[0].innerHTML += `
-        <img 
-            id="LogoIndex"
-            src="` + json.logo + `"
-            onclick="window.open('/','_self')"
-            style="cursor: pointer;">
-        `;    
-});
-
-
 function HideNav() {
     document.getElementById("HideNav").classList.toggle("hide");
     document.getElementById("ShowNav").classList.toggle("hide");

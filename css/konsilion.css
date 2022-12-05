@@ -167,3 +167,10 @@ input:checked + .slider:before {
     background-color: rgba(50,50,50,1);
     color: white;
 } 
+
+
+@media only screen and (max-width: 1219px) {
+	#HideNav, #ShowNav {
+	    display: none;
+	}
+}

@@ -1,38 +1,167 @@
-    #ShowNav {
-        background-color: var(--md-primary-fg-color);
-        color: white;    
-        font-size: 17px;
-        font-weight: 500;
-        position: fixed;
-        top: 30px;
-        left: 0px;
-        border-radius: 0 0 10px 0;
-        padding: 5px 25px; 
-        cursor: pointer;
-        z-index: 4;
-    }
+     
+.ksln-switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+    
+.ksln-switch input { 
+  opacity: 0;
+  width: 0;
+  height: 20;
+}
 
-  
-    #HideNav {
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+    
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
+
+
+
+#LogoIndex {
+    position: fixed;
+    top: 50px;
+    left: 25px;
+    max-width: 200px;
+    max-height: 50px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+
+.ksln-btn-bottom {
+	z-index:500;
         background-color: #EEE;
         color: grey;    
         font-size: 17px;
         font-weight: 500;
         position: fixed;
-        top: 30px;
-        left: 225px;
-        border-radius: 0 0 0 10px;
-        width: 125px;
-        height: 30px;
+        bottom: 0px;
+        right: 0;
+        padding: 7px 15px;
+        border-radius: 10px 0px 0 0px;
         cursor: pointer;
-        z-index: 3;
+}
+
+
+.ksln-btn-bottom:hover {
+    	background-color: rgba(50,50,50,1);
+    	color: white;
+}
+
+    .kslt-btn-index {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
     
-    #HideNav:hover {
-        background-color: rgba(50,50,50,1);
-        color: white;
+    
+    .BtnConfig {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    #ShowNav:hover {
-        background-color: rgba(50,50,50,1);
-        color: white;
-    } 
+
+
+
+@media only screen and (max-width: 1219px) {
+	#LogoIndex {
+		display: none;
+	}
+}
+
+.hide{display: none;}   
+
+
+#ShowNav {
+    background-color: var(--md-primary-fg-color);
+    color: white;    
+    font-size: 17px;
+    font-weight: 500;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    border-radius: 0 0 10px 0;
+    padding: 5px 25px; 
+    cursor: pointer;
+    z-index: 4;
+}
+
+
+#HideNav {
+    background-color: #EEE;
+    color: grey;    
+    font-size: 17px;
+    font-weight: 500;
+    position: fixed;
+    top: 30px;
+    left: 225px;
+    border-radius: 0 0 0 10px;
+    width: 125px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#HideNav:hover {
+    background-color: rgba(50,50,50,1);
+    color: white;
+}
+#ShowNav:hover {
+    background-color: rgba(50,50,50,1);
+    color: white;
+} 

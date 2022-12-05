@@ -99,15 +99,13 @@
         padding: 0px;
     }
 
-    .md-nav--secondary > .md-nav__title {
-	background-color: rgba(250,250,250,1);   
+    .md-nav--secondary > .md-nav__title {  
 	font-size: 18px;
 	color: #666;
 	line-height:20px;
 	padding: 25px 0;    
-	margin: 100px auto 25px auto;
+	margin: 25px auto 25px auto;
 	border-bottom: 1px solid #DDD;
-	border-top: 1px solid #DDD;
     }
 
         /* ------ CORRECTION DATAMI BUG */

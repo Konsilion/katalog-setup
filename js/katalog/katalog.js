@@ -38,7 +38,7 @@ function TakeTheJson() {
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
-    let htlm_init = `<br><br><!-- DATAMI WIDGET'S HTML BLOCK -->
+    let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
                       gitfile="` + gitfile + `"

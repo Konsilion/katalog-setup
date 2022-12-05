@@ -1,10 +1,3 @@
-fetch("https://konsilion.github.io/katalog-setup/js/konsilion.js")
-  .then((response) => response.text())
-  .then((text) => eval(text))
-  .then(() => {
-  })  
-
-
 function linkRemoteCss(url){
 
     // create new link tag
@@ -58,3 +51,9 @@ fetch(url)
         </button>
         `;    
 });
+
+fetch("https://konsilion.github.io/katalog-setup/js/konsilion.js")
+  .then((response) => response.text())
+  .then((text) => eval(text))
+  .then(() => {
+  })  

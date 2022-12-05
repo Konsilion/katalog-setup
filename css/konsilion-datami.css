@@ -185,6 +185,7 @@
             display: block;
             width: 80%;
             max-height: 130px;
+            border-radius: 10px;
         }
 
         .DatamiCardBlockTags {

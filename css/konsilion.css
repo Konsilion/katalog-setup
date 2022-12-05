@@ -1,4 +1,6 @@
-     
+details > summary {font-size: 15px;}  
+
+
 .ksln-switch {
   position: relative;
   display: inline-block;

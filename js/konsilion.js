@@ -1,4 +1,4 @@
-function HideNav() {
+function HideMeNav() {
     document.getElementById("HideNav").classList.toggle("hide");
     document.getElementById("ShowNav").classList.toggle("hide");
     document.getElementById("LogoIndex").classList.toggle("hide");
@@ -8,7 +8,7 @@ function HideNav() {
     
 }
 
-function ShowNav() {
+function ShowMeNav() {
     document.getElementById("HideNav").classList.toggle("hide");
     document.getElementById("ShowNav").classList.toggle("hide");
     document.getElementById("LogoIndex").classList.toggle("hide");

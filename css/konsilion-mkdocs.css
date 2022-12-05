@@ -120,7 +120,7 @@
 	        border-top: 1px solid #DDD;
             }
 
-            .md-sidebar > * {
+            .md-sidebar.md-sidebar--primary > * {
                 background-color: rgba(250,250,250,1) !important;        
                 padding-left: 25px;
                 margin: 0;

@@ -15,6 +15,7 @@ function linkRemoteCss(url){
 
 linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion-mkdocs.css');
 
+linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion.css');
 
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <p style="color:#AAA; font-size: 15px; text-align: center">

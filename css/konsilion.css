@@ -67,9 +67,9 @@ input:checked + .slider:before {
 
 #LogoIndex {
     position: fixed;
-    top: 50px;
+    top: 60px;
     left: 25px;
-    max-width: 150px;
+    max-width: 135px;
     max-height: 50px;
     filter: grayscale(100%);
     opacity: 0.5;

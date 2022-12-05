@@ -33,7 +33,7 @@
 	
 	}
 
-	p {
+	.md-content__inner.md-typeset > p {
 		font-size: 18px; 
 		font-weight: 350;
 		max-width: 1000px

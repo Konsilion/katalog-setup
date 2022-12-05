@@ -144,6 +144,11 @@
             padding-bottom: 12px;
         }
 
+        .card-header-title > * {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
         .card-header-icon > div > div > span > .mdi-eye {
             color: white;
         }

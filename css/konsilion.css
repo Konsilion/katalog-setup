@@ -151,9 +151,9 @@ input:checked + .slider:before {
     font-weight: 500;
     position: fixed;
     top: 30px;
-    left: 175px;
+    left: 225px;
     border-radius: 0 0 0 10px;
-    width: 125px;
+    width: 75px;
     height: 30px;
     cursor: pointer;
     z-index: 3;

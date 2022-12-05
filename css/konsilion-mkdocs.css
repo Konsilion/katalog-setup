@@ -129,6 +129,7 @@
                 line-height:20px;
                 padding: 25px 0;    
                 margin: 50px auto 25px auto;
+	        box-shadow: 10px 5px 5px #ddd;
                 border-bottom: 1px solid #DDD;
 	        border-top: 1px solid #DDD;
             }

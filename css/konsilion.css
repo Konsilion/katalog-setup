@@ -135,7 +135,7 @@ input:checked + .slider:before {
     font-size: 17px;
     font-weight: 500;
     position: fixed;
-    top: 30px;
+    top: 0px;
     left: 0px;
     border-radius: 0 0 10px 0;
     padding: 5px 25px; 
@@ -150,12 +150,10 @@ input:checked + .slider:before {
     font-size: 17px;
     font-weight: 500;
     position: fixed;
-    top: 30px;
+    top: 0px;
     left: 0px;
     border-radius: 0 0 10px 0px;
     padding: 5px 25px;
-    /* width: 50px; */
-    height: 25px;
     cursor: pointer;
     z-index: 4;
 }

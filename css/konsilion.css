@@ -1,5 +1,19 @@
 details > summary {font-size: 15px;}  
 
+.ksln-banner-img {
+    position: absolute;
+    object-fit: cover;
+    width: 225px;
+    max-width: 30%;
+    height: 225px !important;
+    z-index: 5;
+    right: -75px;
+    top: -50px;
+    border-radius: 500px;
+    border-style: solid;
+    border-color: var(--md-primary-fg-color);
+    border-width: 10px 3px 0px 10px;
+}
 
 .ksln-switch {
   position: relative;

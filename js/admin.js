@@ -10,8 +10,7 @@ fetch(url)
 
     document.getElementsByClassName('md-content')[0].innerHTML += `
     <button class="ksln-btn-bottom" 
-        // onclick="window.open('https://` + json.user + `.github.io/` + json.repo +  `/katalog/klouds/home');">
-        onclick="window.open('../katalog/klouds/home');"> 
+        onclick="window.open('../katalog/klouds/home', '_self');"> 
         Déposer un fichier
     </button>
     `;     

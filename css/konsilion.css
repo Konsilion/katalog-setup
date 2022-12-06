@@ -1,6 +1,17 @@
 details > summary {font-size: 15px;}  
 
-
+.ksln-banner-img {
+    margin-bottom: 150px;
+    position: absolute;
+    object-fit: cover;
+    text-align: center;
+    width: 100%;
+    height: 200px !important;
+    z-index: -1;
+    left: 0;
+    top:0;
+    filter: drop-shadow(0 0 0.75rem #AAA) opacity(70%);
+}
 
 .ksln-switch {
   position: relative;

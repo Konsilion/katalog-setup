@@ -10,7 +10,7 @@ fetch(url)
     
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 
-        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs/pages/' + page);"> 
+        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs/pages/` + page + `');"> 
         Modifier cette page
         </button>
         `;    

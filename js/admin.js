@@ -19,9 +19,7 @@ fetch(url)
 
 function myFunction() {
     // Copy the text inside the text field
-    navigator.clipboard.writeText(`
-    
-    # Titre de votre page
+    navigator.clipboard.writeText(`# Titre de votre page
     
 
 

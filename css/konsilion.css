@@ -5,7 +5,20 @@ h1 {
 
 details > summary {font-size: 15px;}  
 
-
+.ksln-banner-img {
+    position: absolute;
+    object-fit: cover;
+    width: 150px;
+    max-width: 30%;
+    height: 150px !important;
+    z-index: 5;
+    right: 300px;
+    top: 60px;
+    border-radius: 500px;
+    border-style: solid;
+    border-color: var(--md-primary-fg-color);
+    border-width: 10px 3px 0px 10px;
+}
 
 .ksln-switch {
   position: relative;

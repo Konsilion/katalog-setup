@@ -161,7 +161,7 @@
 
 		.md-nav__item--nested > nav {
 			padding-left:15px;
-			background-color: rgba(150,150,150,0.1);
+			border-left: 1px solid #CCC;
 		}
 
 		.md-nav__item--nested > nav > ul {

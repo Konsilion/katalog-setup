@@ -145,6 +145,7 @@
                 padding-left: 25px;
                 margin: 0;
                 box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
+	        background-color: white;
             }
 		
             .md-nav__item.md-nav__item--active > a {

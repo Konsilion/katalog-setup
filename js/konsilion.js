@@ -35,7 +35,7 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
     &ensp;
     <br>
     <br>
-    Une plateforme open-source codé avec 🤍 par <u><a href="https://konsilion.fr" target="_blank">Konsilion</a></u>.
+    Une plateforme open-source codé avec 🤍 par Konsilion.
     <br><br>
     Un grand merci à <u><a href="https://multi.coop" target="_blank"> multi</a></u> et <u><a href="https://squidfunk.github.io/mkdocs-material/" target="_blank"> mkdocs-material</a></u> pour le support technique   
 </p>

@@ -169,7 +169,7 @@ input:checked + .slider:before {
     font-size: 17px;
     font-weight: 500;
     position: fixed;
-    top: 30px;
+    top: 0px;
     left: 0px;
     border-radius: 0 0 10px 0px;
     padding: 4px 15px;

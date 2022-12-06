@@ -28,7 +28,7 @@ linkRemoteCss('https://konsilion.github.io/katalog-setup/css/konsilion.css');
 document.getElementsByClassName('md-content')[0].innerHTML += `
 <button id="ShowNav" onclick="ShowNav();" class="hide">Afficher le menu</button>
 
-<button id="HideNav" onclick="HideNav();"> X </button>
+<button id="HideNav" onclick="HideNav();"> x </button>
 
 <p style="color:#AAA; font-size: 15px; text-align: center">
     <u><a href="https://github.com/konsilion/katalog-template/" target="_blank"> Obtenir une plateforme similaire</a></u>

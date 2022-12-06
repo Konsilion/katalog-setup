@@ -1,3 +1,8 @@
+h1 {
+	font-weight: bold;
+}
+
+
 details > summary {font-size: 15px;}  
 
 .ksln-banner-img {

@@ -1,15 +1,6 @@
 details > summary {font-size: 15px;}  
 
-.ksln-banner-img {
-  box-shadow: inset 0em 0em 0.8em 1em white;
-  background: url('http://res.cloudinary.com/do5ht5y0y/image/upload/v1501322753/bg-cp-header_zps4ghnoxc7_zx2ayd.jpg') no-repeat center center;
-  background-size: cover;
-  text-align: center;
-  padding-top: 100px;
-  height: 200px;
-  color: #fff;
-  width: 100%;  
-}
+
 
 .ksln-switch {
   position: relative;

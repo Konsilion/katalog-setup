@@ -151,12 +151,12 @@ input:checked + .slider:before {
     font-weight: 500;
     position: fixed;
     top: 30px;
-    left: 225px;
+    left: 250px;
     border-radius: 0 0 0 10px;
-    width: 75px;
+    width: 50px;
     height: 30px;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 }
 
 #HideNav:hover {

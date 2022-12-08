@@ -419,6 +419,18 @@ input:checked + .slider:before {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======== Anciennement Konsilion-Datami.css ======= */
 
 /* ======= KONSILION ADDED ELEMENTs ======= */
@@ -435,7 +447,7 @@ input:checked + .slider:before {
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
     .section {
-        padding: 0px;
+        padding: 0px !important;
     }
 
     .container {
@@ -445,7 +457,7 @@ input:checked + .slider:before {
 
     .columns.is-mobile>.column.is-10 {
         /* permet une pleine largeur des cards*/
-        flex: 1;
+        flex: 1 !important;
     }
     
 
@@ -460,10 +472,10 @@ input:checked + .slider:before {
     }
 
     .upper-container {
-          margin-bottom: 20px;  
-          border-width: 0px 0px 4px 0px;
-          border-style: solid;
-          border-image: linear-gradient(to right, var(--md-primary-fg-color), white) 0.5;    
+          margin-bottom: 20px !important;  
+          border-width: 0px 0px 4px 0px !important;
+          border-style: solid !important;
+          border-image: linear-gradient(to right, var(--md-primary-fg-color), white) 0.5 !important;    
     }
 
   
@@ -474,12 +486,12 @@ input:checked + .slider:before {
 /* ======= PETITS ICONs ======= */
 
     .mdi {
-        font-size:18px;
-        color: var(--md-primary-fg-color--light);
+        font-size:18px !important;
+        color: var(--md-primary-fg-color--light) !important;
     }
     
     .mdi-close {
-        color: red;
+        color: red !important;
     }
 
 
@@ -490,24 +502,24 @@ input:checked + .slider:before {
 
 
     .button.outlink {
-        width: 100%;
+        width: 100% !important;
     }
 
     .button.is-small:not(.is-rounded){
-        border-radius: 25px;
+        border-radius: 25px !important;
     }
 
     .button.is-dark.is-outlined {
-        border-color: #DDD;
+        border-color: #DDD !important;
     }
 
     .is-dark.input {
-        border-color: #DDD;
+        border-color: #DDD !important;
     }
   
     .navbar-link.is-arrowless {
         /*act on filters button radius*/
-        border-radius: 25px;
+        border-radius: 25px !important;
     }
 
 
@@ -517,23 +529,23 @@ input:checked + .slider:before {
 
 
     .column.is-4, .column.is-4-tablet {
-        -webkit-box-flex: 0;
-        -ms-flex: none;
-        flex: none;
-        width: 100%;
+        -webkit-box-flex: 0 !important;
+        -ms-flex: none !important;
+        flex: none !important;
+        width: 100% !important;
     }
 
 
     @media only screen and (min-width: 769px) and (max-width: 1399px) {
         .column.is-4, .column.is-4-tablet {
-            width: 50%;
+            width: 50% !important;
         }
     }
 
     
     @media only screen and (min-width: 1400px) {
         .column.is-4, .column.is-4-tablet {
-            width: 33.33333337%;
+            width: 33.33333337% !important;
         }
     }
     
@@ -555,81 +567,81 @@ input:checked + .slider:before {
 
         .card {
             background-color: white !important;
-            border-radius: 20px;
-            box-shadow: 0 0em 1em -.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02);
+            border-radius: 20px !important;
+            box-shadow: 0 0em 1em -.125em hsla(0,0%,4%,.1), 0 0 0 1px hsla(0,0%,4%,.02) !important;
         }
 
         .card:hover {
-            box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0px 0px 10px var(--md-primary-fg-color--light);
+            box-shadow: 0 14px 28px rgb(0 0 0 / 5%), 0px 0px 10px var(--md-primary-fg-color--light) !important;
         }
 
         .card-header {
-            padding-bottom: 12px;
+            padding-bottom: 12px !important;
         }
 
         .DatamiCardBlockContent-title > * {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 22px !important;
+            font-weight: bold !important;
         }
 
         .card-header-icon > div > div > span > .mdi-eye {
-            color: white;
+            color: white !important;
         }
 
         .card-content {
-            padding: 15px;
+            padding: 15px !important;
 
         }
 
         .card-footer {
-            border-top: 0px; 
+            border-top: 0px !important; 
         }
     
     /* ======= DatamiCard(s)... ======= */
 
     
         .DatamiCardsGrid {
-            margin-top:25px;
+            margin-top:25px !important;
         }
 
         .DatamiCardBlockImage {
             justify-content: center !important;
             text-align: center !important;
-            max-height: 150px;
-            border-top: 1px solid #DDD;
-            border-bottom: 1px solid #DDD;
-            overflow: hidden;
-            background-color: #f9f9f9;
+            max-height: 150px !important;
+            border-top: 1px solid #DDD !important;
+            border-bottom: 1px solid #DDD !important;
+            overflow: hidden !important;
+            background-color: #f9f9f9 !important;
         }
 
         .DatamiCardBlockImage > figure > img {
-            margin: 10px auto;
-            object-fit: cover;
-            display: block;
-            width: 80%;
-            max-height: 130px;
-            border-radius: 10px;
+            margin: 10px auto !important;
+            object-fit: cover !important;
+            display: block !important;
+            width: 80% !important;
+            max-height: 130px !important;
+            border-radius: 10px !important;
         }
 
         .DatamiCardBlockTags {
-            padding-top:25px;
+            padding-top:25px !important;
         }
 
 
     /* ======= Other Elements : Class as 'IDs' ======= */
 
         .DatamiGrid {
-            padding: 0px;
+            padding: 0px !important;
         }
 
 
         .PreviewCsv {
-            margin-top:40px;
+            margin-top:40px !important;
         }
 
 
 
         .CustomFilterDropdown {
-           border: 1px solid #DDD;
-           border-radius: 25px;
+           border: 1px solid #DDD !important;
+           border-radius: 25px !important;
         }

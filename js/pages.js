@@ -1,6 +1,6 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
-alert(window.location.host);
+alert(window.location.pathname);
 
 
 var url = window.location.pathname + '../../konsilion.json';

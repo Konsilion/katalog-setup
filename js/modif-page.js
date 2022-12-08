@@ -1,6 +1,6 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[0];
 
 fetch(url + '/konsilion.json')
 .then(response => response.json())

@@ -15,7 +15,7 @@ fetch(url)
     
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 
-        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs/pages/` + page + `.md');"> 
+        onclick="window.open('` + window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1] + `/konsilion.json');"> 
         Modifier cette page
         </button>
         `;    

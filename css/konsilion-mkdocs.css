@@ -199,7 +199,7 @@
 
     /* ======= PREV-NEXT & FOOTER ======= */
 
-        .md-footer__inner.md-grid {
+        .md-footer__inner.md-grid, .md-header__source {
             display:none !important;
         }
 

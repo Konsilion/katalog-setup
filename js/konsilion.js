@@ -42,6 +42,9 @@ document.getElementsByClassName('md-content')[0].innerHTML += `
 `;
 
 
+// =======  SHOW/HIDE NAVIGATION LATERALE ====
+
+
 function HideNav() {
     document.getElementById("HideNav").classList.toggle("hide");
     document.getElementById("ShowNav").classList.toggle("hide");

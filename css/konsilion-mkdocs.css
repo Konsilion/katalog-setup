@@ -197,10 +197,10 @@
 			
         }   
 
-    /* ======= PREV-NEXT ======= */
+    /* ======= PREV-NEXT & FOOTER ======= */
 
         .md-footer__inner.md-grid, .md-footer {
-            display:none !important;
+            /* display:none !important; */
         }
 
 

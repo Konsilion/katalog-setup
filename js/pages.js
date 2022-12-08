@@ -1,8 +1,10 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
+
+
 console.log(window.location.protocol + '//' + window.location.host + '/' + window.location.pathname.split('/')[1] + '/konsilion.json')
 
-window.open(window.location.protocol + '//' + window.location.host + '/' + window.location.pathname.split('/')[1] + '/konsilion.json')
+
 
 
 var url = window.location.pathname + '../../konsilion.json';

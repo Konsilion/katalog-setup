@@ -2,13 +2,8 @@
 
 
 
-console.log(window.location.protocol + '//' + window.location.host + '/' + window.location.pathname.split('/')[1] + '/konsilion.json')
-
-
-
-
-var url = window.location.pathname + '../../konsilion.json';
-fetch(url)
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+fetch(url + '/konsilion.json')
 .then(response => response.json())
 .then(json => {
 
@@ -17,7 +12,7 @@ fetch(url)
     
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 
-        onclick="window.open('` + window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1] + `/konsilion.json');"> 
+        onclick="window.open('` + url + `/konsilion.json');"> 
         Modifier cette page
         </button>
         `;    

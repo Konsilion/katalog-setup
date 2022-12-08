@@ -1,5 +1,8 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
+alert(window.location.pathname);
+
+
 var url = window.location.pathname + '../../konsilion.json';
 fetch(url)
 .then(response => response.json())

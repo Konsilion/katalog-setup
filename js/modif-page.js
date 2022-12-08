@@ -10,13 +10,15 @@ fetch(url + '/konsilion.json')
 
     let page = ""
 
-    for (let i = 0; i < (array.length - 2); i++) {
+    for (let i = 2; i < (array.length - 2); i++) {
         i = i+1;
 
         page += '/' + array[i]
         
         i = i-1;
     }
+    
+    var page = array[array.length-2]; 
           
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 

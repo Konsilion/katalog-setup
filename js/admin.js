@@ -3,10 +3,12 @@ fetch(url)
 .then(response => response.json())
 .then(json => {
     
-    document.getElementById("IndexLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/docs/pages/accueil.md");
-    document.getElementById("PageLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/new/master/docs/pages");
-    document.getElementById("InitLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/docs/konsilion.json");
-    document.getElementById("ConfigLink").setAttribute("href", "https://github.com/" + json.user + "/" + json.repo + "/edit/master/mkdocs.yml");
+    var url_repo = "https://github.com/" + json.user + "/" + json.repo
+    
+    document.getElementById("IndexLink").setAttribute("href", url_repo + "/edit/master/docs/pages/accueil.md");
+    document.getElementById("PageLink").setAttribute("href", url_repo + "/new/master/docs/pages");
+    document.getElementById("InitLink").setAttribute("href", url_repo + "/edit/master/docs/konsilion.json");
+    document.getElementById("ConfigLink").setAttribute("href", url_repo +  "/edit/master/mkdocs.yml");
 
     document.getElementsByClassName('md-content')[0].innerHTML += `
     <button class="ksln-btn-bottom" 

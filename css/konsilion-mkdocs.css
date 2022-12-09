@@ -183,14 +183,12 @@
 			position: absolute;
 			top: 65px;
 			left: 15px;
-		}
-
-		.md-header__button.md-logo :-webkit-any(img,svg) {
-			height: 2.5rem;
-			max-width: 200px;
-		}			
+		}		
 			
-			
+		.md-header__button.md-logo :is(img, svg) {
+			height: 2.5rem !important;
+			max-width: 200px !important;
+		}	
 			
 			
 			

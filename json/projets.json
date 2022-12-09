@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "name": "NOM DU PROJET",
+      "title": "Nom du projet",
+      "description": "Designation brève du projet",
+      "type": "string"
+    },
+    {
+      "name": "DESCRIPTION",
+      "title": "Présentation détaillée du projet",
+      "description": "Paragraphe de présentation du projet",
+      "type": "string"
+    },
+    {
+      "name": "LIEN",
+      "title": "URL vers la page du projet",
+      "type": "string",
+      "format": "uri"
+    },
+    {
+      "name": "CATEGORIES",
+      "title": "Filtrer les catégories",
+      "description": "Le différents catégories principales caractérisant vos projets.",
+      "type": "string"
+    },
+    {
+      "name": "ETAT",
+      "title": "Temporalité du projet",
+      "description": "Votre projet est il en cours, une idée, achevé ou arrêté ?",
+      "type": "string"
+    }
+  ]
+}

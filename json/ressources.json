@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "name": "NOM DE LA RESSOURCE",
+      "name": "DESIGNATION",
       "title": "Nom de la ressource",
       "description": "Designation brève de la ressource numérique",
       "type": "string"
@@ -19,7 +19,7 @@
       "format": "uri"
     },
     {
-      "name": "IDs - FILTRES",
+      "name": "CATEGORIE",
       "title": "Filtrer les catégories",
       "description": "Le différents filtres pour les ressources numériques.",
       "type": "string"

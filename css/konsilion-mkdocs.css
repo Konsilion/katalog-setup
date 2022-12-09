@@ -128,21 +128,21 @@
                 padding: 0px !important;
             }
 
-            .md-nav--primary > .md-nav__title {  
-                font-size: 18px;
-                color: #666;
-		line-height: 25px;
-    		padding: 25px 15px 25px 0px;    
-                margin: 125px auto 25px auto;
-                border-bottom: 1px solid #DDD;
-	        border-top: 1px solid #DDD;
-            }
-
+			.md-nav--primary > .md-nav__title {
+				/* font-size: 18px; */
+				color: white;
+				/* line-height: 25px; */
+				padding: 25px 15px 25px 0px;
+				margin: 50px auto 25px auto;
+				border-bottom: 1px solid #DDD;
+				/* border-top: 1px solid #DDD; */
+			}
+		
             .md-sidebar.md-sidebar--primary > * {       
                 padding-left: 25px;
                 margin: 0;
                 box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-	        background-color: white;
+	        	background-color: white;
             }
 		
             .md-nav__item.md-nav__item--active > a {

@@ -225,10 +225,9 @@ h1 {
 
 
 .md-header__title {
-	font-size: 1.1rem !important;
-	line-height: 2.4rem;
+    font-size: 19px !important;
+    margin-left: 50px!important;
 }
-
 
 
 details > summary {font-size: 15px;}  

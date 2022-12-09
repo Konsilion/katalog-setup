@@ -43,10 +43,6 @@
 
 /* ======= BARRE DE COULEUR HAUTE ======= */
 
-.md-header {
-    /*height: 30px;*/
-}
-
 .md-header__button.md-icon > * {
     padding: 0px;
     margin: 0px;
@@ -225,7 +221,7 @@ h1 {
 
 
 .md-header__title {
-    font-size: 19px !important;
+    font-size: 21px !important;
     margin-left: 50px!important;
 }
 

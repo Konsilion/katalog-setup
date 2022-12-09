@@ -223,6 +223,14 @@ h1 {
 }
 
 
+
+.md-header__title {
+	font-size: 1.1rem;
+	line-height: 2.4rem;
+}
+
+
+
 details > summary {font-size: 15px;}  
 
 .ksln-banner-img {

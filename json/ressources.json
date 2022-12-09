@@ -38,9 +38,9 @@
       "foreignKey": {
         "activate": true,
         "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/katalog/projets/data.csv",
-        "fields": "ID",
+        "fields": "DESIGNATION",
         "returnFields" : [
-          "DESIGNATION"
+          "ID"
         ]
       }
     }   

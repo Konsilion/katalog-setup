@@ -29,6 +29,20 @@
       "title": "Auteurs et autrices de la ressources",
       "description": "Liste exhaustives des participants d'origine de la ressource.",
       "type": "string"
-    }
+    },
+    {
+      "name": "PROJETS",
+      "subtype": "tags",
+      "tagSeparator": "-",
+      "bgColor" : "#BED3C3",
+      "foreignKey": {
+        "activate": true,
+        "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/katalog/projets/data.csv",
+        "fields": "Thématique",
+        "returnFields" : [
+          "Tags"
+        ]
+      }
+    }   
   ]
 }

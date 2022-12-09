@@ -38,9 +38,9 @@
       "foreignKey": {
         "activate": true,
         "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/katalog/projets/data.csv",
-        "fields": "Thématique",
+        "fields": "ID",
         "returnFields" : [
-          "Tags"
+          "NOM DU PROJET"
         ]
       }
     }   

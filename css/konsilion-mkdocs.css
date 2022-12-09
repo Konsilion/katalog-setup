@@ -384,17 +384,17 @@ input:checked + .slider:before {
 
 
 #HideNav {
-    background-color: var(--md-primary-fg-color);
-    color: white;
-    font-size: 17px;
-    font-weight: 500;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    border-radius: 0 0 10px 0px;
-    padding: 4px 15px;
-    cursor: pointer;
-    z-index: 4;
+	background-color: var(--md-primary-fg-color);
+	color: white;
+	font-size: 17px;
+	font-weight: 500;
+	position: fixed;
+	top: 39px;
+	left: 0px;
+	border-radius: 0 0 10px 0px;
+	padding: 0px 15px;
+	cursor: pointer;
+	z-index: 4;
 }
 
 #HideNav:hover {

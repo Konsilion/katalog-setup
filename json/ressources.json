@@ -35,11 +35,10 @@
     },
     {
       "name": "PROJETS",
+      "type": "string",
       "subtype": "tags",
       "tagSeparator": "-",
       "bgColor" : "#BED3C3",
-      "subtype": "tags",
-      "tagSeparator": ",",
       "allowNew": true
     }   
   ]

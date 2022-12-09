@@ -1,0 +1,47 @@
+{
+  "fields": [
+    {
+      "name": "DESIGNATION",
+      "sticky": true,
+      "primaryKey": true
+    },
+    {
+      "name": "DESCRIPTION",
+      "subtype": "longtext",
+      "maxLength": 2000
+    },
+    {
+      "name": "LIEN",
+      "subtype": "link"
+    },
+    {
+      "name": "CATEGORIE",
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
+    },
+    {
+      "name": "ETAT",
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
+    },
+    {
+      "name": "AUTEUR.ICES"
+    },
+    {
+      "name": "PROJETS",
+      "subtype": "tags",
+      "tagSeparator": "-",
+      "bgColor" : "#BED3C3",
+      "foreignKey": {
+        "activate": true,
+        "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/katalog/projets/data.csv",
+        "fields": "Thématique",
+        "returnFields" : [
+          "Tags"
+        ]
+      }
+    }    
+  ]
+}

@@ -1,6 +1,12 @@
 {
   "fields": [
     {
+      "name": "ID",
+      "title": "Identifiant unique",
+      "description": "Permet d'assurer l'identifiaction de votre projet dans la recherche de relations.",
+      "type": "string"
+    },
+    {
       "name": "NOM DU PROJET",
       "title": "Nom du projet",
       "description": "Designation brève du projet",

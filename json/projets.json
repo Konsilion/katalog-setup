@@ -4,13 +4,16 @@
       "name": "ID",
       "title": "Identifiant unique",
       "description": "Permet d'assurer l'identifiaction de votre projet dans la recherche de relations.",
-      "type": "string"
+      "type": "string",
+      "sticky": true,
+      "primaryKey": true
     },
     {
       "name": "NOM DU PROJET",
       "title": "Nom du projet",
       "description": "Designation brève du projet",
-      "type": "string"
+      "type": "string",
+      "sticky": true
     },
     {
       "name": "DESCRIPTION",

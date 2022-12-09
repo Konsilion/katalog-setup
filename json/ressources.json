@@ -22,7 +22,10 @@
       "name": "CATEGORIE",
       "title": "Filtrer les catégories",
       "description": "Le différents filtres pour les ressources numériques.",
-      "type": "string"
+      "type": "string",
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
     },
     {
       "name": "AUTEUR.ICES",

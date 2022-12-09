@@ -44,7 +44,7 @@
 /* ======= BARRE DE COULEUR HAUTE ======= */
 
 .md-header {
-    height: 30px;
+    /*height: 30px;*/
 }
 
 .md-header__button.md-icon > * {
@@ -52,12 +52,9 @@
     margin: 0px;
 }
 
-.md-header__button.md-logo {
-    
-}
 
 .md-header__topic {
-    display: none;
+    /*display: none;*/
 }
 
 

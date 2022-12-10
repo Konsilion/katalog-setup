@@ -41,8 +41,6 @@ function TakeTheJson() {
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
-    console.log(gitfile);
-
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
@@ -198,6 +196,14 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
 
 }
 
+fetch(ksln_json)
+    .then(response => response.json())
+    .then(json => {    
+    
+            main_gitfile = `https://github.com/` + json.user + `/` + json.repo + `/` + `blob/master/docs/katalog/` + katalog_folder + `/data.csv`
+    
+            main_token = json.token;
+    });
 
 
 TakeTheJson();

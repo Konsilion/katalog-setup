@@ -28,7 +28,7 @@ fetch(url + '/konsilion.json')
 
 function HideShow(user,repo,page) {
 
-    let html = `<button class="ksln-btn-bottom" 
+    let html = `<button class="ksln-btn-bottom" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
                 Annuler la modification
                 </button>

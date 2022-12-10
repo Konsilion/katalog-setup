@@ -1,11 +1,3 @@
-fetch("https://unpkg.com/papaparse@5.3.0/papaparse.min.js")
-  .then((response) => response.text())
-  .then((text) => eval(text))
-  .then(() => {
-  
-  })
-
-
 // ====== Création du widget Datami ======
 
 

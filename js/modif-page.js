@@ -20,13 +20,13 @@ fetch(url + '/konsilion.json')
           
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 
-        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `');">  
+        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
         Modifier cette page
         </button>
         `;    
 });
 
-function HideShow(user,repo,page) {
+function HideShow(user,repo,page,token) {
 
     let html = `<button class="ksln-btn-bottom" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
@@ -38,6 +38,7 @@ function HideShow(user,repo,page) {
                     gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `.md"
                     options='{}'
                     onlypreview="false"
+                    usertoken="` + window.atob(token) + `"
                     locale="fr"
                 ></datami-file>
                 `;

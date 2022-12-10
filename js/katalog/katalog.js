@@ -1,20 +1,30 @@
-// Ajout CSS - Peux mieux faire ---------------------
+fetch("https://unpkg.com/papaparse@5.3.0/papaparse.min.js")
+  .then((response) => response.text())
+  .then((text) => eval(text))
+  .then(() => {
+  
+  })
 
-//var style = document.createElement('style');
-//    style.type = 'text/css';
-//    style.innerHTML = 'h1 { display: none; }';
-//    document.getElementsByTagName('head')[0].appendChild(style);
 
-// ---------------------
+// ====== Création du widget Datami ======
+
+
 
 const appId = window.location.pathname.split('/');
-    var katalog_folder = appId[appId.length - 3]
-
+    
+var katalog_folder = appId[appId.length - 3]
+   
 var ksln_json = window.location.pathname + '../../../konsilion.json';
 
 var main_token = "";
 
 var main_gitfile = "";
+
+
+
+
+
+
 
 function TakeTheJson() {
     var url = window.location.pathname + '../katalog.json';
@@ -36,7 +46,9 @@ function TakeTheJson() {
 
 
 
+
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
+
 
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
@@ -54,41 +66,42 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     let html_end = ``;
     
     let html = ``;
-
+    
     switch (model) {
-      case '1':
+      case '1':    
+            
         html = `"cardsview": {
                         "activate": true,
                         "default": ` + cardview + `
                       },
                       "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
-                      },
-                      "fields-custom-properties": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `.json"
                       },
                       "customfilters": {
                         "activate": true,
                         "filterfields": [
-                          "IDs - FILTRES"
+                          "CATEGORIE"
                         ],
                         "tagsSeparator": ","
                       },
                       "cardsdetail": false,
                       "cardssettings": {
                         "mini": {
-                          "NOM DE LA RESSOURCE": {
+                          "DESIGNATION": {
                             "position": "title"
                           },
                           "DESCRIPTION": {
                             "position": "resume"
                           },
-                          "IDs - FILTRES": {
+                         "ETAT": {
+                            "position": "resume"
+                          },
+                          "CATEGORIE": {
                             "position": "tags"
                           }
                         },
                         "detail": {
-                          "NOM DE LA RESSOURCE": {
+                          "DESIGNATION": {
                             "position": "title"
                           },
                           "DESCRIPTION": {
@@ -97,7 +110,10 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                           "LIEN": {
                             "position": "links"
                           },
-                          "IDs - FILTRES": {
+                          "CATEGORIE": {
+                            "position": "tags"
+                          },
+                          "ETAT": {
                             "position": "tags"
                           }
                         }
@@ -110,93 +126,56 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                         "default": ` + cardview + `
                       },
                       "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `.json"
                       },
                       "fields-custom-properties": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom-ressources.json"
                       },
                       "customfilters": {
                         "activate": true,
                         "filterfields": [
-                          "IDs - FILTRES"
-                        ],
-                        "tagsSeparator": ","
+                          "CATEGORIE",
+                          "PROJETS"
+                        ]
                       },
                       "cardsdetail": false,
                       "cardssettings": {
                         "mini": {
-                          "NOM DE LA RESSOURCE": {
+                          "DESIGNATION": {
                             "position": "title"
                           },
-                          "IDs - FILTRES": {
+                         "PROJETS": {
+                            "position": "tags", 
+                            "block_title": "Projet"
+                          },
+                          "CATEGORIE": {
                             "position": "tags"
                           }
                         },
                         "detail": {
-                          "NOM DE LA RESSOURCE": {
+                          "DESIGNATION": {
                             "position": "title"
+                          },
+                          "DESCRIPTION": {
+                            "position": "resume"
                           },
                           "LIEN": {
                             "position": "links"
                           },
-                          "IDs - FILTRES": {
+                         "PROJETS": {
+                            "position": "tags", 
+                            "block_title": "Projet"
+                          },
+                          "CATEGORIE": {
+                            "position": "tags"
+                          },
+                          "ETAT": {
                             "position": "tags"
                           }
                         }
                       }
                     }'
                     `;            
-        break;
-      case '3':
-        html = `"cardsview": {
-                        "activate": true,
-                        "default": ` + cardview + `
-                      },
-                      "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/schema.json"
-                      },
-                      "fields-custom-properties": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom.json"
-                      },
-                      "customfilters": {
-                        "activate": true,
-                        "filterfields": [
-                          "IDs - FILTRES"
-                        ],
-                        "tagsSeparator": ","
-                      },
-                      "cardsdetail": false,
-                      "cardssettings": {
-                        "mini": {
-                          "NOM DE LA RESSOURCE": {
-                            "position": "title"
-                          },
-                          "DESCRIPTION": {
-                            "position": "resume"
-                          },
-                          "IMAGE": {
-                            "position": "image"
-                          }
-                        },
-                        "detail": {
-                          "NOM DE LA RESSOURCE": {
-                            "position": "title"
-                          },
-                          "DESCRIPTION": {
-                            "position": "resume"
-                          },
-                          "IMAGE": {
-                            "position": "image"
-                          },
-                          "LIEN": {
-                            "position": "links"
-                          },
-                          "IDs - FILTRES": {
-                            "position": "tags"
-                          }
-                        }
-                      }
-                    }'`;
         break;
         default:
         html = ``;
@@ -212,13 +191,15 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     document.getElementById(type_datami).innerHTML += html_final;
 
 
+    console.log(html_final)
+    
     setTimeout(function() {
         const elem = document.createElement("p");
-            elem.setAttribute("id", "DescrKatalog") 
-            elem.appendChild(document.createTextNode(descr));
+            //elem.setAttribute("id", "DescrKatalog") 
+            //elem.appendChild(document.createTextNode(descr));
 
         var child = document.getElementsByClassName("PreviewCsv")[num];
-            child.parentNode.insertBefore(elem, child);
+            //child.parentNode.insertBefore(elem, child);
 
     }, 1500);
 
@@ -246,3 +227,8 @@ fetch(ksln_json)
 
 
 TakeTheJson();
+
+
+
+
+

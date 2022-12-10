@@ -55,12 +55,6 @@
     margin: 0px;
 }
 
-
-.md-header__topic {
-    /*display: none;*/
-}
-
-
 .md-header__button.md-icon {
     padding: 0px;
     margin: 5px 0px 0px 5px;
@@ -69,11 +63,9 @@
     left: 0;
 }
 
-
-
-
-
-
+.md-search {
+    margin: auto;
+}
 
 
 

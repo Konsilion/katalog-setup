@@ -26,6 +26,15 @@
       "subtype": "tags",
       "tagSeparator": ",",
       "allowNew": true
+    },    
+    {
+      "name": "ETAT",
+      "title": "Disponibilité de la ressource",
+      "description": "Votre ressource est elle à l'état d'idée, en cours de développement, disponible ou arrêtée ?",
+      "type": "string",
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
     },
     {
       "name": "AUTEUR.ICES",

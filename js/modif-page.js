@@ -20,8 +20,34 @@ fetch(url + '/konsilion.json')
           
     document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom" 
-        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/edit/master/docs` + page + `.md');">  
+        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `');">  
         Modifier cette page
         </button>
         `;    
 });
+
+function HideShow(user,repo,page) {
+
+    let html = `<button class="ksln-btn-bottom" 
+                onclick="window.location.reload();">  
+                Annuler la modification
+                </button>
+    
+                <datami-file
+                    title="Modification de la page"
+                    gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `.md"
+                    options='{}'
+                    onlypreview="false"
+                    locale="fr"
+                ></datami-file>
+                `;
+    
+    document.getElementsByClassName('md-content')[0].innerHTML = html;
+   
+    
+    fetch("https://datami-widget.multi.coop/js/app.js")
+      .then((response) => response.text())
+      .then((text) => eval(text))
+      .then(() => {
+      })    
+};

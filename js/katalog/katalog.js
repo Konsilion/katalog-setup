@@ -41,6 +41,7 @@ function TakeTheJson() {
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
+    console.log(gitfile);
 
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file

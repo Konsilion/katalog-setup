@@ -50,22 +50,7 @@
 }
 
 
-.md-header__button.md-icon > * {
-    padding: 0px;
-    margin: 0px;
-}
 
-.md-header__button.md-icon {
-    padding: 0px;
-    margin: 5px 0px 0px 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.md-search {
-    margin: auto;
-}
 
 
 

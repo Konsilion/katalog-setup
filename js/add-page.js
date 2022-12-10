@@ -21,7 +21,7 @@ fetch(url + '/konsilion.json')
         document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-top"  
         onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/new/master/docs/pages');">  
-        Ajouter une page
+        Créer une page
         </button>
         `;    
 });

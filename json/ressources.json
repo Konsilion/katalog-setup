@@ -35,6 +35,7 @@
     },
     {
       "name": "PROJETS",
+      "title": "Projets associés à la ressource",
       "type": "string",
       "subtype": "tags",
       "tagSeparator": "-",

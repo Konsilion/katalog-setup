@@ -182,9 +182,6 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     
     document.getElementById(type_datami).innerHTML += html_final;
 
-
-    console.log(html_final)
-    
     setTimeout(function() {
         const elem = document.createElement("p");
             //elem.setAttribute("id", "DescrKatalog") 

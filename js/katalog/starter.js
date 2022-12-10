@@ -29,7 +29,7 @@ function HideShow(user,repo,page) {
                 </button>
     
                 <datami-file
-                  title="Schéma des données de l-observatoire"
+                  title="Parametrage de la page"
                   gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `/katalog.json"
                   options='{
                   "defaultDepth": 2,

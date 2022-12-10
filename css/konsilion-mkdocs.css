@@ -43,6 +43,13 @@
 
 /* ======= BARRE DE COULEUR HAUTE ======= */
 
+.md-header__title {
+    font-size: 21px !important;
+    display: none;
+    margin-left: 50px!important;
+}
+
+
 .md-header__button.md-icon > * {
     padding: 0px;
     margin: 0px;
@@ -125,15 +132,15 @@
             }
 
 			.md-nav--primary > .md-nav__title {
-				/* font-size: 18px; */
-				color: white;
-				/* line-height: 25px; */
+				font-size: 18px;
+				color: grey;
+				line-height: 25px;
 				padding: 25px 15px 25px 0px;
-				margin: 50px auto 25px auto;
+				margin: 100px auto 25px auto;
 				border-bottom: 1px solid #DDD;
-				/* border-top: 1px solid #DDD; */
+				border-top: 1px solid #DDD;
 			}
-		
+
             .md-sidebar.md-sidebar--primary > * {       
                 padding-left: 25px;
                 margin: 0;
@@ -220,10 +227,6 @@ h1 {
 
 
 
-.md-header__title {
-    font-size: 21px !important;
-    margin-left: 50px!important;
-}
 
 
 details > summary {font-size: 15px;}  

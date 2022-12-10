@@ -23,7 +23,7 @@ fetch("https://datami-widget.multi.coop/js/app.js")
 
 function HideShow(user,repo,page) {
 
-    let html = `<button class="ksln-btn-bottom" 
+    let html = `<button class="ksln-btn-bottom" style="background-color: #bd0000; color: white;" 
                 onclick="window.location.reload();">  
                 Annuler le paramètrage
                 </button>

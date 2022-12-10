@@ -322,19 +322,18 @@ input:checked + .slider:before {
 
 
 .ksln-btn-top {
-	z-index:500;
-        background-color: rgba(255,255,255,0.5);
-        color: black;    
-        font-size: 17px;
-        font-weight: 500;
-        position: fixed;
-        top: 0px;
-        right: 0;
-        padding: 7px 15px;
-        border-radius: 0px 0px 0 10px;
-        cursor: pointer;
+    z-index: 3;
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+    font-size: 17px;
+    font-weight: 500;
+    position: fixed;
+    top: 45px;
+    right: 0;
+    padding: 7px 15px;
+    border-radius: 0px 0px 0 10px;
+    cursor: pointer;
 }
-
 
 .ksln-btn-top:hover {
     	background-color: rgba(50,50,50,1);

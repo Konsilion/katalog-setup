@@ -1,0 +1,27 @@
+{
+  "fields": [
+    {
+      "name": "DESIGNATION",
+      "sticky": true,
+      "primaryKey": true
+    },
+    {
+      "name": "DESCRIPTION",
+      "subtype": "longtext",
+      "maxLength": 2000
+    },
+    {
+      "name": "LIEN",
+      "subtype": "link"
+    },
+    {
+      "name": "CATEGORIES",
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
+    },
+    {
+      "name": "AUTEUR.ICES"
+    }
+  ]
+}

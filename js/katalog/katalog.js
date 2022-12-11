@@ -183,11 +183,11 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
 
     setTimeout(function() {
         const elem = document.createElement("p");
-            //elem.setAttribute("id", "DescrKatalog") 
-            //elem.appendChild(document.createTextNode(descr));
+            elem.setAttribute("id", "DescrKatalog") 
+            elem.appendChild(document.createTextNode(descr));
 
         var child = document.getElementsByClassName("PreviewCsv")[num];
-            //child.parentNode.insertBefore(elem, child);
+            child.parentNode.insertBefore(elem, child);
 
     }, 1500);
 

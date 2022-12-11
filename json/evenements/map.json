@@ -163,31 +163,6 @@
         "text_color"   : "#ffffff"
       },
 
-      "cluster_unclustered_layer" : {
-        "is_activated"        : false,
-        "source_id"           : "clusterSource",
-        "layer_id"            : "unclustered-point",
-        "is_default_visible"  : true,
-        "is_source_distant"   : false,
-        "is_clickable"        : true,
-        "add_zoom_on_click"   : 3.5,
-        "is_hoverable"        : true,
-        "hover_infos"         : {},
-        "direct_to_detail"    : false,
-        "has_popup"           : true, 
-        "popup_config"        : {
-          "action" : "mousemove",
-          "fields_settings": {
-            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
-            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
-          }
-        },
-        "circle_color"        : "#fff", 
-        "circle_stroke_color" : "#e08453",
-        "circle_radius"       : 7, 
-        "circle_stroke_width" : 3 
-      },
-
       "choropleth_layer" : {
         "_COMMENT": "### choropleth source and layer",
         "is_activated"        : true,
@@ -243,7 +218,7 @@
               "fields_settings": {
                 "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
                 "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " evenements" }
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " évenements" }
               }
             },
             "legend" : {
@@ -261,6 +236,31 @@
             }
           }
         ]
+      },
+      
+      "cluster_unclustered_layer" : {
+        "is_activated"        : false,
+        "source_id"           : "clusterSource",
+        "layer_id"            : "unclustered-point",
+        "is_default_visible"  : true,
+        "is_source_distant"   : false,
+        "is_clickable"        : true,
+        "add_zoom_on_click"   : 3.5,
+        "is_hoverable"        : true,
+        "hover_infos"         : {},
+        "direct_to_detail"    : false,
+        "has_popup"           : true, 
+        "popup_config"        : {
+          "action" : "mousemove",
+          "fields_settings": {
+            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
+            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour plus d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
+          }
+        },
+        "circle_color"        : "#fff", 
+        "circle_stroke_color" : "#e08453",
+        "circle_radius"       : 7, 
+        "circle_stroke_width" : 3 
       },
 
       "heatmap_layer" : {

@@ -16,6 +16,11 @@
       "type": "string"
     },
     {
+      "name": "type",
+      "title": "Type évenement",
+      "type": "string"
+    },
+    {
       "name": "date",
       "title": "Date de début de l'évenement",
       "type": "string"

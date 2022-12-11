@@ -61,7 +61,7 @@
 
         "circle_color": [
           "match",
-          ["get", "nature_juridique"],
+          ["get", "nature"],
           "Association",
           "#a6cee3",
           "Entreprise",
@@ -92,7 +92,7 @@
         ],
         "circle_color_activated": [
           "match",
-          ["get", "nature_juridique"],
+          ["get", "nature"],
           "Association",
           "#a6cee3",
           "Entreprise",

@@ -19,7 +19,7 @@
       "type": "string"
     },
     {
-      "name": "AUTEUR.ICES"
+      "name": "AUTEUR.ICES",
       "title": "Qui est autour de cette tâche",
       "type": "string"
     }

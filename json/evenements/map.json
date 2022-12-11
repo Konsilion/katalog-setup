@@ -9,7 +9,7 @@
     "currentCenter"    : [1.625257, 43.281245],
     "zoom"             : 7.3,
     "maxZoom"          : 10,
-    "minZoom"          : 2,
+    "minZoom"          : 0,
     "useMarkerCluster" : true,
 
     "item_geo_fields"   : {
@@ -109,7 +109,7 @@
         "is_activated"        : true,
         "source_id"           : "allPointsSource",
         "layer_id"            : "all-points",
-        "is_default_visible"  : false,
+        "is_default_visible"  : true,
         "is_source_distant"   : false,
 
         "is_live_data"        : false,

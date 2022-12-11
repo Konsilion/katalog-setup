@@ -17,11 +17,6 @@
       "maxLength": 15
     },
     {
-      "name": "BAN_adress_full",
-      "subtype": "longtext",
-      "maxLength": 15
-    },
-    {
       "name": "departement",
       "subtype": "tag",
       "foreignKey": {

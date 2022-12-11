@@ -30,7 +30,7 @@ function HideShow(user,repo,page,token) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
-                Annuler la modification
+                Quitter
                 </button>
     
                 <datami-file

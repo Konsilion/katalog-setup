@@ -3,8 +3,8 @@
     {
       "title": { "fr": "REPARTITION PAR NATURE" },
       "cols": 6,
-      "unit": { "fr": "lieu(x)" },
-      "aggregatebyfield": "nature",
+      "unit": { "fr": "évenement(s)" },
+      "aggregatebyfield": "type",
       "aggregationtype": "countitems",
       "chartOptions": {
         "chart": {

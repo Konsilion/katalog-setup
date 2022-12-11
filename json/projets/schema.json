@@ -31,7 +31,7 @@
       "name": "CATEGORIES",
       "title": "Filtrer les catégories",
       "description": "Le différents catégories principales caractérisant vos projets.",
-      "type": "string",   
+      "type": "string"
     },
     {
       "name": "ETAT",

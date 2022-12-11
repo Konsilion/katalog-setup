@@ -22,6 +22,11 @@
       "name": "AUTEUR.ICES",
       "title": "Qui est autour de cette tâche",
       "type": "string"
-    }
+    },
+    {
+      "name": "PROJETS",
+      "title": "Projets associés à la ressource",
+      "type": "string"
+    } 
   ]
 }

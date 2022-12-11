@@ -322,16 +322,17 @@ input:checked + .slider:before {
 
 
 .ksln-btn-top {
-    z-index: 3;
+    z-index: 0;
     background-color: #EEE;
     color: grey;
     font-size: 17px;
     font-weight: 500;
+    border: 1px solid grey;
     position: fixed;
-    top: 35px;
-    right: 0;
-    padding: 20px 25px 8px;
-    border-radius: 0px 0px 0 10px;
+    bottom: 0px;
+    right: 135px;
+    padding: 7px 20px;
+    border-radius: 10px 0px 0 0px;
     cursor: pointer;
 }
 

@@ -62,11 +62,11 @@
       "results_fields": [
         { 
           "resp_field" : "features.0.geometry.coordinates.1",
-          "map_to_field": "lat"
+          "map_to_field": "latitude"
         },
         { 
           "resp_field" : "features.0.geometry.coordinates.0",
-          "map_to_field": "lon"
+          "map_to_field": "longitude"
         }
       ]
     }

@@ -1,7 +1,7 @@
 {
   "charts": [
     {
-      "title": { "fr": "REPARTITION PAR NATURE JURIDIQUE" },
+      "title": { "fr": "REPARTITION PAR NATURE" },
       "cols": 6,
       "unit": { "fr": "lieu(x)" },
       "aggregatebyfield": "nature",

@@ -9,7 +9,7 @@
       "primaryKey": true
     },
     {
-      "name": "NOM DU PROJET",
+      "name": "DESIGNATION",
       "title": "Nom du projet",
       "description": "Designation brève du projet",
       "type": "string",
@@ -31,7 +31,10 @@
       "name": "CATEGORIES",
       "title": "Filtrer les catégories",
       "description": "Le différents catégories principales caractérisant vos projets.",
-      "type": "string"
+      "type": "string",   
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
     },
     {
       "name": "ETAT",

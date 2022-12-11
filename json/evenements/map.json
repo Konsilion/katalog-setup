@@ -109,7 +109,7 @@
         "is_activated"        : true,
         "source_id"           : "allPointsSource",
         "layer_id"            : "all-points",
-        "is_default_visible"  : true,
+        "is_default_visible"  : false,
         "is_source_distant"   : false,
 
         "is_live_data"        : false,
@@ -283,24 +283,24 @@
       "is_drawer_open"  : false,
       "layers_switches" : [ 
         {
-          "label" : "évenements",  
+          "label" : "Évenements",  
           "layers" : [ "all-points" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "Densité" ,
+          "layers" : [ "heatmap-layer" ],
           "default_visible" : false
         }, 
         {
-          "label" : "ensembles" ,
+          "label" : "Ensembles" ,
           "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ],
           "default_visible" : true
         }, 
         {
-          "label" : "départements" ,
+          "label" : "Départements" ,
           "layers" : [ "chorolayer-departements" ],
           "default_visible" : true
-        }, 
-        {
-          "label" : "heatmap" ,
-          "layers" : [ "heatmap-layer" ],
-          "default_visible" : false
         }
       ]
     }

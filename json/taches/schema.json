@@ -15,7 +15,7 @@
       "subtype": "link"
     },
     {
-      "name": "IDs - FILTRES",
+      "name": "CATEGORIES",
       "subtype": "tags",
       "tagSeparator": ",",
       "allowNew": true

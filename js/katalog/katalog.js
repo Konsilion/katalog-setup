@@ -69,7 +69,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     let html = ``;
     
     switch (model) {
-      case '1':    
+      case 'projet':    
             
         html = `"cardsview": {
                         "activate": true,
@@ -121,7 +121,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                       }
                     }'`;
         break;
-      case '2':
+      case 'tache':
         html = `"cardsview": {
                         "activate": true,
                         "default": ` + cardview + `

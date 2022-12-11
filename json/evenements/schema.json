@@ -1,18 +1,12 @@
 {
   "fields": [
     {
-      "name": "siren",
-      "title": "N° SIREN",
-      "description": "Numéro de SIREN de la structure",
-      "type": "string"
-    },
-    {
-      "name": "code_postal",
+      "name": "BAN_postcode",
       "title": "Code postal",
       "type": "string"
     },
     {
-      "name": "adresse",
+      "name": "BAN_adress",
       "title": "Adresse",
       "type": "string"
     },
@@ -28,16 +22,6 @@
     },
     {
       "name": "lon",
-      "title": "Longitude",
-      "type": "number"
-    },
-    {
-      "name": "latitude",
-      "title": "Latitude",
-      "type": "number"
-    },
-    {
-      "name": "longitude",
       "title": "Longitude",
       "type": "number"
     }

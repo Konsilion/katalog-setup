@@ -1,0 +1,15 @@
+{
+  "fields": [
+    {
+      "name": "CATEGORIES", 
+      "subtype": "tags",
+      "tagSeparator": ",",
+      "allowNew": true
+    },
+    {
+      "name": "ETAT",
+      "subtype": "tag",
+      "allowNew": true
+    }
+  ]
+}

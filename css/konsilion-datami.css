@@ -190,8 +190,8 @@
 
         .CustomFilterDropdown > .navbar-dropdown {
             background-color: #fff!important;
-            background: linear-gradient(#fff 100%,transparent),linear-gradient(transparent,#fff 100%) 0 100%,linear-gradient(transparent,rgba(0,0,0,0)),linear-gradient(rgba(0,0,0,0),transparent) 0 100%;
-            background: linear-gradient(#fff 100%,transparent),linear-gradient(transparent,#fff 100%) 0 100%,linear-gradient(transparent,rgba(0,0,0,0)) 0 100%,linear-gradient(rgba(0,0,0,0),transparent);
+            background: linear-gradient(#fff 100%,transparent),linear-gradient(transparent,#fff 100%) 0 100%,linear-gradient(transparent,rgba(0,0,0,0)),linear-gradient(rgba(0,0,0,0),transparent) 0 100%!important;
+            background: linear-gradient(#fff 100%,transparent),linear-gradient(transparent,#fff 100%) 0 100%,linear-gradient(transparent,rgba(0,0,0,0)) 0 100%,linear-gradient(rgba(0,0,0,0),transparent)!important;
         }
 
     /* ======= Other Elements : Class as 'IDs' ======= */

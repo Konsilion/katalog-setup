@@ -1,63 +1,15 @@
 {
   "charts": [
     {
-      "title": { "fr": "REPARTITION PAR TYPES DE LIEU" },
-      "cols": 12,
-      "unit": { "fr": "lieu(x)" },
-      "aggregatebyfield": "type_lieu",
-      "aggregationtype": "countitems",
-      "chartOptions": {
-        "chart": {
-          "type": "donut",
-          "height": 500
-        }
-      }
-    },
-    {
       "title": { "fr": "REPARTITION PAR NATURE JURIDIQUE" },
       "cols": 6,
       "unit": { "fr": "lieu(x)" },
-      "aggregatebyfield": "nature_juridique",
+      "aggregatebyfield": "nature",
       "aggregationtype": "countitems",
       "chartOptions": {
         "chart": {
           "type": "donut",
           "height": 500
-        }
-      }
-    },
-    {
-      "title": { "fr": "REPARTITION DES LIEUX PAR NATURE JURIDIQUE" },
-      "cols": 6,
-      "unit": { "fr": "lieu(x)" },
-      "aggregatebyfield": "nature_juridique",
-      "aggregationtype": "countitems",
-      "chartOptions": {
-        "chart": {
-          "type": "treemap",
-          "height": 500
-        },
-        "legend": {
-          "show": false
-        },
-        "colors": [
-          "#3B93A5",
-          "#F7B844",
-          "#ADD8C7",
-          "#EC3C65",
-          "#CDD7B6",
-          "#C1F666",
-          "#D43F97",
-          "#1E5D8C",
-          "#421243",
-          "#EF6537",
-          "#C0ADDB"
-        ],
-        "plotOptions": {
-          "treemap": {
-            "distributed": true,
-            "enableShades": false
-          }
         }
       }
     }

@@ -323,7 +323,7 @@ input:checked + .slider:before {
 
 
 .ksln-btn-top {
-    z-index: 0;
+    z-index: 4;
     background-color: #EEE;
     color: grey;
     font-size: 17px;

@@ -2,26 +2,26 @@
   "fields": [
     {
       "name": "DESIGNATION",
-      "sticky": true,
-      "primaryKey": true
+      "title": "Nom de la tache",
+      "type": "string"
     },
     {
       "name": "DESCRIPTION",
-      "subtype": "longtext",
-      "maxLength": 2000
+      "title": "Description des choses à faire, du but.",
+      "type": "string"
     },
     {
       "name": "LIEN",
-      "subtype": "link"
     },
     {
       "name": "CATEGORIES",
-      "subtype": "tags",
-      "tagSeparator": ",",
-      "allowNew": true
+      "title": "Type de tache",
+      "type": "string"
     },
     {
       "name": "AUTEUR.ICES"
+      "title": "Qui est autour de cette tâche",
+      "type": "string"
     }
   ]
 }

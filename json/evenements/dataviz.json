@@ -1,7 +1,7 @@
 {
   "charts": [
     {
-      "title": { "fr": "REPARTITION PAR NATURE" },
+      "title": { "fr": "REPARTITION PAR TYPE D'EVENEMENTS" },
       "cols": 6,
       "unit": { "fr": "évenement(s)" },
       "aggregatebyfield": "type",

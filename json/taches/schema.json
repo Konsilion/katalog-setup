@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "name": "NOM DE LA RESSOURCE",
+      "name": "DESIGNATION",
       "sticky": true,
       "primaryKey": true
     },

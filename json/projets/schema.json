@@ -32,9 +32,6 @@
       "title": "Filtrer les catégories",
       "description": "Le différents catégories principales caractérisant vos projets.",
       "type": "string",   
-      "subtype": "tags",
-      "tagSeparator": ",",
-      "allowNew": true
     },
     {
       "name": "ETAT",

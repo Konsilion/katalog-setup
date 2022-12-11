@@ -1,0 +1,399 @@
+{
+
+  "mapOptions"   : {
+
+    "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+    "attribution"      : "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
+    "subdomains"       : "abcd",
+    "center"           : [1.625257, 43.281245],
+    "currentCenter"    : [1.625257, 43.281245],
+    "zoom"             : 7.3,
+    "maxZoom"          : 18,
+    "minZoom"          : 2,
+    "useMarkerCluster" : true,
+
+    "item_geo_fields"   : {
+      "latitude" : "latitude",
+      "longitude": "longitude"
+    },
+
+    "item_marker"       : "map-marker",
+    "item_marker_color" : "primary",
+    "item_marker_offset" : [ 0, 8 ],
+    "item_marker_anchor" : "bottom",
+
+    "pinIconSize"      : {
+      "highlighted" : [46, 46],
+      "normal"      : [29, 29]
+    },
+
+    "map_layers" : {
+
+      "all_points_layer" : {
+        "_COMMENT": "### all points source and layer",
+        "is_activated"        : true,
+        "source_id"           : "allPointsSource",
+        "layer_id"            : "all-points",
+        "is_default_visible"  : true,
+        "is_source_distant"   : false,
+
+        "is_live_data"        : false,
+        "refresh_delay"       : 3000,
+
+        "is_clickable"        : true,
+        "add_zoom_on_click"   : 3.5,
+        "is_hoverable"        : true,
+        "hover_infos"         : {},
+        "direct_to_detail"    : false,
+        "has_popup"           : true,
+        "popup_config"        : {
+          "action" : "mousemove",
+          "fields_settings": {
+            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
+            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
+          }
+        },
+
+        "radius_min"          : 2,
+        "radius_max"          : 15,
+        "max_zoom"            : 14,
+        "min_zoom"            : 4,
+
+        "circle_color": [
+          "match",
+          ["get", "nature_juridique"],
+          "Association",
+          "#a6cee3",
+          "Entreprise",
+          "#1f78b4",
+          "SAS",
+          "#1f78b4",
+          "SARL",
+          "#1f78b4",
+          "SCIC",
+          "#1f78b4",
+          "SCIC SARL",
+          "#1f78b4",
+          "SARL en SCIC",
+          "#1f78b4",
+          "SASU",
+          "#1f78b4",
+          "Micro-Entrpreneur",
+          "#1f78b4",
+          "EPCI",
+          "#b2df8a",
+          "syndicat mixte",
+          "#b2df8a",
+          "Communauté de commune",
+          "#33a02c",
+          "Collectivité territoriale",
+          "#33a02c",
+          "#e69c75"
+        ],
+        "circle_color_activated": [
+          "match",
+          ["get", "nature_juridique"],
+          "Association",
+          "#a6cee3",
+          "Entreprise",
+          "#1f78b4",
+          "SAS",
+          "#1f78b4",
+          "SARL",
+          "#1f78b4",
+          "SCIC",
+          "#1f78b4",
+          "SCIC SARL",
+          "#1f78b4",
+          "SARL en SCIC",
+          "#1f78b4",
+          "SASU",
+          "#1f78b4",
+          "Micro-Entrpreneur",
+          "#1f78b4",
+          "EPCI",
+          "#b2df8a",
+          "syndicat mixte",
+          "#b2df8a",
+          "Communauté de commune",
+          "#33a02c",
+          "Collectivité territoriale",
+          "#33a02c",
+          "#e69c75"
+        ],
+        "circle_stroke_color" : "#FFFFFF",
+        "circle_opacity"      : 0.9
+      },
+
+      "cluster_circles_layer" : {
+        "_COMMENT": "### clusters source and layer",
+        "is_activated"        : true,
+        "source_id"           : "clusterSource",
+        "layer_id"            : "cluster-circles",
+        "is_default_visible"  : false,
+
+        "is_source_distant"   : false,
+        "is_clickable"        : true,
+
+        "circle_color"     : "#e69c75",
+        "circle_color_100" : "#e39064",
+        "circle_color_250" : "#e08453",
+        "circle_color_500" : "#c9764a",
+        "circle_color_750" : "#b36942",
+
+        "circle_radius"     : 15, 
+        "circle_radius_100" : 20, 
+        "circle_radius_250" : 30, 
+        "circle_radius_500" : 40, 
+        "circle_radius_750" : 50, 
+
+        "circle_stroke_color" : "#fff",
+        "circle_stroke_width" : 1
+      },
+
+      "cluster_count_layer" : {
+        "is_activated"        : true,
+        "source_id"           : "clusterSource",
+        "layer_id"            : "cluster-counts",
+        "is_default_visible"  : false,
+        "is_source_distant"   : false,
+        "is_clickable"        : true,
+
+        "text_size"    : 11,
+        "text_color"   : "#ffffff"
+      },
+
+      "cluster_unclustered_layer" : {
+        "is_activated"        : false,
+        "source_id"           : "clusterSource",
+        "layer_id"            : "unclustered-point",
+        "is_default_visible"  : true,
+        "is_source_distant"   : false,
+        "is_clickable"        : true,
+        "add_zoom_on_click"   : 3.5,
+        "is_hoverable"        : true,
+        "hover_infos"         : {},
+        "direct_to_detail"    : false,
+        "has_popup"           : true, 
+        "popup_config"        : {
+          "action" : "mousemove",
+          "fields_settings": {
+            "nom" :       { "position": "main_title", "prefix" : null, "suffix" : null, "class": "is-size-6 has-text-weight-semibold" },
+            "_datami_" :  { "position": "info",       "prefix" : "(cliquez pour + d'infos)", "suffix" : null, "class": "has-text-centered has-text-weight-light" }
+          }
+        },
+        "circle_color"        : "#fff", 
+        "circle_stroke_color" : "#e08453",
+        "circle_radius"       : 7, 
+        "circle_stroke_width" : 3 
+      },
+
+      "choropleth_layer" : {
+        "_COMMENT": "### choropleth source and layer",
+        "is_activated"        : true,
+        "is_live_data"        : false,
+        "refresh_delay"       : 3000,
+
+        "is_drawer_open"      : false,
+
+        "is_source_distant"   : true,
+        "_COMMENT_SOURCES_DISTANT": {
+          "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson",
+          "distant_source_url_bis"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson"
+        },
+        
+        "change_source_by_zoom" : true,
+        "is_clickable"        : false,
+
+        "_COMMENT_SOURCES": "### list of choropleth sources",
+        "sources" : [
+
+          { "_COMMENT": "### FR - departements",
+            "is_activated" : true,
+            "source_id" : "chorosource-departements",
+            "layer_id"  : "chorolayer-departements",
+            "is_default_visible" : true,
+            "max_zoom" : 9,
+            "min_zoom" : 0,
+
+            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/occitanie/departements-occitanie.geojson", 
+            "update_src_from_previous_layer" : false,
+
+            "need_aggregation" : true,
+            "polygon_prop_id" : "code",
+            "join_polygon_id_to_field"  : "departement",
+            "agregated_data_field"      : "count_dep",
+            "fill_color": [
+              "interpolate",
+              ["linear"],
+              ["get", "count_dep" ],
+              0,  "#f2f3f3",
+              1,  "#d2ede9",
+              25,  "#67c1b5",
+              75,  "#18a28f",
+              100, "#158b7b",
+              150, "#106268"
+            ],
+            "fill_opacity"        : 0.3,
+            "fill_outline_color"  : "#004494",
+
+            "has_popup" : true, 
+            "popup_config" : {
+              "action" : "mousemove",
+              "fields_settings": {
+                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
+                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+              }
+            },
+            "legend" : {
+              "position" : "bottom-right", 
+              "title" : "département",
+              "scales" : [
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",  "color" : "#6cc3b7"},
+                { "value" : "0 lieu",   "color" : "#fbf2ed"}
+              ]
+            }
+          },
+          { "_COMMENT": "### OCCITANIE - EPCI",
+            "is_activated" : true,
+            "source_id" : "chorosource-epci",
+            "layer_id"  : "chorolayer-epci",
+            "is_default_visible" : true,
+            "max_zoom" : 12,
+            "min_zoom" : 9,
+
+            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/EPCI_4DPT.geojson", 
+            "update_src_from_previous_layer" : false,
+            "need_aggregation" : false,
+            "polygon_prop_id" : "code_epci",
+            "join_polygon_id_to_field"  : "departement",
+            "agregated_data_field"      : "count_dep",
+            "fill_color": "transparent",
+            "fill_opacity"        : 0.9,
+            "fill_outline_color"  : "#e69c75",
+            "has_popup" : false, 
+            "popup_config" : {
+              "action" : "mousemove",
+              "fields_settings": {
+                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
+                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+              }
+            },
+            "legend" : {
+              "position" : "bottom-right", 
+              "title" : "Tiers-lieux / EPCI",
+              "scales" : [
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",   "color" : "#6cc3b7"},
+                { "value" : "0 lieu",    "color" : "#fbf2ed"}
+              ]
+            }
+          },
+          { "_COMMENT": "### OCCITANIE - QPV",
+            "is_activated" : true,
+            "source_id" : "chorosource-qpv",
+            "layer_id"  : "chorolayer-qpv",
+            "is_default_visible" : true,
+            "max_zoom" : 15,
+            "min_zoom" : 0,
+
+            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/QPV_4DPT.geojson", 
+            "update_src_from_previous_layer" : false,
+            "need_aggregation" : false,
+            "polygon_prop_id" : "objectid",
+            "join_polygon_id_to_field"  : "departement",
+            "agregated_data_field"      : "count_dep",
+            "fill_color": "#feb24c",
+            "fill_opacity"        : 0.8,
+            "fill_outline_color"  : "#fd8d3c",
+            "has_popup" : false, 
+            "popup_config" : {
+              "action" : "mousemove",
+              "fields_settings": {
+                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
+                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+              }
+            },
+            "legend" : {
+              "position" : "bottom-right", 
+              "title" : "Tiers-lieux / EPCI",
+              "scales" : [
+                { "value" : ">150 lieux", "color" : "#106268"},
+                { "value" : "100 lieux",  "color" : "#10685c"},
+                { "value" : "50 lieux",  "color" : "#158b7b"},
+                { "value" : "25 lieux",  "color" : "#18a28f"},
+                { "value" : "10 lieux",   "color" : "#42b2a3"},
+                { "value" : "1 lieu",   "color" : "#6cc3b7"},
+                { "value" : "0 lieu",    "color" : "#fbf2ed"}
+              ]
+            }
+          }
+        ]
+      },
+
+      "heatmap_layer" : {
+        "_COMMENT"            : "### heatmap source and layer",
+        "is_activated"        : true,
+        "is_default_visible"  : false,
+        "source_id"           : "allPointsSource",
+        "layer_id"            : "heatmap-layer",
+        "source"              : "all-points",
+        "prop_weight"         : "weight",
+        "max_zoom"            : 18,
+        "radius_min"          : 6,
+        "radius_max"          : 25
+      }
+
+    },
+
+    "layers_visibility" :{
+      "is_activated"    : true,
+      "is_drawer_open"  : false,
+      "layers_switches" : [ 
+        {
+          "label" : "lieux",  
+          "layers" : [ "all-points" ],
+          "default_visible" : false
+        }, 
+        {
+          "label" : "ensembles" ,
+          "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "départements" ,
+          "layers" : [ "chorolayer-departements" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "EPCI" ,
+          "layers" : [ "chorolayer-epci" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "QPV" ,
+          "layers" : [ "chorolayer-qpv" ],
+          "default_visible" : true
+        }, 
+        {
+          "label" : "heatmap" ,
+          "layers" : [ "heatmap-layer" ],
+          "default_visible" : false
+        }
+      ]
+    }
+
+  }
+}

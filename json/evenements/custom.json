@@ -13,8 +13,8 @@
     },
     {
       "name": "date",
-      "subtype": "longtext",
-      "maxLength": 15
+      "subtype": "tag",
+      "allowNew": true
     },
     {
       "name": "departement",
@@ -33,17 +33,10 @@
       }
     },
     {
-      "name": "lat",
-      "hide": true
-    },
-    {
-      "name": "lon",
-      "hide": true
-    },
-    {
-      "name": "nature",
-      "title": "Nature de l'evenement",
-      "subtype": "tag"
+      "name": "type",
+      "title": "Type evenement",
+      "subtype": "tag",
+      "allowNew": true
     }
   ],
   "consolidation": [

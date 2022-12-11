@@ -243,100 +243,20 @@
               "fields_settings": {
                 "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
                 "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
+                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " evenements" }
               }
             },
             "legend" : {
               "position" : "bottom-right", 
               "title" : "département",
               "scales" : [
-                { "value" : ">150 lieux", "color" : "#106268"},
-                { "value" : "100 lieux",  "color" : "#10685c"},
-                { "value" : "50 lieux",  "color" : "#158b7b"},
-                { "value" : "25 lieux",  "color" : "#18a28f"},
-                { "value" : "10 lieux",   "color" : "#42b2a3"},
-                { "value" : "1 lieu",  "color" : "#6cc3b7"},
-                { "value" : "0 lieu",   "color" : "#fbf2ed"}
-              ]
-            }
-          },
-          { "_COMMENT": "### OCCITANIE - EPCI",
-            "is_activated" : true,
-            "source_id" : "chorosource-epci",
-            "layer_id"  : "chorolayer-epci",
-            "is_default_visible" : true,
-            "max_zoom" : 12,
-            "min_zoom" : 9,
-
-            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/EPCI_4DPT.geojson", 
-            "update_src_from_previous_layer" : false,
-            "need_aggregation" : false,
-            "polygon_prop_id" : "code_epci",
-            "join_polygon_id_to_field"  : "departement",
-            "agregated_data_field"      : "count_dep",
-            "fill_color": "transparent",
-            "fill_opacity"        : 0.9,
-            "fill_outline_color"  : "#e69c75",
-            "has_popup" : false, 
-            "popup_config" : {
-              "action" : "mousemove",
-              "fields_settings": {
-                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
-                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
-              }
-            },
-            "legend" : {
-              "position" : "bottom-right", 
-              "title" : "Tiers-lieux / EPCI",
-              "scales" : [
-                { "value" : ">150 lieux", "color" : "#106268"},
-                { "value" : "100 lieux",  "color" : "#10685c"},
-                { "value" : "50 lieux",  "color" : "#158b7b"},
-                { "value" : "25 lieux",  "color" : "#18a28f"},
-                { "value" : "10 lieux",   "color" : "#42b2a3"},
-                { "value" : "1 lieu",   "color" : "#6cc3b7"},
-                { "value" : "0 lieu",    "color" : "#fbf2ed"}
-              ]
-            }
-          },
-          { "_COMMENT": "### OCCITANIE - QPV",
-            "is_activated" : true,
-            "source_id" : "chorosource-qpv",
-            "layer_id"  : "chorolayer-qpv",
-            "is_default_visible" : true,
-            "max_zoom" : 15,
-            "min_zoom" : 0,
-
-            "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/QPV_4DPT.geojson", 
-            "update_src_from_previous_layer" : false,
-            "need_aggregation" : false,
-            "polygon_prop_id" : "objectid",
-            "join_polygon_id_to_field"  : "departement",
-            "agregated_data_field"      : "count_dep",
-            "fill_color": "#feb24c",
-            "fill_opacity"        : 0.8,
-            "fill_outline_color"  : "#fd8d3c",
-            "has_popup" : false, 
-            "popup_config" : {
-              "action" : "mousemove",
-              "fields_settings": {
-                "nom" :        { "position": "title",      "prefix" : null,       "suffix" : null },
-                "code" :       { "position": "title_post", "prefix" : " (",       "suffix" : ")" },
-                "count_dep" :  { "position": "value",      "prefix" : "total : ", "suffix" : " organisations" }
-              }
-            },
-            "legend" : {
-              "position" : "bottom-right", 
-              "title" : "Tiers-lieux / EPCI",
-              "scales" : [
-                { "value" : ">150 lieux", "color" : "#106268"},
-                { "value" : "100 lieux",  "color" : "#10685c"},
-                { "value" : "50 lieux",  "color" : "#158b7b"},
-                { "value" : "25 lieux",  "color" : "#18a28f"},
-                { "value" : "10 lieux",   "color" : "#42b2a3"},
-                { "value" : "1 lieu",   "color" : "#6cc3b7"},
-                { "value" : "0 lieu",    "color" : "#fbf2ed"}
+                { "value" : ">150 évenements", "color" : "#106268"},
+                { "value" : "100 évenements",  "color" : "#10685c"},
+                { "value" : "50 évenements",  "color" : "#158b7b"},
+                { "value" : "25 évenements",  "color" : "#18a28f"},
+                { "value" : "10 évenements",   "color" : "#42b2a3"},
+                { "value" : "1 évenement",  "color" : "#6cc3b7"},
+                { "value" : "0 évenement",   "color" : "#fbf2ed"}
               ]
             }
           }
@@ -363,7 +283,7 @@
       "is_drawer_open"  : false,
       "layers_switches" : [ 
         {
-          "label" : "lieux",  
+          "label" : "évenements",  
           "layers" : [ "all-points" ],
           "default_visible" : false
         }, 
@@ -375,16 +295,6 @@
         {
           "label" : "départements" ,
           "layers" : [ "chorolayer-departements" ],
-          "default_visible" : true
-        }, 
-        {
-          "label" : "EPCI" ,
-          "layers" : [ "chorolayer-epci" ],
-          "default_visible" : true
-        }, 
-        {
-          "label" : "QPV" ,
-          "layers" : [ "chorolayer-qpv" ],
           "default_visible" : true
         }, 
         {

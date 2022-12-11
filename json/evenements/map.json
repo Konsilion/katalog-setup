@@ -8,7 +8,7 @@
     "center"           : [1.625257, 43.281245],
     "currentCenter"    : [1.625257, 43.281245],
     "zoom"             : 7.3,
-    "maxZoom"          : 18,
+    "maxZoom"          : 10,
     "minZoom"          : 2,
     "useMarkerCluster" : true,
 
@@ -216,7 +216,7 @@
             "max_zoom" : 9,
             "min_zoom" : 0,
 
-            "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/occitanie/departements-occitanie.geojson", 
+            "source_url" : "https://france-geojson.gregoiredavid.fr/repo/departements.geojson", 
             "update_src_from_previous_layer" : false,
 
             "need_aggregation" : true,

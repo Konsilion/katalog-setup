@@ -310,6 +310,7 @@ input:checked + .slider:before {
         bottom: 0px;
         right: 0;
         padding: 7px 15px;
+    	border: 1px solid grey;
         border-radius: 10px 0px 0 0px;
         cursor: pointer;
 }

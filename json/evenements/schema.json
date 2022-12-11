@@ -16,14 +16,9 @@
       "type": "string"
     },
     {
-      "name": "lat",
-      "title": "Latitude",
-      "type": "number"
-    },
-    {
-      "name": "lon",
-      "title": "Longitude",
-      "type": "number"
+      "name": "date",
+      "title": "Date de début de l'évenement",
+      "type": "string"
     },
     {
       "name": "latitude",

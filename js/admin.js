@@ -11,7 +11,7 @@ fetch(url)
     document.getElementById("ConfigLink").setAttribute("href", url_repo +  "/edit/master/mkdocs.yml");
 
     document.getElementsByClassName('md-content')[0].innerHTML += `
-    <button class="ksln-btn-bottom" 
+    <button class="ksln-btn-top" 
         onclick="window.open('../katalog/klouds/home', '_self');"> 
         Déposer un fichier
     </button>

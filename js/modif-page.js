@@ -19,7 +19,7 @@ fetch(url + '/konsilion.json')
     } 
           
     document.getElementsByClassName('md-content')[0].innerHTML += `
-        <button class="ksln-btn-bottom" 
+        <button class="ksln-btn-top" 
         onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
         Modifier cette page
         </button>

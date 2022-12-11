@@ -78,7 +78,7 @@
             "fill_opacity"        : 0.3,
             "fill_outline_color"  : "#004494",
 
-            "has_popup" : true, 
+            "has_popup" : false, 
             "popup_config" : {
               "action" : "mousemove",
               "fields_settings": {

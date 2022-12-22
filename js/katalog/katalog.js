@@ -62,26 +62,31 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                       "pagination": {
                         "itemsPerPage": 6
                       },
+                      "cardsview": {
+                        "activate": true,
+                        "default": ` + cardview + `
+                      },
+                      "schema": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/schema.json"
+                      },
+                      "fields-custom-properties": {
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/custom.json"
+                      },
                       `;
     
     let html_end = ``;
     
     let html = ``;
     
+    console.log(model)
+    
     switch (model) {
-      case 'projet':    
-            
-        html = `"cardsview": {
-                        "activate": true,
-                        "default": ` + cardview + `
-                      },
-                      "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `.json"
-                      },
-                      "customfilters": {
+      case 'projet':        
+        html = `"customfilters": {
                         "activate": true,
                         "filterfields": [
-                          "CATEGORIE"
+                          "CATEGORIES",
+                          "ETAT"
                         ],
                         "tagsSeparator": ","
                       },
@@ -95,9 +100,9 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                             "position": "resume"
                           },
                          "ETAT": {
-                            "position": "resume"
+                            "position": "tags"
                           },
-                          "CATEGORIE": {
+                          "CATEGORIES": {
                             "position": "tags"
                           }
                         },
@@ -111,7 +116,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                           "LIEN": {
                             "position": "links"
                           },
-                          "CATEGORIE": {
+                          "CATEGORIES": {
                             "position": "tags"
                           },
                           "ETAT": {
@@ -121,23 +126,14 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                       }
                     }'`;
         break;
-      case 'tache':
-        html = `"cardsview": {
-                        "activate": true,
-                        "default": ` + cardview + `
-                      },
-                      "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `.json"
-                      },
-                      "fields-custom-properties": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/custom-ressources.json"
-                      },
-                      "customfilters": {
+       case 'tache':        
+        html = `"customfilters": {
                         "activate": true,
                         "filterfields": [
-                          "CATEGORIE",
+                          "CATEGORIES",
                           "PROJETS"
-                        ]
+                        ],
+                        "tagsSeparator": ","
                       },
                       "cardsdetail": false,
                       "cardssettings": {
@@ -145,12 +141,15 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                           "DESIGNATION": {
                             "position": "title"
                           },
-                         "PROJETS": {
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
+                         "CATEGORIES": {
+                            "position": "tags"
+                          },                
+                          "PROJETS": {
                             "position": "tags", 
                             "block_title": "Projet"
-                          },
-                          "CATEGORIE": {
-                            "position": "tags"
                           }
                         },
                         "detail": {
@@ -158,16 +157,12 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                             "position": "title"
                           },
                           "DESCRIPTION": {
-                            "position": "resume"
+                            "position": "description"
                           },
                           "LIEN": {
                             "position": "links"
                           },
-                         "PROJETS": {
-                            "position": "tags", 
-                            "block_title": "Projet"
-                          },
-                          "CATEGORIE": {
+                          "CATEGORIES": {
                             "position": "tags"
                           },
                           "ETAT": {
@@ -175,7 +170,54 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                           }
                         }
                       }
-                    }'
+                    }'`;
+        break;           
+            
+      case 'ressource':
+        html = `"customfilters": {
+                    "activate": true,
+                    "filterfields": [
+                      "CATEGORIE",
+                      "PROJETS"
+                    ]
+                  },
+                  "cardsdetail": false,
+                  "cardssettings": {
+                    "mini": {
+                      "DESIGNATION": {
+                        "position": "title"
+                      },
+                     "PROJETS": {
+                        "position": "tags", 
+                        "block_title": "Projet"
+                      },
+                      "CATEGORIES": {
+                        "position": "tags"
+                      }
+                    },
+                    "detail": {
+                      "DESIGNATION": {
+                        "position": "title"
+                      },
+                      "DESCRIPTION": {
+                        "position": "resume"
+                      },
+                      "LIEN": {
+                        "position": "links"
+                      },
+                     "PROJETS": {
+                        "position": "tags", 
+                        "block_title": "Projet"
+                      },
+                      "CATEGORIES": {
+                        "position": "tags"
+                      },
+                      "ETAT": {
+                        "position": "tags"
+                      }
+                    }
+                  }
+                }'
                     `;            
         break;
         default:
@@ -225,7 +267,7 @@ TakeTheJson();
 
 // ============ KONSILION JSON INFORMATIONS =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[0];
 
 fetch(url + '/konsilion.json')
 .then(response => response.json())
@@ -235,7 +277,7 @@ fetch(url + '/konsilion.json')
 
     let page = ""
 
-    for (let i = 1; i < (array.length - 3); i++) {
+    for (let i = 0; i < (array.length - 3); i++) {
         i = i+1;
 
         page += '/' + array[i]

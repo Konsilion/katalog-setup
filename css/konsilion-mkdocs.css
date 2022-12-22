@@ -111,13 +111,7 @@
             }
 
 			.md-nav--primary > .md-nav__title {
-				font-size: 18px;
-				color: grey;
-				line-height: 25px;
-				padding: 25px 15px 25px 0px;
-				margin: 100px auto 25px auto;
-				border-bottom: 1px solid #DDD;
-				border-top: 1px solid #DDD;
+				display: none;
 			}
 
             .md-sidebar.md-sidebar--primary > * {       

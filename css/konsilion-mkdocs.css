@@ -154,24 +154,7 @@
 
 		.md-nav__link {
 			margin: 20px auto;
-		}
-			
-		/* ======= LOGO ======= */
-
-		.md-header__button.md-logo {
-			position: absolute;
-			top: 65px;
-			left: 15px;
-		}		
-			
-		.md-header__button.md-logo :is(img, svg) {
-			height: 2.5rem !important;
-			max-width: 200px !important;
-		}	
-			
-			
-			
-			
+		}			
         }   
 
     /* ======= PREV-NEXT & FOOTER ======= */

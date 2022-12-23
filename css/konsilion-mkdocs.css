@@ -163,7 +163,7 @@
 :root > * {
 	/*--color-back-form: rgba(245, 245, 245, 0.9);*/
 	/*--color-button: #1FAA1F;*/
-	--md-primary-fg-color: #2B8DCE !important;
+	--md-primary-fg-color: #505050 !important;
 	/*--md-primary-fg-color-light: rgba(19,96,149,0.2) !important;*/
 	/*--md-primary-fg-color--dark: #505050;*/
 }

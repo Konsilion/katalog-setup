@@ -8,46 +8,10 @@ var style = document.createElement('style');
 // ---------------------
 
 
-// ====== Création du widget Datami ======
 
 
 
-const appId = window.location.pathname.split('/');
-    
-var katalog_folder = appId[appId.length - 3]
-   
-var ksln_json = window.location.pathname + '../../../konsilion.json';
-
-var main_token = "";
-
-var main_gitfile = "";
-
-
-
-
-
-
-
-function TakeTheJson() {
-    var url = window.location.pathname + '../katalog.json';
-    fetch(url)
-    .then(response => response.json())
-    .then(json => {
-        var main = Object.keys(json.informations);
-        var model = json.informations.model;
-        var cardview = json.informations.cardview;
-        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,main_gitfile,model,cardview,main_token);
-
-        var list = Object.keys(json.external);        
-        var count = Object.keys(json.external).length;
-        for (let i = 0; i < count; i++) {
-            DatamiKatalog(i+1,"DatamiExternal",list[i],json.external[list[i]].descr,json.external[list[i]].url,model,cardview,json.external[list[i]].token);
-        }
-    });
-}
-
-
-
+// ====== Modele de Datami widgets ======
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
@@ -77,8 +41,6 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
     let html_end = ``;
     
     let html = ``;
-    
-    console.log(model)
     
     switch (model) {
       case 'projet':        
@@ -242,57 +204,68 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
             child.parentNode.insertBefore(elem, child);
 
     }, 1500);
-
-
-
-
 }
+// ---------------------
+
+
+
+
+
+
+
+
+
+// ====== Recuperation du katalog.json pour creer le catalogue 'main' et les 'partenaires' ======
+
+function TakeTheJson() {
+    var url = window.location.pathname + '../katalog.json';
+    fetch(url)
+    .then(response => response.json())
+    .then(json => {
+        var main = Object.keys(json.informations);
+        var model = json.informations.model;
+        var cardview = json.informations.cardview;
+        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,main_gitfile,model,cardview,main_token);
+
+        var list = Object.keys(json.external);        
+        var count = Object.keys(json.external).length;
+        for (let i = 0; i < count; i++) {
+            DatamiKatalog(i+1,"DatamiExternal",list[i],json.external[list[i]].descr,json.external[list[i]].url,model,cardview,json.external[list[i]].token);
+        }
+    });
+}
+// ---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+// ====== Execution ======
+
+const appId = window.location.pathname.split('/');
+    
+var katalog_folder = appId[appId.length - 3]
+
+var ksln_json = window.location.pathname + '../../../konsilion.json';
+
+var main_gitfile = "";
+
+var main_token = "";
 
 fetch(ksln_json)
     .then(response => response.json())
     .then(json => {    
-    
             main_gitfile = `https://github.com/` + json.user + `/` + json.repo + `/` + `blob/master/docs/katalog/` + katalog_folder + `/data.csv`
-    
             main_token = json.token;
     });
 
 
 TakeTheJson();
-
-
-
-
-
-
-// ============ KONSILION JSON INFORMATIONS =============
-
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[0];
-
-fetch(url + '/konsilion.json')
-.then(response => response.json())
-.then(json => {
-
-    var array = window.location.pathname.split('/');
-
-    let page = ""
-
-    for (let i = 0; i < (array.length - 3); i++) {
-        i = i+1;
-
-        page += '/' + array[i]
-        
-        i = i-1;
-    } 
-
-        document.getElementsByClassName('md-content')[0].innerHTML += `
-        <button class="ksln-btn-top" 
-        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `');">  
-        Paramétrer ce catalogue
-        </button>
-        `;    
-});
-
-
-
-
+// ---------------------

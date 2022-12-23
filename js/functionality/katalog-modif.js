@@ -2,6 +2,8 @@
 
 var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[0];
 
+console.log(url);
+
 fetch(url + '/konsilion.json')
 .then(response => response.json())
 .then(json => {

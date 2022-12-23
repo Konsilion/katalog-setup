@@ -13,7 +13,7 @@ fetch("https://datami-widget.multi.coop/js/app.js")
 
 
 
-function ModifKatalog(user,repo,page) {
+function ModifKatalog(user,repo,page,token) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;" 
                 onclick="window.location.reload();">  
@@ -28,6 +28,7 @@ function ModifKatalog(user,repo,page) {
                   "allowKeyEdit": true
                 }'
                   onlypreview="false"
+                  usertoken="` + window.atob(token) + `"
                   locale="fr"
                 ></datami-file>
                 `;

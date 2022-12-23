@@ -13,7 +13,7 @@ fetch("https://datami-widget.multi.coop/js/app.js")
 
 
 
-function HideShow(user,repo,page) {
+function ModifKatalog(user,repo,page) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;" 
                 onclick="window.location.reload();">  

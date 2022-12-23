@@ -1,32 +1,6 @@
-// ============ KONSILION JSON INFORMATIONS =============
+// ============ Modification de la page avec remplacement par un widget Datami =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
-
-fetch(url + '/konsilion.json')
-.then(response => response.json())
-.then(json => {
-
-    var array = window.location.pathname.split('/');
-
-    let page = ""
-
-    for (let i = 1; i < (array.length - 2); i++) {
-        i = i+1;
-
-        page += '/' + array[i]
-        
-        i = i-1;
-    } 
-          
-    document.getElementsByClassName('md-content')[0].innerHTML += `
-        <button class="ksln-btn-top" 
-        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
-        Modifier cette page
-        </button>
-        `;    
-});
-
-function HideShow(user,repo,page,token) {
+function ModifPage(user,repo,page,token) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
@@ -52,3 +26,40 @@ function HideShow(user,repo,page,token) {
       .then(() => {
       })    
 };
+
+// ---------------------------
+
+
+
+
+
+
+
+// ============ Execution =============
+
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+
+fetch(url + '/konsilion.json')
+.then(response => response.json())
+.then(json => {
+
+    var array = window.location.pathname.split('/');
+
+    let page = ""
+
+    for (let i = 1; i < (array.length - 2); i++) {
+        i = i+1;
+
+        page += '/' + array[i]
+        
+        i = i-1;
+    } 
+          
+    document.getElementsByClassName('md-content')[0].innerHTML += `
+        <button class="ksln-btn-top" 
+        onclick="ModifPage('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
+        Modifier cette page
+        </button>
+        `;    
+});
+// ---------------------------

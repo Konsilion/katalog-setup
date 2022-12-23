@@ -15,8 +15,7 @@
 	@media only screen and (min-width: 1220px) {
 		.md-content{
 			margin: 50px auto;
-			width: 70%;
-			max-width: 1200px;
+			max-width: 1240px;
 			padding: 0 25px;
 		}
 	}

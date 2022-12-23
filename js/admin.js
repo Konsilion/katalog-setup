@@ -8,14 +8,7 @@ fetch(url)
     document.getElementById("IndexLink").setAttribute("href", url_repo + "/edit/master/docs/pages/accueil.md");
     document.getElementById("PageLink").setAttribute("href", url_repo + "/new/master/docs/pages");
     document.getElementById("InitLink").setAttribute("href", url_repo + "/edit/master/docs/konsilion.json");
-    document.getElementById("ConfigLink").setAttribute("href", url_repo +  "/edit/master/mkdocs.yml");
-
-    document.getElementsByClassName('md-content')[0].innerHTML += `
-    <button class="ksln-btn-top" 
-        onclick="window.open('../katalog/klouds/home', '_self');"> 
-        Déposer un fichier
-    </button>
-    `;     
+    document.getElementById("ConfigLink").setAttribute("href", url_repo +  "/edit/master/mkdocs.yml"); 
 });
 
 

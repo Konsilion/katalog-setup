@@ -1,6 +1,6 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[0];
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
 
 console.log(url);
 
@@ -22,9 +22,8 @@ fetch(url + '/konsilion.json')
 
         document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-top" 
-        onclick="HideShow('` + json.user + `','` + json.repo + `','` + page + `');">  
+        onclick="ModifKatalog('` + json.user + `','` + json.repo + `','` + page + `');">  
         Paramétrer ce catalogue
         </button>
         `;    
 });
-

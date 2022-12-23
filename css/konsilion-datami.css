@@ -101,14 +101,14 @@
     }
 
 
-    @media only screen and (min-width: 1000px) and (max-width: 1559px) {
+    @media only screen and (min-width: 769px) and (max-width: 1399px) {
         .column.is-4, .column.is-4-tablet {
             width: 50% !important;
         }
     }
 
     
-    @media only screen and (min-width: 1560px) {
+    @media only screen and (min-width: 1400px) {
         .column.is-4, .column.is-4-tablet {
             width: 33.33333337% !important;
         }

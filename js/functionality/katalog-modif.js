@@ -12,7 +12,7 @@ fetch(url + '/konsilion.json')
 
     let page = ""
 
-    for (let i = 0; i < (array.length - 3); i++) {
+    for (let i = 1; i < (array.length - 3); i++) {
         i = i+1;
 
         page += '/' + array[i]

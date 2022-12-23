@@ -88,6 +88,44 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                       }
                     }'`;
         break;
+      case 'kloud':        
+        html = `"customfilters": {
+                        "activate": true,
+                        "filterfields": [
+                          "ETAT"
+                        ],
+                        "tagsSeparator": ","
+                      },
+                      "cardsdetail": false,
+                      "cardssettings": {
+                        "mini": {
+                          "DESIGNATION": {
+                            "position": "title"
+                          },
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
+                         "ETAT": {
+                            "position": "tags"
+                          }
+                        },
+                        "detail": {
+                          "DESIGNATION": {
+                            "position": "title"
+                          },
+                          "DESCRIPTION": {
+                            "position": "resume"
+                          },
+                          "LIEN": {
+                            "position": "links"
+                          },
+                          "ETAT": {
+                            "position": "tags"
+                          }
+                        }
+                      }
+                    }'`;
+        break;
        case 'tache':        
         html = `"customfilters": {
                         "activate": true,

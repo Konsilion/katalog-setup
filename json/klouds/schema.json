@@ -2,54 +2,29 @@
   "fields": [
     {
       "name": "DESIGNATION",
-      "title": "Nom de la ressource",
+      "title": "Nom de l espace de stockage",
       "description": "Designation brève de la ressource numérique",
       "type": "string"
     },
     {
       "name": "DESCRIPTION",
-      "title": "Présentation de la ressource",
+      "title": "Présentation du stockage et de son proprietaire",
       "description": "Paragraphe de présentation de la ressource",
       "type": "string"
     },
     {
       "name": "LIEN",
-      "title": "URL du site de la ressource",
+      "title": "URL du depot de fichier",
       "type": "string",
       "format": "uri"
-    },
-    {
-      "name": "CATEGORIE",
-      "title": "Filtrer les catégories",
-      "description": "Le différents filtres pour les ressources numériques.",
-      "type": "string",
-      "subtype": "tags",
-      "tagSeparator": ",",
-      "allowNew": true
-    },    
+    },   
     {
       "name": "ETAT",
-      "title": "Disponibilité de la ressource",
+      "title": "Disponibilité du stockage en espace libre",
       "description": "Votre ressource est elle à l'état d'idée, en cours de développement, disponible ou arrêtée ?",
       "type": "string",
-      "subtype": "tags",
-      "tagSeparator": ",",
+      "subtype": "tag",
       "allowNew": true
-    },
-    {
-      "name": "AUTEUR.ICES",
-      "title": "Auteurs et autrices de la ressources",
-      "description": "Liste exhaustives des participants d'origine de la ressource.",
-      "type": "string"
-    },
-    {
-      "name": "PROJETS",
-      "title": "Projets associés à la ressource",
-      "type": "string",
-      "subtype": "tags",
-      "tagSeparator": "-",
-      "bgColor" : "#BED3C3",
-      "allowNew": true
-    }   
+    }
   ]
 }

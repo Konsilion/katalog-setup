@@ -116,12 +116,14 @@
                 background-color: white;
             }
 
-            .md-nav__item.md-nav__item--active > a {
-                margin: 0px;
-                padding: 15px;
-                background-color: #EEE;    
-                border-radius: 50px 0px 0px 50px;
-            }
+	    .md-nav__item.md-nav__item--active > a {
+	        margin: 0px;
+	        color: #777;
+	        font-weight: 600;
+	        padding: 15px;
+	        background-color: #EEE;
+	        border-radius: 50px 0px 0px 50px;
+	    }
 
 
             .md-nav__item--nested > nav {

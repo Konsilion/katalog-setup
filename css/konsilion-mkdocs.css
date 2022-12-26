@@ -348,7 +348,7 @@ input:checked + .slider:before {
 	max-width: 450px;
 	padding: 12px 20px;
 	margin: 8px 0;
-	display: block;
+	display: inline-block;
 	border: 1px solid #eee;
 	border-radius: 4px;
 	box-sizing: border-box;

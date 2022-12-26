@@ -148,11 +148,12 @@
                 margin: 0px;
                 padding: 15px;
             }
+		
             .md-nav__link:hover {
                 margin: 0px;
                 color: black;
                 background-color: #F5F5F5;    
-                border-radius: 50px 0px 0px 50px;
+                border-radius: 0px;
             }
         }   
 

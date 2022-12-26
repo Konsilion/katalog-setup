@@ -105,9 +105,9 @@
                 padding: 0px !important;
             }
 
-	   .md-nav__item--active > label {
-	       color: var(--md-accent-fg-color);
-	   }
+		   .md-nav__item--active > label {
+			   color: var(--md-accent-fg-color);
+		   }
 		
             .md-nav--primary > .md-nav__title {
                 display: none;
@@ -124,9 +124,10 @@
 				margin: 0px;
 				color: #777;
 				font-weight: 600;
-				padding: 15px;
+				padding: 1em;
 				background-color: #EEE;
-				border-radius: 50px 0px 0px 50px;
+				margin-left: 10px;
+				border-radius: 5px 0px 0px 5px;
 			}
 
 

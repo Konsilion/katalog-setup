@@ -196,13 +196,13 @@ h1 {
 }
 
 .ksln-cards {
-border: 0.05rem solid var(--md-default-fg-color--lightest);
-border-radius: 0.1rem;
-padding: 0.8rem;
-width: 100%;
-box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
-font-weight: 300;
-}   
+    border: 0.05rem solid var(--md-default-fg-color--lightest);
+    border-radius: 0.1rem;
+    padding: 0.8rem;
+    width: 100%;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 4%);
+    font-weight: 300;
+}
 
 
 

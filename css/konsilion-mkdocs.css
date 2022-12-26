@@ -113,12 +113,13 @@
                 display: none;
             }
 
-            .md-sidebar.md-sidebar--primary > * {       
-                padding: 25px 0 0 15px;
-                margin: 0;
-                box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-                background-color: white;
-            }
+			.md-sidebar.md-sidebar--primary > * {
+				padding: 25px 0 0 0px;
+				margin: 0;
+				margin-left: 5px;
+				box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
+				background-color: white;
+			}
 
 			.md-nav__item.md-nav__item--active > a {
 				margin: 0px;

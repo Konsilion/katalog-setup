@@ -2,6 +2,11 @@
 
 var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
 
+console.log("Variable host : " + window.location.host);
+console.log("Variable split 1 : " + window.location.pathname.split('/')[1]);
+console.log("Variable split 0 : " + window.location.pathname.split('/')[0]);
+
+
 fetch(url + '/konsilion.json')
 .then(response => response.json())
 .then(json => {
@@ -18,6 +23,8 @@ fetch(url + '/konsilion.json')
         i = i-1;
     } 
 
+    console.log("Variable page : " + page);
+    
         document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom"  
         onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/new/master/docs/pages');">  

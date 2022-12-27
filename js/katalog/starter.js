@@ -5,14 +5,6 @@ fetch("https://konsilion.github.io/katalog-setup/js/katalog/katalog.js")
   })  
 
 
-fetch("https://datami-widget.multi.coop/js/app.js")
-  .then((response) => response.text())
-  .then((text) => eval(text))
-  .then(() => {
-  })
-
-
-
 function ModifKatalog(user,repo,page,token) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;" 

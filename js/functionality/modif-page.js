@@ -37,7 +37,17 @@ function ModifPage(user,repo,page,token) {
 
 // ============ Execution =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+
+var num = 0;
+
+if (window.location.host.split('.')[1] == "github") {
+    num = 1;
+} else {
+    num = 0;
+}
+
+
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[num];
 
 fetch(url + '/konsilion.json')
 .then(response => response.json())
@@ -47,7 +57,7 @@ fetch(url + '/konsilion.json')
 
     let page = ""
 
-    for (let i = 1; i < (array.length - 2); i++) {
+    for (let i = num; i < (array.length - 2); i++) {
         i = i+1;
 
         page += '/' + array[i]

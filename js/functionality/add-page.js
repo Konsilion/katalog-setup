@@ -26,8 +26,6 @@ fetch(url + '/konsilion.json')
         i = i-1;
     } 
 
-    console.log("Variable page : " + page);
-    
         document.getElementsByClassName('md-content')[0].innerHTML += `
         <button class="ksln-btn-bottom"  
         onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/new/master/docs/pages');">  

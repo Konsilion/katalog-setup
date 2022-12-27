@@ -1,11 +1,17 @@
 // ============ KONSILION JSON INFORMATIONS =============
 
-var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[1];
+var num = 0;
 
-console.log("Variable host : " + window.location.host);
-console.log("Variable split 1 : " + window.location.pathname.split('/')[1]);
-console.log("Variable split 0 : " + window.location.pathname.split('/')[0]);
+console.log(window.location.host.split('.')[0])
+console.log(window.location.host.split('.')[1])
 
+if (window.location.host == "konsilion.github.io") {
+    num = 1;
+} else {
+    num = 0;
+}
+
+var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[num];
 
 fetch(url + '/konsilion.json')
 .then(response => response.json())
@@ -15,7 +21,7 @@ fetch(url + '/konsilion.json')
 
     let page = ""
 
-    for (let i = 1; i < (array.length - 3); i++) {
+    for (let i = num; i < (array.length - 3); i++) {
         i = i+1;
 
         page += '/' + array[i]

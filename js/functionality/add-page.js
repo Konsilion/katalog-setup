@@ -2,10 +2,7 @@
 
 var num = 0;
 
-console.log(window.location.host.split('.')[0])
-console.log(window.location.host.split('.')[1])
-
-if (window.location.host == "konsilion.github.io") {
+if (window.location.host.split('.')[1] == "github") {
     num = 1;
 } else {
     num = 0;

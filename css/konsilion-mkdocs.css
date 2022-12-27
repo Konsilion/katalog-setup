@@ -347,11 +347,18 @@ input:checked + .slider:before {
 }
 
 .ksln-btn-top:hover {
-    	background-color: rgba(50,50,50,1);
-    	color: white;
+	background-color: rgba(50,50,50,1);
+	color: white;
 }
 
 
+
+
+@media only screen and (max-width: 959px) {
+	.ksln-btn-top, .ksln-btn-bottom {
+		display: none;
+	}
+}
 
 .kslt-btn-index {
 	width: 100%;

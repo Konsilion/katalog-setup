@@ -29,7 +29,17 @@ function ModifPage(user,repo,page,token) {
       .then((response) => response.text())
       .then((text) => eval(text))
       .then(() => {
-      })          
+      })
+    
+    // Ajout CSS ---------------------
+
+    var style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = '.md-content {margin: 50px auto; max-width: 100% !important; padding: 0 25px;}';
+        document.getElementsByTagName('head')[0].appendChild(style);
+
+    // ---------------------
+
 };
 
 // ---------------------------

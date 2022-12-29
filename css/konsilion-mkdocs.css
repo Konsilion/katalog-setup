@@ -198,7 +198,8 @@ h1 {
 .ksln-grid {
   justify-content: left;
   display: grid;
-  margin: 0;  
+  margin: 0;
+  margin-bottom: 50px;	
   gap: 25px;
   grid-template-columns: 100%;
   max-width: 98%;  

@@ -96,6 +96,15 @@
             font-size:17px;
         }
 
+	/* ------ MASQUE NAV SECONDAIRE SUR ECRAN MOYEN */
+
+ 	@media only screen and (max-width: 1219px) {
+	    .md-sidebar.md-sidebar--secondary {
+		display: none !important;
+	    }
+	}
+
+
         /* ------ GRAND ECRAN */
 
         @media only screen and (min-width: 1220px) {

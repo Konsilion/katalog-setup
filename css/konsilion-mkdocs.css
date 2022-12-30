@@ -1,19 +1,19 @@
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
 h1 {
-    margin-top: 50px;
+    margin-top: 50px !important;
     font-weight: bold !important;	
 }
 
 h2 {
-    font-size: 1.7em;
-    font-weight: 400;
+    font-size: 1.7em !important;
+    font-weight: 400 !important;
 }
 
 h3 {
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid #EEE !important;
     margin-top: 50px !important;
-    padding-bottom: 15px;
+    padding-bottom: 15px !important;
 }
 
 .md-grid { 

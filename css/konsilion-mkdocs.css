@@ -16,6 +16,11 @@ h3 {
     padding-bottom: 15px !important;
 }
 
+p {
+    line-height: 35px !important;	
+}
+
+
 .md-grid { 
     max-width: initial;
     margin: 0px;

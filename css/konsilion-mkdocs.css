@@ -1,5 +1,15 @@
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
+h3 {
+    border-bottom: 1px solid #EEE;
+    margin-top: 50px !important;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
 
 .md-grid { 
     max-width: initial;

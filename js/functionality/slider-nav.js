@@ -12,6 +12,7 @@ function HideNav() {
     document.getElementsByClassName("md-header__inner md-grid")[0].classList.toggle("hide");
     document.getElementsByClassName("md-sidebar--primary")[0].classList.toggle("hide");
     document.getElementsByClassName("ksln-btn-top")[0].classList.toggle("hide");
+    document.getElementsByClassName("ksln-btn-bottom")[0].classList.toggle("hide");
     document.getElementsByClassName("md-main")[0].style.marginRight = "auto";
     document.getElementsByClassName("md-main")[0].style.marginLeft = "auto";
     
@@ -23,6 +24,7 @@ function ShowNav() {
     document.getElementsByClassName("md-header__inner md-grid")[0].classList.toggle("hide");
     document.getElementsByClassName("md-sidebar--primary")[0].classList.toggle("hide");
     document.getElementsByClassName("ksln-btn-top")[0].classList.toggle("hide");
+    document.getElementsByClassName("ksln-btn-bottom")[0].classList.toggle("hide");
     document.getElementsByClassName("md-main")[0].style.marginRight = "0px";
     document.getElementsByClassName("md-main")[0].style.marginLeft = "0px";
 };

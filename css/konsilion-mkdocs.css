@@ -12,6 +12,7 @@ h2 {
 h3 {
     border-bottom: 1px solid #EEE;
     margin-top: 50px !important;
+    padding-bottom: 15px;
 }
 
 .md-grid { 

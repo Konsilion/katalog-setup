@@ -223,8 +223,7 @@ p {
 .ksln-grid {
   justify-content: left;
   display: grid;
-  margin: 0;
-  margin-bottom: 25px;	
+  margin: 50px 0px;	
   gap: 25px;
   grid-template-columns: 100%;
   max-width: 98%;  

@@ -27,7 +27,7 @@ p {
 }
 
 .tabbed-labels:before {
-    background: none;
+    background: none !important;
 }
 
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */

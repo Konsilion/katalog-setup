@@ -1,8 +1,7 @@
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
-h3 {
-    border-bottom: 1px solid #EEE;
-    margin-top: 50px !important;
+h1 {
+    margin-top: 50px;
 }
 
 h2 {
@@ -10,6 +9,10 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    border-bottom: 1px solid #EEE;
+    margin-top: 50px !important;
+}
 
 .md-grid { 
     max-width: initial;

@@ -26,6 +26,10 @@ p {
     margin: 0px;
 }
 
+.tabbed-labels:before {
+    background: none !important;
+}
+
 
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 

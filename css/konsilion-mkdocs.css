@@ -26,10 +26,6 @@ p {
     margin: 0px;
 }
 
-.tabbed-labels:before {
-    background: none !important;
-}
-
 
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 
@@ -201,7 +197,11 @@ p {
 
 
 .tabbed-labels {
-	max-width: 100% !important;
+    /* max-width: 100% !important; */
+}
+
+.tabbed-labels:before {
+    /* background: none !important; */
 }
 
 

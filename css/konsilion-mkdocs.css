@@ -150,6 +150,7 @@ p {
 
 		   .md-nav__item--active > label {
 			   color: var(--md-accent-fg-color);
+			   box-shadow: none !important;
 		   }
 		
             .md-nav--primary > .md-nav__title {

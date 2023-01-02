@@ -80,7 +80,10 @@ p {
 
 
     /* ======= NAVIGATION ======= */
-
+	
+	.md-tabs {
+		background-color: black;
+	}
 
     .md-sidebar--primary {
         left: 0; 
@@ -128,9 +131,14 @@ p {
 
         @media only screen and (min-width: 1220px) {
 		
+			
+			
+			.md-tabs__item {
+				height: auto;
+			}
+			
 			a.md-tabs__link {
 				font-size: 18px;
-				margin: 5px;
 				color: white;
 			}
 

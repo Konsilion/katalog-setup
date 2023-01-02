@@ -412,13 +412,18 @@ input:checked + .slider:before {
     font-size: 17px;
     font-weight: 500;
     position: fixed;
-    top: 0px;
+    top: 50px;
     left: 0px;
     border-radius: 0 0 10px 0;
     padding: 4px 15px; 
     cursor: pointer;
     z-index: 4;
 }
+
+#ShowNav:hover {
+    background-color: rgba(50,50,50,1);
+    color: white;
+} 
 
 
 #HideNav {
@@ -442,14 +447,12 @@ input:checked + .slider:before {
     background-color: rgba(50,50,50,1);
     color: white;
 }
-#ShowNav:hover {
-    background-color: rgba(50,50,50,1);
-    color: white;
-} 
-
 
 @media only screen and (max-width: 1219px) {
 	#HideNav {
 	    display: none;
+	}
+	#ShowNav {
+	    top: 0px;
 	}
 }

@@ -127,6 +127,12 @@ p {
         /* ------ GRAND ECRAN */
 
         @media only screen and (min-width: 1220px) {
+		
+			a.md-tabs__link {
+				font-size: 18px;
+				margin: 5px;
+				color: white;
+			}
 
             .md-sidebar.md-sidebar--primary {
                 width: 300px;

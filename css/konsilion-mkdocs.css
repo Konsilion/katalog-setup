@@ -422,15 +422,15 @@ input:checked + .slider:before {
 
 
 #ShowNav {
-    background-color: var(--md-primary-fg-color);
-    color: white;    
+    background-color: #bf0000;
+    color: white;
     font-size: 17px;
     font-weight: 500;
     position: fixed;
-    top: 50px;
+    bottom: 0px;
     left: 0px;
-    border-radius: 0 0 10px 0;
-    padding: 4px 15px; 
+    border-radius: 0 10px 0px 0;
+    padding: 4px 15px;
     cursor: pointer;
     z-index: 4;
 }
@@ -466,8 +466,5 @@ input:checked + .slider:before {
 @media only screen and (max-width: 1219px) {
 	#HideNav {
 	    display: none;
-	}
-	#ShowNav {
-	    top: 0px;
 	}
 }

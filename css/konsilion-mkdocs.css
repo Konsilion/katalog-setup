@@ -213,7 +213,7 @@ p {
 
 
 .tabbed-labels {
-    /* max-width: 100% !important; */
+    max-width: 100% !important;
 }
 
 .tabbed-labels:before {

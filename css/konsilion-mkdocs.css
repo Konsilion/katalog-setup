@@ -175,7 +175,7 @@ p {
 
             .md-nav__link {
                 margin: 0px;
-                padding: 15px;
+                padding: 15px !important;
             }
 		
             .md-nav__link:hover {

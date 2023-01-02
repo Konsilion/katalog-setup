@@ -140,6 +140,7 @@ p {
 			a.md-tabs__link {
 				font-size: 18px;
 				color: white;
+				margin: 10px auto;
 			}
 
             .md-sidebar.md-sidebar--primary {

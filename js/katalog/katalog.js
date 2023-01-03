@@ -15,6 +15,8 @@ var style = document.createElement('style');
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
+    console.log({{ katalog_repo }});
+    
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
@@ -31,7 +33,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                         "default": ` + cardview + `
                       },
                       "schema": {
-                        "file": "{{ katalog_repo }}blob/master/json/` + katalog_folder + `/schema.json"
+                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/schema.json"
                       },
                       "fields-custom-properties": {
                         "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/custom.json"

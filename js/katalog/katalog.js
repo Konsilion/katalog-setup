@@ -2,7 +2,25 @@
 
 var style = document.createElement('style');
     style.type = 'text/css';
-    style.innerHTML = 'h1 { display: none; }';
+    style.innerHTML = `h1 { display: none; }    
+
+                        #DatamiExternal .ButtonEditFile {
+                          display: none;
+                        }
+
+                        .md-main {
+                        background-color: #fbfbfb;
+                        }
+
+                        .md-content {
+                        background-color: rgba(255,255,255,0);
+                        }
+
+                        .upper-container {
+                                font-size: 18px;
+                        }
+                        `;
+    
     document.getElementsByTagName('head')[0].appendChild(style);
 
 // ---------------------

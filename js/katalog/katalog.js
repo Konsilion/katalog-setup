@@ -15,7 +15,7 @@ var style = document.createElement('style');
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
-    console.log({{ katalog_repo }});
+    console.log("{{ katalog_repo }}");
     
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file

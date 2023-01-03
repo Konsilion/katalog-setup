@@ -18,12 +18,6 @@ function ModifPage(user,repo,page,token) {
                 `;
     
     document.getElementsByClassName('md-content')[0].innerHTML = html;
-
-    fetch("https://konsilion.github.io/katalog-setup/js/functionality/slider-nav.js")
-      .then((response) => response.text())
-      .then((text) => eval(text))
-      .then(() => {
-      })  
     
     fetch("https://datami-widget.multi.coop/js/app.js")
       .then((response) => response.text())

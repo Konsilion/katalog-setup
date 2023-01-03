@@ -33,10 +33,7 @@
     }
 
     .upper-container {
-          margin-bottom: 20px !important;  
-          border-width: 0px 0px 4px 0px !important;
-          border-style: solid !important;
-          border-image: linear-gradient(to right, var(--md-primary-fg-color), white) 0.5 !important;    
+          margin-bottom: 20px !important;      
     }
 
   

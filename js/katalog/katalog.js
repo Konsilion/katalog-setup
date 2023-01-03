@@ -31,7 +31,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                         "default": ` + cardview + `
                       },
                       "schema": {
-                        "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/schema.json"
+                        "file": "{{ katalog_repo }}blob/master/json/` + katalog_folder + `/schema.json"
                       },
                       "fields-custom-properties": {
                         "file": "https://github.com/Konsilion/katalog-setup/blob/master/json/` + katalog_folder + `/custom.json"

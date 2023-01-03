@@ -13,7 +13,7 @@ function ModifKatalog(user,repo,page,token) {
                 </button>
     
                 <datami-file
-                  title="Parametrage de la page"
+                  title="Parametrage du catalogue Web"
                   gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `/katalog.json"
                   options='{
                   "defaultDepth": 2,

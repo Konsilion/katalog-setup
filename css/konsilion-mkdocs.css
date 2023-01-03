@@ -428,8 +428,8 @@ input:checked + .slider:before {
     font-weight: 500;
     position: fixed;
     top: 0px;
-    left: 0px;
-    border-radius: 0 0px 10px 0;
+    right: 0px;
+    border-radius: 0 0px 0px 5px;
     padding: 4px 15px;
     cursor: pointer;
     z-index: 4;

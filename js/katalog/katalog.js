@@ -15,8 +15,6 @@ var style = document.createElement('style');
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
 
-    console.log("{{ katalog_repo }}");
-    
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"
@@ -231,7 +229,13 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                 locale="fr"
         ></datami-file><br><br> `;
       
-    var html_final = htlm_init + html + html_end;
+    var html_final = ""
+    
+    if (type_datami == "DatamiExternal"){
+        html_final += "<a class='.md-button' href="#">Accéder à ce catalogue</a>"
+    }
+    
+    html_final += htlm_init + html + html_end;
     
     document.getElementById(type_datami).innerHTML += html_final;
 

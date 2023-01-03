@@ -8,7 +8,7 @@ function ModifPage(user,repo,page,token) {
                 </button>
     
                 <datami-file
-                    title="Modification de la page"
+                    title="Modification de la page Web"
                     gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `.md"
                     options='{}'
                     onlypreview="false"

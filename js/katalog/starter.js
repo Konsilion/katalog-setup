@@ -27,10 +27,13 @@ function ModifKatalog(user,repo,page,token) {
     
     document.getElementsByClassName('md-content')[0].innerHTML = html;
   
-    fetch("https://konsilion.github.io/katalog-setup/js/functionality/slider-nav.js")
-      .then((response) => response.text())
-      .then((text) => eval(text))
-      .then(() => {
-      })    
+    // Ajout CSS ---------------------
+
+    var style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = '.md-sidebar {display: none !important;} .md-content {margin: 50px auto; max-width: 100vw !important; padding: 0 25px;}';
+        document.getElementsByTagName('head')[0].appendChild(style);
+
+    // ---------------------   
   
 };

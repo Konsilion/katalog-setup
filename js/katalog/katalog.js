@@ -3,24 +3,16 @@
 var style = document.createElement('style');
     style.type = 'text/css';
     style.innerHTML = `h1 { display: none; }    
-
                         #DatamiExternal .ButtonEditFile {
                           display: none;
                         }
-
                         .md-main {
                         background-color: #fbfbfb;
                         }
-
                         .md-content {
                         background-color: rgba(255,255,255,0);
                         }
-
-                        .upper-container {
-                                font-size: 18px;
-                        }
                         `;
-    
     document.getElementsByTagName('head')[0].appendChild(style);
 
 // ---------------------
@@ -31,7 +23,7 @@ var style = document.createElement('style');
 
 // ====== Modele de Datami widgets ======
 
-function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token) {
+function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,url_origin) {
 
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
@@ -246,25 +238,51 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
                 usertoken="` + window.atob(token) + `"
                 locale="fr"
         ></datami-file><br><br> `;
-      
+ 
     var html_final = ""
-    
+
+      
     if (type_datami == "DatamiExternal"){
-        html_final += "<a class='.md-button' href="#">Accéder à ce catalogue</a>"
+        
+
+        // html_final += "<a class='md-button md-button--secondary' href='" + url_origin + "' style='border-radius: 50px;'>Accédez au catalogue original</a>"
+         
+        html_final += htlm_init + html + html_end;
+
+        
+    } else {
+    
+        html_final += htlm_init + html + html_end;
+    
     }
-    
-    html_final += htlm_init + html + html_end;
-    
+       
     document.getElementById(type_datami).innerHTML += html_final;
 
+
     setTimeout(function() {
-        const elem = document.createElement("p");
-            elem.setAttribute("id", "DescrKatalog") 
-            elem.appendChild(document.createTextNode(descr));
-
+        
         var child = document.getElementsByClassName("PreviewCsv")[num];
-            child.parentNode.insertBefore(elem, child);
+            
+        if (type_datami == "DatamiExternal") {
+                
+            const btn = document.createElement("a");
+                btn.setAttribute("href", "#")
+                btn.setAttribute("target", "_blank")
+                btn.setAttribute("class", "md-button md-button--secondary")
+                btn.setAttribute("style", "float: right; border-radius: 25px; margin: 10px")
+                btn.appendChild(document.createTextNode("Voir catalogue source"));
 
+            child.parentNode.insertBefore(btn, child);
+        
+        }
+        
+        const elem = document.createElement("p");
+            elem.setAttribute("id", "DescrKatalog")
+            elem.setAttribute("style", "min-height: 50px;")
+            elem.appendChild(document.createTextNode(descr));
+        
+        child.parentNode.insertBefore(elem, child);
+        
     }, 1500);
 }
 // ---------------------
@@ -280,19 +298,33 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token)
 // ====== Recuperation du katalog.json pour creer le catalogue 'main' et les 'partenaires' ======
 
 function TakeTheJson() {
+    
     var url = window.location.pathname + '../katalog.json';
     fetch(url)
     .then(response => response.json())
     .then(json => {
-        var main = Object.keys(json.informations);
-        var model = json.informations.model;
-        var cardview = json.informations.cardview;
-        DatamiKatalog(0,"DatamiMain",json.informations.name,json.informations.descr,main_gitfile,model,cardview,main_token);
+        
 
-        var list = Object.keys(json.external);        
-        var count = Object.keys(json.external).length;
+        var list = Object.keys(json);
+        
+        var model = json[list[0]].model;
+        var cardview = json[list[0]].cardview;
+        
+        console.log(model);
+        
+        var count = Object.keys(json).length;
+        
         for (let i = 0; i < count; i++) {
-            DatamiKatalog(i+1,"DatamiExternal",list[i],json.external[list[i]].descr,json.external[list[i]].url,model,cardview,json.external[list[i]].token);
+            if (i == 0) {
+                DatamiKatalog(i,"DatamiMain",list[i],json[list[i]].descr,main_gitfile,model,cardview,main_token,"");           
+                document.getElementById("DatamiMain").innerHTML += `<h2>Afficher les catalogues liés</h2>
+                                <label class="ksln-switch">
+                                    <input id="LoadAll" type="checkbox" onclick="document.getElementById('DatamiExternal').classList.toggle('hide');">
+                                    <span class="slider round"></span>
+                                </label>`;
+            } else {
+                DatamiKatalog(i,"DatamiExternal",list[i],json[list[i]].descr,json[list[i]].url_csv,model,cardview,"",json[list[i]].url_origin);
+            }
         }
     });
 }

@@ -317,12 +317,14 @@ function TakeTheJson() {
         for (let i = 0; i < count; i++) {
             if (i == 0) {
                 DatamiKatalog(i,"DatamiMain",list[i],json[list[i]].descr,main_gitfile,model,cardview,main_token,"");           
-                document.getElementById("DatamiMain").innerHTML += `<h2>Afficher les catalogues liés</h2>
-                                <label class="ksln-switch">
-                                    <input id="LoadAll" type="checkbox" onclick="document.getElementById('DatamiExternal').classList.toggle('hide');">
-                                    <span class="slider round"></span>
-                                </label>`;
             } else {
+                if (i == 1) {                
+                    document.getElementById("DatamiMain").innerHTML += `<h2>Afficher les catalogues secondaires</h2>
+                                                                        <label class="ksln-switch">
+                                                                            <input id="LoadAll" type="checkbox" onclick="document.getElementById('DatamiExternal').classList.toggle('hide');">
+                                                                            <span class="slider round"></span>
+                                                                        </label>`;
+                }
                 DatamiKatalog(i,"DatamiExternal",list[i],json[list[i]].descr,json[list[i]].url_csv,model,cardview,"",json[list[i]].url_origin);
             }
         }

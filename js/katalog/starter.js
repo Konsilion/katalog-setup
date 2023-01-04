@@ -1,4 +1,4 @@
-fetch("../../katalog.js")
+fetch("https://konsilion.github.io/katalog-setup/js/katalog/katalog.js")
   .then((response) => response.text())
   .then((text) => eval(text))
   .then(() => {

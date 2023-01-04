@@ -27,6 +27,13 @@ p {
 }
 
 
+.md-button {
+    font-size: 16px;
+    padding: 5px 2em !important;
+    border-radius: 25px !important;
+}
+
+
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 
 

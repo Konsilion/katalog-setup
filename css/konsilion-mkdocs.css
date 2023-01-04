@@ -36,6 +36,10 @@ p {
     border-radius: 25px !important;
 }
 
+.md-content__button {
+    display: none;
+}
+
 
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 

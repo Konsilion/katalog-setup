@@ -26,7 +26,7 @@ fetch(url + '/konsilion.json')
         i = i-1;
     } 
 
-        document.getElementsByClassName('md-content')[0].innerHTML += `
+        document.getElementsByClassName('md-header')[0].innerHTML += `
         <button class="ksln-btn-top" 
         onclick="ModifKatalog('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
         Paramétrer ce catalogue

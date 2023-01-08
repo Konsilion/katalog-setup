@@ -136,7 +136,7 @@ p {
 
  	@media only screen and (max-width: 1219px) {
 	    .md-sidebar.md-sidebar--secondary {
-		display: none !important;
+		/*display: none !important;*/
 	    }
 	}
 
@@ -145,8 +145,6 @@ p {
 
         @media only screen and (min-width: 1220px) {
 		
-			
-			
 			.md-tabs__item {
 				height: auto;
 			}
@@ -162,10 +160,10 @@ p {
                 padding: 0px !important;
             }
 
-		   .md-nav__item--active > label {
+		   	.md-nav__item--active > label {
 			   color: var(--md-accent-fg-color);
 			   box-shadow: none !important;
-		   }
+		   	}
 		
             .md-nav--primary > .md-nav__title {
                 display: none;
@@ -215,15 +213,16 @@ p {
             }
         }   
 
-    /* ======= PREV-NEXT & FOOTER ======= */
 
-        .md-footer__inner.md-grid, .md-header__source {
-            display:none !important;
-        }
 
+
+/* ======= PREV-NEXT & FOOTER ======= */
+
+.md-footer__inner.md-grid, .md-header__source {
+	display:none !important;
+}
 
 /* ======= ACCORDEONS MKDOCS ======= */
-
 
 .tabbed-labels {
     max-width: 100% !important;

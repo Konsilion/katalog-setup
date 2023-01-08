@@ -17,7 +17,7 @@ function ModifPage(user,repo,page,token) {
                 ></datami-file>
                 `;
     
-    document.getElementsByClassName('md-header')[0].innerHTML = html;
+    document.getElementsByClassName('md-content')[0].innerHTML = html;
     
     fetch("https://datami-widget.multi.coop/js/app.js")
       .then((response) => response.text())

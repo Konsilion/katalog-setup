@@ -29,11 +29,11 @@ function ModifPage(user,repo,page,token) {
 
     var style = document.createElement('style');
         style.type = 'text/css';
-        style.innerHTML = '.md-sidebar {display: none !important;} .md-content {margin: 50px auto; max-width: 100vw !important; padding: 0 25px;}';
-        document.getElementsByTagName('head')[0].appendChild(style);
-        document.getElementsById('ksln-btn-top').classList.toggle('hide');
-        document.getElementsById('ksln-btn-bottom').classList.toggle('hide');
-    
+        style.innerHTML = ` .md-sidebar {display: none !important;} 
+                            .md-content {margin: 50px auto; max-width: 100vw !important; padding: 0 25px;}
+                            .ksln-btn-top {display: none}
+                            .ksln-btn-bottom {display: none}`;
+        document.getElementsByTagName('head')[0].appendChild(style);    
     // ---------------------
 
 };

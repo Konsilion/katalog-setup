@@ -1,6 +1,6 @@
 // =======  SHOW/HIDE NAVIGATION LATERALE ====
 
-document.getElementsByClassName('md-container')[0].innerHTML += `
+document.getElementsByClassName('md-header')[0].innerHTML += `
 <button id="ShowNav" onclick="ShowNav();" class="hide">Afficher le menu</button>
 <button id="HideNav" onclick="HideNav();"> x </button>
 `;

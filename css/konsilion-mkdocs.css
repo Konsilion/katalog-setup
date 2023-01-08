@@ -112,22 +112,22 @@ p {
         box-shadow: -5px 0px 8px rgba(0,0,0,0.1);
     }
 
-    .md-sidebar.md-sidebar--secondary {
-        padding: 0px;
-    }
+	.md-sidebar.md-sidebar--secondary {
+		padding: 0px;
+		width: 300px;
+		max-width: 25%;
+	}
 
-    .md-nav--secondary > .md-nav__title {  
-		/*font-size: 18px;*/
-		/*color: #666;*/
-		/*line-height:20px;*/
-		/*padding: 25px 0;*/    
-		/*margin: 25px auto 25px auto;*/
-		/*border-bottom: 1px solid #DDD;*/
-    }
+	.md-nav--secondary > .md-nav__title {
+		font-size: 18px;
+		color: #666;
+		padding: 10px;
+		border-bottom: 1px solid #DDD;
+	}
 
 	/* ------ CORRECTION DATAMI BUG */
 
-	 .md-sidebar--primary .md-nav__link {
+ 	.md-sidebar--primary .md-nav__link {
 		color: rgba(125,125,125,1) ;
 		font-size:17px;
 	}

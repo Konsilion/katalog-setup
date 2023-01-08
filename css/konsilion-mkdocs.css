@@ -149,7 +149,11 @@ p {
 			.md-sidebar--primary .md-tabs__item {
 				height: auto;
 			}
-
+			
+			.md-tabs .md-tabs__item {
+				height: auto;
+			}
+			
 			.md-tabs a.md-tabs__link {
 				font-size: 17px;
 				color: white;

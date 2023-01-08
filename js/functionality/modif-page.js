@@ -2,7 +2,7 @@
 
 function ModifPage(user,repo,page,token) {
 
-    let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;"
+    let html = `<button id="ModifPage" class="ksln-btn-top" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
                 Quitter
                 </button>
@@ -31,8 +31,9 @@ function ModifPage(user,repo,page,token) {
         style.type = 'text/css';
         style.innerHTML = ` .md-sidebar {display: none !important;} 
                             .md-content {margin: 50px auto; max-width: 100vw !important; padding: 0 25px;}
-                            .ksln-btn-top {display: none}
-                            .ksln-btn-bottom {display: none}`;
+                            #ModifPage {display: none}
+                            #HideNav {display: none}
+                            #AddPage {display: none}
         document.getElementsByTagName('head')[0].appendChild(style);    
     // ---------------------
 

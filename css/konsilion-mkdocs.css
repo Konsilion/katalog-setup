@@ -108,12 +108,12 @@ p {
     }
 
     .md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {
-        /*padding: 15px;*/
-        /*box-shadow: -5px 0px 8px rgba(0,0,0,0.1);*/
+        padding-top: 25px;
+        box-shadow: -5px 0px 8px rgba(0,0,0,0.1);
     }
 
     .md-sidebar.md-sidebar--secondary {
-        /*padding: 0px;*/
+        padding: 0px;
     }
 
     .md-nav--secondary > .md-nav__title {  

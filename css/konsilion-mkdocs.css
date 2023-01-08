@@ -175,7 +175,7 @@ p {
 				padding: 25px 0 0 0px;
 				margin: 0;
 				box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-				background-color: white;
+				background-color: var(--md-default-bg-color);
 			}
 
 			.md-nav__item.md-nav__item--active > a {
@@ -321,7 +321,7 @@ details > summary {font-size: 15px;}
   width: 16px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: var(--md-default-bg-color);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -458,7 +458,7 @@ input:checked + .slider:before {
 #HideNav {
     
     box-shadow: 5px 0px 5px rgba(0,0,0,0.1);
-	background-color: white;
+	background-color: var(--md-default-bg-color);
 	color: grey;
 	font-size: 17px;
 	font-weight: 500;

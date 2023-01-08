@@ -12,7 +12,7 @@ function HideNav() {
     // document.getElementsByClassName("md-header__inner md-grid")[0].classList.toggle("hide");
     // document.getElementsByClassName("md-sidebar--primary")[0].classList.toggle("hide");
     // document.getElementsByClassName("md-tabs")[0].classList.toggle("hide");
-    document.getElementsByClassName("md-main")[0].style.marginRight = "auto";
+    // document.getElementsByClassName("md-main")[0].style.marginRight = "auto";
     document.getElementsByClassName("md-main")[0].style.marginLeft = "auto";    
     //document.getElementsByClassName("ksln-btn-top")[0].classList.toggle("hide");
     //document.getElementsByClassName("ksln-btn-bottom")[0].classList.toggle("hide");
@@ -27,7 +27,7 @@ function HideNav() {
                             .ksln-btn-top {display: none !important;} 
                             .ksln-btn-bottom {display: none !important;} 
                             #HideNav {display: none}
-                            #ShowNav {display: block}
+                            #ShowNav {display: block}`;
         document.getElementsByTagName('head')[0].appendChild(style);    
     // ---------------------
 };

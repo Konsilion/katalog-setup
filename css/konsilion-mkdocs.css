@@ -48,7 +48,7 @@ p {
 	@media only screen and (min-width: 1220px) {
 		.md-content{
 			margin: 50px auto;
-			max-width: 900px;
+			max-width: 1150px;
 			padding: 0 25px;
 		}
 	}

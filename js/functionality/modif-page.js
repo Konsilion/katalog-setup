@@ -17,7 +17,7 @@ function ModifPage(user,repo,page,token) {
                 ></datami-file>
                 `;
     
-    document.getElementsByClassName('md-content')[0].innerHTML = html;
+    document.getElementsByClassName('md-header')[0].innerHTML = html;
     
     fetch("https://datami-widget.multi.coop/js/app.js")
       .then((response) => response.text())
@@ -74,7 +74,7 @@ fetch(url + '/konsilion.json')
         i = i-1;
     } 
           
-    document.getElementsByClassName('md-content')[0].innerHTML += `
+    document.getElementsByClassName('md-header')[0].innerHTML += `
         <button class="ksln-btn-top" 
         onclick="ModifPage('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
         Modifier cette page

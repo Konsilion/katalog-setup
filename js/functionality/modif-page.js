@@ -2,7 +2,7 @@
 
 function ModifPage(user,repo,page,token) {
 
-    let html = `<button id="ModifPage" class="ksln-btn-top" style="background-color: #bd0000; color: white;"
+    let html = `<button id="Quit" class="ksln-btn-top" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
                 Quitter
                 </button>
@@ -78,7 +78,7 @@ fetch(url + '/konsilion.json')
     } 
           
     document.getElementsByClassName('md-header')[0].innerHTML += `
-        <button class="ksln-btn-top" 
+        <button id="ModifPage" class="ksln-btn-top" 
         onclick="ModifPage('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
         Modifier cette page
         </button>

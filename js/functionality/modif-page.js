@@ -33,7 +33,7 @@ function ModifPage(user,repo,page,token) {
                             .md-content {margin: 50px auto; max-width: 100vw !important; padding: 0 25px;}
                             #ModifPage {display: none}
                             #HideNav {display: none}
-                            #AddPage {display: none}
+                            #AddPage {display: none}`;
         document.getElementsByTagName('head')[0].appendChild(style);    
     // ---------------------
 

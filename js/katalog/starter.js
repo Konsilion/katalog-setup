@@ -258,6 +258,14 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,
                 btn.appendChild(document.createTextNode("Voir catalogue source"));
 
             child.parentNode.insertBefore(btn, child);
+            
+            // Ajout CSS ---------------------
+
+            var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '#DatamiExternal {display: block !important;}';
+
+            // ---------------------             
         
         }
         

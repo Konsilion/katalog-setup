@@ -80,7 +80,9 @@
         border-radius: 25px !important;
     }
 
-
+    .md-typeset ol:not([hidden]), .md-typeset ul:not([hidden]) {
+        display: flex;
+    }
 
 
 /* ======= CARD GRID DISPLAY ======= */

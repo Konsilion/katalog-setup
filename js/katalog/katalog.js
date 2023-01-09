@@ -24,7 +24,14 @@ var style = document.createElement('style');
 // ====== Modele de Datami widgets ======
 
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,url_origin) {
-
+    
+    var numItems = 6
+    
+    if (num > 0){
+        numItems = 3
+    }
+    
+    
     let htlm_init = `<!-- DATAMI WIDGET'S HTML BLOCK -->
                 <datami-file
                     title="` + title + `"

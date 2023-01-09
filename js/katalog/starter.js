@@ -1,5 +1,9 @@
 // ====== Modele de Datami widgets ======
 
+const appId = window.location.pathname.split('/');
+    
+var katalog_folder = appId[appId.length - 3]
+
 function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,url_origin) {
     
     var numItems = 6

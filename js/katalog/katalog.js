@@ -75,9 +75,6 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,
                           "DESIGNATION": {
                             "position": "title"
                           },
-                          "DESCRIPTION": {
-                            "position": "resume"
-                          },
                          "ETAT": {
                             "position": "tags"
                           },

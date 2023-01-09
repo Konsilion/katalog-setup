@@ -241,7 +241,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,
     
     }
        
-    document.getElementById(type_datami).innerHTML += html_final;
+    document.getElementById(type_datami).innerHTML = html_final;
 
 
     setTimeout(function() {

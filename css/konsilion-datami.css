@@ -81,7 +81,7 @@
     }
 
     .md-typeset ol:not([hidden]), .md-typeset ul:not([hidden]) {
-        display: content;
+        display: inherit;
     }
 
 

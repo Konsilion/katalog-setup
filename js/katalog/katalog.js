@@ -41,7 +41,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,
                       "separator": ";",
                       "lockcolumns": false,
                       "pagination": {
-                        "itemsPerPage": 3
+                        "itemsPerPage": ` + numItems + `
                       },
                       "cardsview": {
                         "activate": true,

@@ -1,6 +1,6 @@
 // ============ Modification de la page avec remplacement par un widget Datami =============
 
-function ModifPage(user,repo,page,token) {
+function ModifPage(page) {
 
     let html = `<button id="Quit" class="ksln-btn-top" style="background-color: #bd0000; color: white;"
                 onclick="window.location.reload();">  
@@ -9,10 +9,10 @@ function ModifPage(user,repo,page,token) {
     
                 <datami-file
                     title="Modification de la page Web"
-                    gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `.md"
+                    gitfile="` + URLKatalogRepo + `/edit/master/docs` + page + `.md"
                     options='{}'
                     onlypreview="false"
-                    usertoken="` + window.atob(token) + `"
+                    usertoken=""
                     locale="fr"
                 ></datami-file>
                 `;
@@ -61,27 +61,23 @@ if (window.location.host.split('.')[1] == "github") {
 
 var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[num];
 
-fetch(url + '/konsilion.json')
-.then(response => response.json())
-.then(json => {
+var array = window.location.pathname.split('/');
 
-    var array = window.location.pathname.split('/');
+let page = ""
 
-    let page = ""
+for (let i = num; i < (array.length - 2); i++) {
+    i = i+1;
 
-    for (let i = num; i < (array.length - 2); i++) {
-        i = i+1;
+    page += '/' + array[i]
 
-        page += '/' + array[i]
-        
-        i = i-1;
-    } 
-          
-    document.getElementsByClassName('md-header')[0].innerHTML += `
-        <button id="ModifPage" class="ksln-btn-top" 
-        onclick="ModifPage('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
-        Modifier cette page
-        </button>
-        `;    
-});
+    i = i-1;
+} 
+
+document.getElementsByClassName('md-header')[0].innerHTML += `
+    <button id="ModifPage" class="ksln-btn-top" 
+    onclick="ModifPage('` + page + `');">  
+    Modifier cette page
+    </button>
+    `;    
+
 // ---------------------------

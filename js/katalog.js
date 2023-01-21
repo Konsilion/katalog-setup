@@ -347,18 +347,23 @@ const appId = window.location.pathname.split('/');
     
 var katalog_folder = appId[appId.length - 3]
 
-var ksln_json = window.location.pathname + '../../../konsilion.json';
+// var ksln_json = window.location.pathname + '../../../konsilion.json';
 
 var main_gitfile = "";
 
 var main_token = "";
 
-fetch(ksln_json)
-    .then(response => response.json())
-    .then(json => {    
-            main_gitfile = `https://github.com/` + json.user + `/` + json.repo + `/` + `blob/master/docs/katalog/` + katalog_folder + `/data.csv`
-            main_token = json.token;
-    });
+//fetch(ksln_json)
+//    .then(response => response.json())
+//    .then(json => {    
+
+
+
+
+main_gitfile = URLKatalogRepo + `/blob/master/docs/katalog/` + katalog_folder + `/data.csv`
+
+
+//    });
 
 
 TakeTheJson();

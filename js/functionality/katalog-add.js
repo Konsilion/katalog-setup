@@ -28,7 +28,7 @@ fetch(url + '/konsilion.json')
 
         document.getElementsByClassName('md-header')[0].innerHTML += `
         <button class="ksln-btn-bottom" id="AddPage" 
-        onclick="window.open('https://github.com/` + json.user + `/` + json.repo +  `/new/master/docs/pages');">  
+        onclick="window.open('` + URLKatalogRepo + `/new/master/docs/pages');">  
         Créer une ressource
         </button>
         `;    

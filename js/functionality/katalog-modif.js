@@ -1,6 +1,4 @@
-
-
-function ModifKatalog(user,repo,page,token) {
+function ModifKatalog(page) {
 
     let html = `<button class="ksln-btn-top" style="background-color: #bd0000; color: white;" 
                 onclick="window.location.reload();">  
@@ -9,13 +7,13 @@ function ModifKatalog(user,repo,page,token) {
     
                 <datami-file
                   title="Parametrage du catalogue Web"
-                  gitfile="https://github.com/` + user + `/` + repo +  `/edit/master/docs` + page + `/katalog.json"
+                  gitfile="` + URLKatalogRepo + `/edit/master/docs` + page + `/katalog.json"
                   options='{
                   "defaultDepth": 2,
                   "allowKeyEdit": true
                 }'
                   onlypreview="false"
-                  usertoken="` + window.atob(token) + `"
+                  usertoken=""
                   locale="fr"
                 ></datami-file>
                 `;
@@ -50,26 +48,21 @@ if (window.location.host.split('.')[1] == "github") {
 
 var url = window.location.protocol + `//` + window.location.host + `/` + window.location.pathname.split('/')[num];
 
-fetch(url + '/konsilion.json')
-.then(response => response.json())
-.then(json => {
+var array = window.location.pathname.split('/');
 
-    var array = window.location.pathname.split('/');
+let page = ""
 
-    let page = ""
+for (let i = num; i < (array.length - 3); i++) {
+    i = i+1;
 
-    for (let i = num; i < (array.length - 3); i++) {
-        i = i+1;
+    page += '/' + array[i]
 
-        page += '/' + array[i]
-        
-        i = i-1;
-    } 
+    i = i-1;
+} 
 
-        document.getElementsByClassName('md-header')[0].innerHTML += `
-        <button id="ModifKatalog" class="ksln-btn-top" 
-        onclick="ModifKatalog('` + json.user + `','` + json.repo + `','` + page + `','` + json.token + `');">  
-        Paramétrer ce catalogue
-        </button>
-        `;    
-});
+document.getElementsByClassName('md-header')[0].innerHTML += `
+<button id="ModifKatalog" class="ksln-btn-top" 
+onclick="ModifKatalog('` + page + `');">  
+Paramétrer ce catalogue
+</button>
+`;    

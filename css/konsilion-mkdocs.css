@@ -8,6 +8,7 @@
     }   
     
     #carouselPage {
+	border-top: 1px solid #AAA;    
         border-bottom: 1px solid #AAA;
     }       
 

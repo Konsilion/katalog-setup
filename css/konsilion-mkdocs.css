@@ -4,9 +4,13 @@
 
     
     #carouselPage, #carouselPage > a {
-        border-radius: 10px;
+        border-radius: 0px;
     }   
     
+    #carouselPage {
+        border-bottom: 1px solid #DDD;
+    }       
+
     .full-screen {
       max-height: 250px;  
       background-size: contain;

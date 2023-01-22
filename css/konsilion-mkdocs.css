@@ -333,6 +333,16 @@ p {
   max-width: 98%;  
 }
 
+
+.ksln-grid-2c {
+  justify-content: left;
+  display: grid;
+  margin: 50px 0px;	
+  gap: 25px;
+  grid-template-columns: 50% 50%;
+  max-width: 98%;  
+}
+
 .ksln-cards {
     border: 0.05rem solid var(--md-default-fg-color--lightest);
     border-radius: 0.1rem;

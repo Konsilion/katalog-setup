@@ -12,7 +12,6 @@ function ModifPage(page) {
                     gitfile="` + URLKatalogRepo + `/edit/master/docs` + page + `.md"
                     options='{}'
                     onlypreview="false"
-                    usertoken=""
                     locale="fr"
                 ></datami-file>
                 `;

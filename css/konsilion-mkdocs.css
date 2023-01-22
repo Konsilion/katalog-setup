@@ -1,3 +1,25 @@
+#FullDatamiExternal, #MinimizeDatamiExternal {
+	float: right;
+}
+#HideDatamiExternal {
+	float: right;
+
+#DatamiExternal {
+	height: 55vh;
+	width: 100%; 
+	overflow-y: scroll; 
+	overflow-x: hidden;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-top: 25px;
+	padding: 25px;
+	transition: box-shadow 0.5s, background 0.5s;
+}
+#DatamiExternal:hover {
+	box-shadow: inset -3px 5px 3px #DDD,
+		inset -3px -5px 3px #DDD;
+}  
+
 /* ===== SLIDE BAR RIGHT ======= */
 
 /* width */

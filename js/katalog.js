@@ -275,7 +275,7 @@ function DatamiKatalog(num,type_datami,title,descr,gitfile,model,cardview,token,
     }
     
     html_end = `onlypreview="false"
-                usertoken="` + window.atob(token) + `"
+                usertoken=""
                 locale="fr"
         ></datami-file><br><br> `;
  

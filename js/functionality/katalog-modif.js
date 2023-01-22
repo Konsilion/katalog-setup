@@ -13,7 +13,6 @@ function ModifKatalog(page) {
                   "allowKeyEdit": true
                 }'
                   onlypreview="false"
-                  usertoken=""
                   locale="fr"
                 ></datami-file>
                 `;

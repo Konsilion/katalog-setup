@@ -3,6 +3,9 @@
 }
 #HideDatamiExternal {
 	float: right;
+	background-color: #bd0000;
+	color: white;
+}
 
 #DatamiExternal {
 	height: 55vh;

@@ -21,7 +21,7 @@ function HideNav() {
 
     var style = document.createElement('style');
         style.type = 'text/css';
-        style.innerHTML = ` .md-header__inner md-grid, .md-header {display: none !important;} 
+        style.innerHTML = ` .md-header__inner md-grid {display: none !important;} 
                             .md-sidebar--primary {display: none !important;} 
                             .md-tabs {display: none !important;}    
                             .ksln-btn-top {display: none !important;} 

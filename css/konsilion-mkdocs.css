@@ -191,12 +191,10 @@ p {
 	
 	}
 
-	p {
-		font-size: 18px; 
-		font-weight: 350;
+	ul > li, p {
+	    font-size: 18px;
+	    font-weight: 350;
 	}
-
-
 
 /* ======= BARRE DE COULEUR HAUTE ======= */
 

@@ -7,7 +7,7 @@ function ModifKatalog(page) {
     
                 <datami-file
                   title="Parametrage du catalogue Web"
-                  gitfile="` + URLKatalogRepo + `/edit/master/docs` + page + `/katalog.json"
+                  gitfile="` + URLKatalogRepo + `/edit/master/mkdocs/docs` + page + `/katalog.json"
                   options='{
                   "defaultDepth": 2,
                   "allowKeyEdit": true

@@ -355,7 +355,7 @@ var main_token = "";
 
 
 
-main_gitfile = URLKatalogRepo + `/blob/master/docs/katalog/` + katalog_folder + `/data.csv`
+main_gitfile = URLKatalogRepo + `/blob/master/mkdocs/docs/katalog/` + katalog_folder + `/data.csv`
 
 console.log("Voici URL : " + main_gitfile);
 

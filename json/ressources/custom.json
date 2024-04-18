@@ -36,7 +36,7 @@
       "bgColor" : "#BED3C3",
       "foreignKey": {
         "activate": true,
-        "ressource": "https://github.com/Konsilion/katalog-template/blob/master/docs/katalog/projets/data.csv",
+        "ressource": "https://github.com/Konsilion/website-konsilion/blob/master/mkdocs/docs/katalog/projets/data.csv",
         "fields": "ID",
         "returnFields" : [
           "DESIGNATION"

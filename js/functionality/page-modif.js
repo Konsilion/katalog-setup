@@ -9,7 +9,7 @@ function ModifPage(page) {
     
                 <datami-file
                     title="Modification de la page Web"
-                    gitfile="` + URLKatalogRepo + `/edit/master/docs` + page + `.md"
+                    gitfile="` + URLKatalogRepo + `/edit/master/mkdocs/docs` + page + `.md"
                     options='{}'
                     onlypreview="false"
                     locale="fr"

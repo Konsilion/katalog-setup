@@ -78,6 +78,19 @@
 	box-shadow: none !important;
 }
 
+.md-nav__item > a {
+	color: #777;
+	font-weight: 400;
+	padding-top: 10px;
+	background-color: #FFF;
+}
+
+.md-nav__title {
+	padding-left: 0 !important;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #DDD;
+}
+
 /* ------ GRAND ECRAN */
 
 @media only screen and (min-width: 1220px) {

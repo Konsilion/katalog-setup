@@ -70,8 +70,6 @@ p {
 
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */
 
-
-
 	@media only screen and (min-width: 1220px) {
 		.md-content{
     			margin: 0 auto;
@@ -94,25 +92,21 @@ p {
 	    font-weight: 500;
 	}
 
+
+
+
 /* ======= BARRE DE COULEUR HAUTE ======= */
 
 .md-header__title {
     font-size: 21px !important;
     font-family: 'Roboto'; 	
     margin-left: 0px !important;
-
 }
-
-.md-search {
-	margin: auto;
-}
-
 
 
 
 
 /* ======= NAVIGATIONS, TOC, PREV-NEXT ======= */
-
 
 .md-sidebar__inner {
     padding: 0px !important;
@@ -121,9 +115,6 @@ p {
 
     /* ======= NAVIGATION ======= */
 
-    .md-sidebar--primary {
-        left: 0; 
-    } 
 
     .md-sidebar--primary .md-nav__link.md-nav__link--active::after {
         content: "";
@@ -146,102 +137,87 @@ p {
 		border-bottom: 1px solid #DDD;
 	}
 
-	/* ------ CORRECTION DATAMI BUG */
-
- 	.md-sidebar--primary .md-nav__link {
-		color: rgba(125,125,125,1) ;
-		font-size:17px;
-	}
-
-	/* ------ MASQUE NAV SECONDAIRE SUR ECRAN MOYEN */
-
- 	@media only screen and (max-width: 1219px) {
-	    .md-sidebar.md-sidebar--secondary {
-		/*display: none !important;*/
-	    }
-	}
-
 
         /* ------ GRAND ECRAN */
 
         @media only screen and (min-width: 1220px) {
 		
-			.md-sidebar--primary .md-tabs__item {
-				height: auto;
-			}
-			
-			.md-tabs .md-tabs__item {
-				height: auto;
-			}
-			
-			.md-tabs a.md-tabs__link {
-				font-size: 17px;
-				margin: 13px auto;
-			}			
-			
-			
-			.md-sidebar--primary a.md-tabs__link {
-				font-size: 17px;
-				color: white;
-				margin: 13px auto;
-			}
-
-            .md-sidebar.md-sidebar--primary {
-                width: 300px;
-                padding: 0px !important;
-            }
-
-		   	.md-sidebar--primary .md-nav__item--active > label {
-			   color: var(--md-accent-fg-color);
-			   box-shadow: none !important;
-		   	}
+		.md-sidebar--primary .md-tabs__item {
+			height: auto;
+		}
 		
-            .md-nav--primary > .md-nav__title {
-                display: none;
-            }
-
-			.md-sidebar.md-sidebar--primary > * {
-				padding: 25px 0 0 0px;
-				margin: 0;
-				box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-				background-color: var(--md-default-bg-color);
-			}
-
-			.md-sidebar--primary .md-nav__item.md-nav__item--active > a {
-				margin: 0px;
-				color: #777;
-				font-weight: 600;
-				padding: 1em;
-				background-color: #EEE;
-				border-radius: 0px;
-			}
-
-
-			.md-sidebar--primary .md-nav__item--nested > nav {
-				margin-left: 0px;
-				padding-left: 15px;
-			}
-
-			.md-sidebar--primary .md-nav__item--nested > nav > ul {
-				padding: 0px;
-				border-left: 1px solid #DDD;
-			}
-
-            .md-sidebar--primary .md-nav__item {
-                padding: 0px;
-            }
-
-            .md-sidebar--primary .md-nav__link {
-                margin: 0px;
-                padding: 15px !important;
-            }
+		.md-tabs .md-tabs__item {
+			height: auto;
+		}
 		
-            .md-sidebar--primary .md-nav__link:hover {
-                margin: 0px;
-                color: black;
-                background-color: #F5F5F5;    
-                border-radius: 0px;
-            }
+		.md-tabs a.md-tabs__link {
+			font-size: 17px;
+			margin: 13px auto;
+		}			
+		
+		
+		.md-sidebar--primary a.md-tabs__link {
+			font-size: 17px;
+			color: white;
+			margin: 13px auto;
+		}
+
+		.md-sidebar.md-sidebar--primary {
+			width: 300px;
+			padding: 0px !important;
+		}
+
+		.md-sidebar--primary .md-nav__item--active > label {
+		   color: var(--md-accent-fg-color);
+		   box-shadow: none !important;
+		}
+	
+		.md-nav--primary > .md-nav__title {
+			display: none;
+		}
+
+		.md-sidebar.md-sidebar--primary > * {
+			padding: 25px 0 0 0px;
+			margin: 0;
+			box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
+			background-color: var(--md-default-bg-color);
+		}
+
+		.md-sidebar--primary .md-nav__item.md-nav__item--active > a {
+			margin: 0px;
+			color: #777;
+			font-weight: 600;
+			padding: 1em;
+			background-color: #EEE;
+			border-radius: 0px;
+		}
+
+
+		.md-sidebar--primary .md-nav__item--nested > nav {
+			margin-left: 0px;
+			padding-left: 15px;
+		}
+
+		.md-sidebar--primary .md-nav__item--nested > nav > ul {
+			padding: 0px;
+			border-left: 1px solid #DDD;
+		}
+
+		.md-sidebar--primary .md-nav__item {
+			padding: 0px;
+		}
+		
+		.md-sidebar--primary .md-nav__link {
+			margin: 0px;
+			padding: 15px !important;
+		}
+		
+		.md-sidebar--primary .md-nav__link:hover {
+			margin: 0px;
+			color: black;
+			background-color: #F5F5F5;    
+			border-radius: 0px;
+		}
         }   
 
 

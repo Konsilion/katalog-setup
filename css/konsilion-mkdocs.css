@@ -171,12 +171,6 @@ p {
 			border-radius: 0px;
 		}
 
-
-		.md-sidebar--primary .md-nav__item--nested > nav {
-			margin-left: 0px;
-			padding-left: 15px;
-		}
-
 		.md-sidebar--primary .md-nav__item--nested > nav > ul {
 			padding: 0px ! important;
 		}
@@ -187,7 +181,7 @@ p {
 		
 		.md-sidebar--primary .md-nav__link {
 			margin: 0px;
-			padding: 15px !important;
+			padding: 15px 5px !important;
 		}
 		
 		.md-sidebar--primary .md-nav__link:hover {

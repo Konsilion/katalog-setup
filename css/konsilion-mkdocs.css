@@ -96,7 +96,7 @@ p {
 
 
     .md-sidebar--primary .md-nav__link.md-nav__link--active::after {
-        /*content: "";*/
+        content: "";
     }
 
 	.md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {

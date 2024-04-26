@@ -37,20 +37,19 @@
 	display: none;
 }
 
-
 .md-tabs__item.md-tabs__item--active {
 	color: white;
 	font-weight: 600;
 	background-color: var(--md-primary-fg-color);
 }
 
+.md-tabs__list{margin-left:0 !important;}
+
 .md-tabs__link {font-size: 14px;}
 
 .md-nav__source {display:none !important;}
 
 .md-nav__title {padding-left: 15px !important;}
-
-
 
     
 /* ======= CONTENT WITH LIGHT BASE MOBILE PADDING ======= */

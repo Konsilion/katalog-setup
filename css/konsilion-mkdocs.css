@@ -41,7 +41,6 @@
 	color: white;
 	font-weight: 600;
 	background-color: var(--md-primary-fg-color);
-	border-bottom: 2px solid white;
 	border-top: 2px solid white;
 }
 

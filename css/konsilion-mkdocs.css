@@ -178,8 +178,7 @@ p {
 		}
 
 		.md-sidebar--primary .md-nav__item--nested > nav > ul {
-			padding: 0px;
-			border-left: 3px solid #0b4387;
+			padding: 0px ! important;
 		}
 
 		.md-sidebar--primary .md-nav__item {

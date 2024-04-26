@@ -158,8 +158,8 @@ p {
 		.md-sidebar.md-sidebar--primary > * {
 			padding: 25px 0 0 0px;
 			margin: 0;
-			/*box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-			background-color: var(--md-default-bg-color);*/
+			box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
+			background-color: var(--md-default-bg-color);
 		}
 
 		.md-sidebar--primary .md-nav__item.md-nav__item--active > a {

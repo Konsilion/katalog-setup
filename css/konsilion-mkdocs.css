@@ -96,7 +96,7 @@ p {
 
 
     .md-sidebar--primary .md-nav__link.md-nav__link--active::after {
-        content: "";
+        /*content: "";*/
     }
 
 	.md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {
@@ -175,19 +175,23 @@ p {
 			padding: 0px ! important;
 		}
 
-		.md-sidebar--primary .md-nav__item {
+		.md-nav__item {
 			padding: 0px;
 		}
 		
-		.md-sidebar--primary .md-nav__link {
+		.md-sidebar--primary {
 			margin: 0px;
 			padding: 15px 5px !important;
 		}
 		
-		.md-sidebar--primary .md-nav__link:hover {
+		.md-nav__link:hover {
 			margin: 0px;
 			color: white;
 			background-color: #0b4387;    
+		}
+
+		.md-nav__link {
+    			box-shadow: none !important;
 		}
         }   
 

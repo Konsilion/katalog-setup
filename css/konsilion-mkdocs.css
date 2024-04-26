@@ -1,29 +1,3 @@
-/* ===== SLIDE BAR RIGHT ======= */
-
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #DDD; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #666; 
-  border-radius: 10px;
-  transition: background 0.5s;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--md-accent-fg-color); 
-}
-
-
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
 h1 {

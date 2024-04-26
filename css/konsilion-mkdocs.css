@@ -1,3 +1,26 @@
+/* ===== SLIDE BAR RIGHT ======= */
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #DDD; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--md-primary-fg-color); 
+  transition: background 0.5s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-accent-fg-color); 
+}
+
 /* ======= BODY WITH FULL WIDTH & HEIGTH ======= */
 
 h1 {

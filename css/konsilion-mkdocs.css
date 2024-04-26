@@ -50,10 +50,6 @@ p {
     margin: 0px;
 }
 
-.md-nav__source {
-	display: none;
-}
-
 .md-button {
     font-size: 16px;
     padding: 5px 2em !important;
@@ -86,116 +82,6 @@ p {
 
 
 /* ======= NAVIGATIONS, TOC, PREV-NEXT ======= */
-
-.md-sidebar__inner {
-    padding: 0px !important;
-}
-
-
-    /* ======= NAVIGATION ======= */
-
-
-    .md-sidebar--primary .md-nav__link.md-nav__link--active::after {
-        /*content: "";*/
-    }
-
-	.md-sidebar.md-sidebar--secondary > .md-sidebar__scrollwrap {
-		padding-top: 25px;
-	}
-
-	.md-sidebar.md-sidebar--secondary {
-		padding: 0px;
-		width: 300px;
-		max-width: 25%;
-	}
-
-	.md-nav--secondary > .md-nav__title {
-		font-size: 18px;
-		color: #666;
-		padding: 10px;
-		border-bottom: 1px solid #DDD;
-	}
-
-
-        /* ------ GRAND ECRAN */
-
-        @media only screen and (min-width: 1220px) {
-		
-		.md-sidebar--primary .md-tabs__item {
-			height: auto;
-		}
-		
-		.md-tabs .md-tabs__item {
-			height: auto;
-		}
-		
-		.md-tabs a.md-tabs__link {
-			font-size: 17px;
-			margin: 13px auto;
-		}			
-		
-		
-		.md-sidebar--primary a.md-tabs__link {
-			font-size: 17px;
-			color: white;
-			margin: 13px auto;
-		}
-
-		.md-sidebar.md-sidebar--primary {
-			width: 300px;
-			padding: 0px !important;
-		}
-
-		/*.md-sidebar--primary .md-nav__item--active > label {
-			color: var(--md-accent-fg-color);
-			box-shadow: none !important;
-		}*/
-	
-		.md-nav--primary > .md-nav__title {
-			/* display: none; */
-		}
-
-		.md-sidebar.md-sidebar--primary > * {
-			padding: 25px 0 0 0px;
-			margin: 0;
-			box-shadow: 5px -10px 8px rgba(0,0,0,0.1);
-			background-color: var(--md-default-bg-color);
-		}
-
-		.md-sidebar--primary .md-nav__item.md-nav__item--active > a {
-			margin: 0px;
-			color: #777;
-			font-weight: 600;
-			padding: 1em;
-			background-color: #EEE;
-			border-radius: 0px;
-		}
-
-		.md-sidebar--primary .md-nav__item--nested > nav > ul {
-			padding: 0px ! important;
-		}
-
-		.md-nav__item {
-			padding: 0px;
-		}
-		
-		.md-sidebar--primary {
-			margin: 0px;
-			padding: 15px 5px !important;
-		}
-		
-		.md-nav__link:hover {
-			margin: 0px;
-			color: white;
-			background-color: #0b4387;    
-		}
-
-		.md-nav__link {
-    			box-shadow: none !important;
-		}
-        }   
-
-
 
 
 /* ======= PREV-NEXT & FOOTER ======= */

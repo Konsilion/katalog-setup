@@ -222,7 +222,7 @@ p {
 /* ======= PREV-NEXT & FOOTER ======= */
 
 .md-footer__inner.md-grid, .md-header__source {
-	display:none !important;
+	/* display:none !important; */
 }
 
 /* ======= ACCORDEONS MKDOCS ======= */
@@ -230,11 +230,6 @@ p {
 .tabbed-labels {
     max-width: 100% !important;
 }
-
-.tabbed-labels:before {
-    /* background: none !important; */
-}
-
 
 /* =================  ANCIENNEMENT Konsilion.css ================ */
 

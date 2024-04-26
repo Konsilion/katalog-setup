@@ -98,7 +98,7 @@ p {
 
 .md-header__title {
     font-size: 21px !important;
-    display: none;
+    /* display: none; */
     margin-left: 50px!important;
 }
 

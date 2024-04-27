@@ -4,7 +4,7 @@
 
 
 @media only screen and (min-width: 1220px) {
-    .md-nav__link {margin-bottom: 20px;}
+    .md-nav__link {margin-bottom: 10px;}
 
 	.md-sidebar--primary .md-nav__item > a {
 	border-radius: 15px;

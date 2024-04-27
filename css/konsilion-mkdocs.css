@@ -156,7 +156,7 @@
 	.md-sidebar--primary .md-nav__item > a:hover {
 		color: #AAA;
 		font-weight: 600;
-		background-color: #DDD;
+		background-color: black;
 	}
 	
 	.md-sidebar--primary {

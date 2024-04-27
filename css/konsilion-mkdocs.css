@@ -115,8 +115,7 @@
 @media only screen and (min-width: 1220px) {
 
 	.md-nav--primary .md-nav__item > .md-nav__link {
-		margin-right: 0 !important;
-		border-radius: 15px 0 0 15px;
+		border-radius: 10px;
 	}
 	
 	.md-sidebar.md-sidebar--primary > * {

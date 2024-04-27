@@ -6,10 +6,12 @@
 @media only screen and (min-width: 1220px) {
 
 	.md-sidebar--primary .md-nav__item > a {
-        border: 1px solid #EEE;
+	    border-radius: 7px 0 0 7px !important;
+	    border: 1px solid #EEE;
+	    margin-bottom: 15px;
+	    margin-right: 0 !important;
 	}
 }
-
 
 
 /* ===== SLIDE BAR RIGHT ======= */

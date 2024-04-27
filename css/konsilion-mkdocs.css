@@ -8,6 +8,7 @@
 	.md-sidebar--primary .md-nav__item > a {
 	    border-radius: 7px 0 0 7px !important;
 	    border: 1px solid #EEE;
+	    border-right: 0px !important;
 	    margin-bottom: 15px;
 	    margin-right: 0 !important;
 	}

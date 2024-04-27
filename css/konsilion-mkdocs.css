@@ -6,17 +6,18 @@
 @media only screen and (min-width: 1220px) {
 
 	.md-sidebar--primary .md-nav__item > a {
-	    border-radius: 7px 0 0 7px !important;
-	    border: 1px solid #EEE;
-	    border-right: 0px !important;
-	    margin-bottom: 15px;
-	    margin-right: 0 !important;
+		border-radius: 7px 0 0 7px !important;
+		border: 1px solid #EEE;
+		border-right: 0px !important;
+		margin-bottom: 15px;
+		margin-right: 0 !important;
 	}
 
 	ul.md-nav__list {
-	    border-left: 1px solid #CCC;
-	    margin-left: -1px;
-	    padding-bottom: 0px;
+		border-left: 1px solid #CCC;
+		margin-left: -1px;
+		padding-bottom: 0px !important;
+		margin-bottom: 8px;
 	}
 }
 

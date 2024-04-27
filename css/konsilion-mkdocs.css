@@ -1,3 +1,17 @@
+/* ==== PHASE DE TEST - avril 2024 =====*/
+
+    .md-nav__link {margin-bottom: 15px;}
+
+	.md-sidebar--primary .md-nav__item > a {
+		border-radius: 15px;
+        border: 1px solid #EEE;
+	}
+
+
+
+
+
+
 /* ===== SLIDE BAR RIGHT ======= */
 
 /* width */

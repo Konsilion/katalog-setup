@@ -12,6 +12,12 @@
 	    margin-bottom: 15px;
 	    margin-right: 0 !important;
 	}
+
+	ul.md-nav__list {
+	    border-left: 1px solid #CCC;
+	    margin-left: -1px;
+	    padding-bottom: 0px;
+	}
 }
 
 

@@ -124,7 +124,7 @@
 
 .md-nav__item > a {
 	font-weight: 400;
-	padding-top: 10px;
+	padding: 0.8em;
 	background-color: #FFF;
 }
 
@@ -151,9 +151,6 @@
 		background-color: var(--md-default-bg-color);
     	}
 	
-	.md-nav__item > a {
-		padding: 0.5em;
-	}
 	
 	.md-nav__item.md-nav__item--active > a {
 		font-weight: 600;

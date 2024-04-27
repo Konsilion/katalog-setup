@@ -33,6 +33,10 @@
 	border-radius: 25px !important;
 }
 
+.md-button--secondary {
+    background-color: white;
+}
+
 .md-content__button {
 	display: none;
 }

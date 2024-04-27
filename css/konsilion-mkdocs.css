@@ -119,11 +119,10 @@
 	}
 	
 	.md-sidebar.md-sidebar--primary > * {
-		padding-top: 25px !important;
+		padding-top: 50px !important;
 		padding: 0px;
 		margin: 0px !important;
 		border-right: 1px solid #CCC;
-		/*box-shadow: 5px -10px 8px rgba(0,0,0,0.1);*/
 		background-color: var(--md-default-bg-color);
 	}
 	

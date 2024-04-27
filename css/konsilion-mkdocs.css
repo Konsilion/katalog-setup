@@ -75,6 +75,7 @@
 
 .md-tabs__item.md-tabs__item:hover {
 	background-color: #EEE;
+	color: black;
 }
 
 .md-tabs__list{margin-left:0 !important;}

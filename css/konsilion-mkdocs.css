@@ -133,7 +133,7 @@
 	}
 	
 	.md-sidebar.md-sidebar--primary > * {
-		padding-top: 50px !important;
+		padding-top: 30px !important;
 		padding: 0px;
 		margin: 0px !important;
 		border-right: 1px solid #CCC;

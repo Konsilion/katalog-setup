@@ -134,15 +134,15 @@
 	}
 	
 	.md-nav__item.md-nav__item--active > a {
-		color: #777;
 		font-weight: 600;
-		background-color: #EEE;
+		background-color: var(--md-primary-fg-color);
+		color: white !important;
 	}
 	
 	.md-sidebar--primary .md-nav__item > a:hover {
 		color: white;
 		font-weight: 600;
-		background-color: var(--md-primary-fg-color);
+		background-color: #DDD;
 	}
 	
 	.md-sidebar--primary {

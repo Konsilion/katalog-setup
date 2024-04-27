@@ -14,10 +14,11 @@
 	}
 
 	ul.md-nav__list {
-		border-left: 1px solid #CCC;
+		border-left: 1px solid var(--md-primary-fg-color);
 		margin-left: -1px;
 		padding-bottom: 0px !important;
 		margin-bottom: 8px;
+		margin-top: 4px;
 	}
 }
 
